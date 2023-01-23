@@ -1,5 +1,5 @@
 # Hounslow Recycling Hub - Team Black
-A central hub for all recycling-related information for the London Borough of Hounslow.  
+An engaging and easy-to-navigate Recycling Information Hub for Hounslow Council.
 
 **Team Members**:
 - Kacper Dudzinski (K1921541)  
