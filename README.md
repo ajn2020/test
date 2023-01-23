@@ -1,4 +1,4 @@
-# Hounslow Recycling Hub
+# Hounslow Recycling Hub - Black Team
 
 An engaging and easy-to-navigate Recycling Information Hub for Hounslow Council.
 
