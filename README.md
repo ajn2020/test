@@ -1,3 +1,15 @@
+# Hounslow Recycling Hub
+
+An engaging and easy-to-navigate Recycling Information Hub for Hounslow Council.
+
+Kacper Dudzinski (K1921541)\
+Haoxuan Feng (K1925595)\
+Ai Jian (K1897735)\
+Mirela Manoleva (K19016984)\
+Fatlir Topalli (K1921543)\
+Zihao You (K1923149)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
