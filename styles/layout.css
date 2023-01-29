@@ -1,0 +1,24 @@
+.layout-header {
+    background-color: #642f6c;
+    color: white;
+    font-family: Lato;
+    text-align: center;
+    padding: 30px;
+}
+
+.layout-header-title {
+    font-size: 40px;
+}
+
+.layout-header-description {
+    font-size: 15px;
+}
+
+.layout-footer {
+    background-color: #642f6c;
+    color: white;
+    font-family: Lato;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
