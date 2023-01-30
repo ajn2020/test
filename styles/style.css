@@ -1,4 +1,4 @@
-.layout-header {
+.header {
     background-color: #642f6c;
     color: white;
     font-family: Lato;
@@ -6,15 +6,15 @@
     padding: 30px;
 }
 
-.layout-header-title {
+.header-title {
     font-size: 40px;
 }
 
-.layout-header-description {
+.header-description {
     font-size: 15px;
 }
 
-.layout-footer {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;

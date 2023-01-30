@@ -1,10 +1,10 @@
 export default function Header() {
     return (
         <>
-            <div className='layout-header'>
-                <div className='layout-header-title'>Hounslow Recycling Hub</div>
+            <div className='header'>
+                <div className='header-title'>Hounslow Recycling Hub</div>
                 <br />
-                <div className='layout-header-description'>Your go-to stop for all recycling things in the London Borough of Hounslow!</div>
+                <div className='header-description'>Your go-to stop for all recycling things in the London Borough of Hounslow!</div>
             </div>
         </>
     )
