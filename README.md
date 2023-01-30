@@ -18,7 +18,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 1. CD into project directory
 
-2. Create a Docker Image pretaining to the 'Dockerfile' in the repository, uisng:
+2. Create a Docker Image pertaining to the 'Dockerfile' in the repository, uisng:
 
 ```bash
 sudo docker build -t <container-name> .
