@@ -12,9 +12,9 @@ Zihao You (K1923149)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Getting Started
 
-# Run app in a Docker development container
+## Run app in a Docker development container
 
 1. CD into the project directory
 
@@ -29,7 +29,7 @@ sudo docker build -t <container-name> .
 sudo docker run -p 5000:3000 <container-name>
 ```
 
-# Run the app normally
+## Run the app normally
 
 First, run the development server:
 
