@@ -16,7 +16,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Run app in a Docker development container
 
-1. CD into the project directory
+1. CD into project directory
 
 2. Create a Docker Image pretaining to the 'Dockerfile' in the repository, uisng:
 
