@@ -14,6 +14,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+## Run app in a Docker development container [WIP]
+
+1. CD into project directory
+
+2. Create a Docker Image pertaining to the 'Dockerfile' in the repository, uisng:
+
+```bash
+sudo docker build -t <container-name> .
+```
+3. Run a container using the Docker Image:
+
+```bash
+sudo docker run -p 5000:3000 <container-name>
+```
+
+## Run app normally
+
 First, run the development server:
 
 ```bash
