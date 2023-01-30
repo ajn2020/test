@@ -29,7 +29,7 @@ sudo docker build -t <container-name> .
 sudo docker run -p 5000:3000 <container-name>
 ```
 
-## Run the app normally
+## Run app normally
 
 First, run the development server:
 
