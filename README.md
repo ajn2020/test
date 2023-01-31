@@ -25,7 +25,7 @@ sudo docker compose up --build
 Every other time, run without --build:
 
 ```bash
-ssudo docker compose up
+sudo docker compose up
 ```
 
 Open http://localhost:5000 with your browser to see the result.
