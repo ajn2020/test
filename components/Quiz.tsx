@@ -3,9 +3,13 @@ import React, { useState } from 'react';
 type QiuzOption = {
     id: string;
     value: string;
-    content: string;
-    followUpQuestion: any;
-    options: any; 
+    followUpQuestion: number;
+}
+
+type QiuzQuestion = {
+    id: number;
+    question: string;
+    options: Array<QiuzOption>;
 }
 
 const questions = [
@@ -16,23 +20,7 @@ const questions = [
         {
           id: "a",
           value: "Yes",
-          followUpQuestion: 2
-        },
-        {
-          id: "b",
-          value: "No",
-          followUpQuestion: 7
-        }
-      ]
-    },
-    {
-      id: 2,
-      question: "Is it reusable / would you like to donate it?",
-      options: [
-        {
-          id: "a",
-          value: "Yes",
-          followUpQuestion: 3
+          followUpQuestion: 1
         },
         {
           id: "b",
@@ -42,18 +30,34 @@ const questions = [
       ]
     },
     {
+      id: 2,
+      question: "Is it reusable / would you like to donate it?",
+      options: [
+        {
+          id: "c",
+          value: "Yes",
+          followUpQuestion: 2
+        },
+        {
+          id: "d",
+          value: "No",
+          followUpQuestion: 5
+        }
+      ]
+    },
+    {
       id: 3,
       question: "Is it furniture or electrical appliance?",
       options: [
         {
-          id: "a",
+          id: "e",
           value: "Yes",
-          followUpQuestion: 4
+          followUpQuestion: 3
         },
         {
-          id: "b",
+          id: "f",
           value: "No",
-          followUpQuestion: 5
+          followUpQuestion: 4
         }
       ]
     },
@@ -77,39 +81,39 @@ const questions = [
       question: "What material is it made of?",
       options: [
         {
-          id: "a",
+          id: "g",
           value: "Plastic or metal",
+          followUpQuestion: 7
+        },
+        {
+          id: "h",
+          value: "Cardboard or paper",
           followUpQuestion: 8
         },
         {
-          id: "b",
-          value: "Cardboard or paper",
+          id: "i",
+          value: "Glass",
           followUpQuestion: 9
         },
         {
-          id: "c",
-          value: "Glass",
+          id: "j",
+          value: "Textiles",
           followUpQuestion: 10
         },
         {
-          id: "d",
-          value: "Textiles",
+          id: "k",
+          value: "Food",
           followUpQuestion: 11
         },
         {
-          id: "e",
-          value: "Food",
+          id: "l",
+          value: "Natural / organic",
           followUpQuestion: 12
         },
         {
-          id: "f",
-          value: "Natural / organic",
-          followUpQuestion: 13
-        },
-        {
-          id: "g",
+          id: "m",
           value: "Other / different materials",
-          followUpQuestion: 14
+          followUpQuestion: 15
         }
       ]
     },
@@ -144,14 +148,14 @@ const questions = [
         question: "Is it infectious (blood / tissue)?",
         options: [
           {
-            id: "a",
+            id: "n",
             value: "Yes",
-            followUpQuestion: 14
+            followUpQuestion: 13
           },
           {
-            id: "b",
+            id: "o",
             value: "No",
-            followUpQuestion: 15
+            followUpQuestion: 14
           }
         ]
       },
@@ -170,24 +174,19 @@ const questions = [
       question: "Is it an electrical appliance?",
       options: [
         {
-          id: "a",
+          id: "p",
           value: "Yes",
-          followUpQuestion: 17
+          followUpQuestion: 10
         },
         {
-          id: "b",
+          id: "q",
           value: "No",
-          followUpQuestion: 18
+          followUpQuestion: 16
         }
       ]
     },
     {
       id: 17,
-      question: "You can use a clearly marked plastic bag and put it alongside your recycling boxes!",
-      options: []
-    },
-    {
-      id: 18,
       question: "Sorry, this item is a rubbish and cannot be recycled. Please, use the black bin!",
       options: []
     }
@@ -197,25 +196,34 @@ const questions = [
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const handleOptionClick = (option: QiuzOption) => {
-    if (option.options.length === 0) {
+    if (questions[option.followUpQuestion].options.length === 0) {
+        setCurrentQuestion(option.followUpQuestion);
         // End the quiz
-        return;
+        return;        
     }
     setCurrentQuestion(option.followUpQuestion);
+    
   };
 
   const currentQuizQuestion = questions[currentQuestion];
 
   return (
-    <div className="quiz">
-      <h2>{currentQuizQuestion.question}</h2>
-      <div className="options">
-      {currentQuizQuestion.options.map((option) => (
-        <button key={option.id} onClick={() => handleOptionClick(option)}>
-            {option.value}
-        </button>
-      ))}
-      </div>
+    <div className="quiz-wrapper">
+      <div className='quiz-title'>
+        <h2>
+            Choose the right recycling service for your item here!
+        </h2>
+      </div>  
+      <div className='quiz'>
+        <h3>{currentQuizQuestion.question}</h3>
+        <div>
+        {currentQuizQuestion.options.map((option) => (
+            <button className="quiz-option" key={option.id} onClick={() => handleOptionClick(option)}>
+                {option.value}
+            </button>
+        ))}
+        </div>
+      </div>  
     </div>
   );
 }
