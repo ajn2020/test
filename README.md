@@ -14,6 +14,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+## Run app in a Docker development container
+
+For the first time, run:
+
+```bash
+sudo docker compose up --build
+```
+
+Every other time, run without --build:
+
+```bash
+sudo docker compose up
+```
+
+Open http://localhost:5000 with your browser to see the result.
+
+## Run app normally
+
 First, run the development server:
 
 ```bash
