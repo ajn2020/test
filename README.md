@@ -14,7 +14,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-## Run app in a Docker development container
+## Run app in a Docker development container [WIP]
 
 1. CD into project directory
 
