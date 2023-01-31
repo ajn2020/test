@@ -12,9 +12,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <RecyclingServiceAccordion />
-        <RecyclingServiceAccordion />
-        <RecyclingServiceAccordion />
+        <RecyclingServiceAccordion
+          title="Lorem ipsum"
+          description="Lorem ipsum something something"
+          content="Lorem ipsum x 100"
+        />
+        <RecyclingServiceAccordion
+          title="Lorem ipsum but different"
+          description="Lorem ipsum but different something something"
+          content="Lorem ipsum but different x 100"
+        />
+        <RecyclingServiceAccordion
+          title="Lorem ipsum the third"
+          description="Lorem ipsum the third something something"
+          content="Lorem ipsum the third x 100"
+        />
       </main>
     </>
   )
