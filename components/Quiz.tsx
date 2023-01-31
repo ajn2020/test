@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 
+type QiuzOption = {
+    id: string;
+    value: string;
+    content: string;
+    followUpQuestion: any;
+    options: any; 
+}
+
 const questions = [
     {
       id: 1,
@@ -188,7 +196,7 @@ const questions = [
   export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option: QiuzOption) => {
     if (option.options.length === 0) {
         // End the quiz
         return;
