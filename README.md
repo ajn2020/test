@@ -28,6 +28,8 @@ Every other time, run without --build:
 ssudo docker compose up
 ```
 
+Open http://localhost:5000 with your browser to see the result.
+
 ## Run app normally
 
 First, run the development server:
