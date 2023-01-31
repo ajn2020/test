@@ -63,15 +63,15 @@ class Index extends Component {
           <div className={styles.midContainer}>
             <div className={styles.slideContainer}>
               <Carousel autoplay>
-                <div className={styles.slideContent} onClick={() => {gotoNews("https://www.google.com")}}>
+                <div className={styles.slideContent} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image src="/news1.png" width={1000} height={350} alt="news picture"/>
                   <div className={styles.slideTitle}>G7: Agree to 'price cap' Russia warns: Cut supply from February 1st</div>
                 </div>
-                <div className={styles.slideContent} onClick={() => {gotoNews("https://www.google.com")}}>
+                <div className={styles.slideContent} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image src="/news2.png" width={1000} height={350} alt="news picture"/>
                   <div className={styles.slideTitle}>Seize the long window</div>
                 </div>
-                <div className={styles.slideContent} onClick={() => {gotoNews("https://www.google.com")}}>
+                <div className={styles.slideContent} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image src="/news3.png" width={1000} height={350} alt="news picture"/>
                   <div className={styles.slideTitle}>South Korean expert meeting condemns Japan for dumping pollution into Sea: Not 'dumping' but 'discarding'</div>
                 </div>
@@ -79,37 +79,37 @@ class Index extends Component {
             </div>
           </div>
           <div className={styles.midRightContents}>
-              <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 <div className={styles.nDot}>.</div>
                 <div className={styles.nText}>
                   NATO's top military officer says it is prepared for direct confrontation with Russia. Ukraine has requested long-range missiles
                 </div>
               </div>
-              <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 <div className={styles.nDot}>.</div>
                 <div className={styles.nText}>
                   Protests continue in Peru after Congress rejected the president's proposal for early elections
                 </div>
               </div>
-              <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 <div className={styles.nDot}>.</div>
                 <div className={styles.nText}>
                   Will the Ukrainian army use Western intelligence information to launch further decapitation operations?
                 </div>
               </div>
-              <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 <div className={styles.nDot}>.</div>
                 <div className={styles.nText}>
                   Argentina's President: Latin American countries are not considering sending arms to Ukraine
                 </div>
               </div>
-              <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 <div className={styles.nDot}>.</div>
                 <div className={styles.nText}>
                   The widespread use of police violence reflects the intensification of social conflicts in the United States
                 </div>
               </div>
-              <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 <div className={styles.nDot}>.</div>
                 <div className={styles.nText}>
                   Bolsonaro's son says his father may not plan to return to Brazil
@@ -136,18 +136,18 @@ class Index extends Component {
             this.state.showWebsite?(
               <>
                 <div className={styles.hotWebsites}>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite}  src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite}  src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
                 </div>
                 <div className={styles.hotWebsites}>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite}  src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
-                  <Image onClick={() => {gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite}  src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
+                  <Image onClick={() => {this.gotoNews("https://www.google.com")}} className={styles.hSite} src="/news-logo.jpg" width={160} height={160} alt="site"/>
                 </div>
               </>
             ):null
@@ -166,31 +166,31 @@ class Index extends Component {
             this.state.showOther?(
               <div className={styles.otherCol}>
                 <div className={styles.colItem}>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       2023 could be the year Meta's luck changes
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       Apple industry moves to India?
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       Are Tesla's days of comfort coming to an end?
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       The red and black of high precision map: from the smart driving necessary to the car enterprise cumbersome
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       How big is Apple's AR/VR industry chain potential?
@@ -198,31 +198,31 @@ class Index extends Component {
                   </div>
                 </div>
                 <div className={styles.colItem}>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       Tesla's real worry: Did you get the tickets for the second half?
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       New energy vehicle enterprise competition intensifies differentiated technology into the key competition market
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       Returning home for the Spring Festival, we talked to the post-00s about these issues
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       Systems, machines and algorithms are cold, but people have temperature
                     </div>
                   </div>
-                  <div className={styles.rightNews} onClick={() => {gotoNews("https://www.google.com")}}>
+                  <div className={styles.rightNews} onClick={() => {this.gotoNews("https://www.google.com")}}>
                     <div className={styles.nDot}>.</div>
                     <div className={styles.nText}>
                       Google play back stab, Qualcomm, Mediatek panic
@@ -246,7 +246,7 @@ class Index extends Component {
           {
             this.state.showNews?(
               <div className={styles.currentNews}>
-                <div className={styles.newsItem} onClick={() => {gotoNews("https://www.google.com")}}>
+                <div className={styles.newsItem} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image className={styles.cImage} src="/c-1.jpg" width={234} height={132} alt="site"/>
                   <div className={styles.newsRightText}>
                     <div className={styles.newsRightTitle}>
@@ -259,7 +259,7 @@ class Index extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={styles.newsItem} onClick={() => {gotoNews("https://www.sohu.com/a/635390357_162522?scm=1102.xchannel:1649:110036.0.1.0~9110.8000.0.0.6634&spm=smpc.channel_114.block3_77_O0F7zf_1_fd.28.1675009296343sb2SYJ9_1524")}}>
+                <div className={styles.newsItem} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image className={styles.cImage} src="/c-2.jpg" width={234} height={132} alt="site"/>
                   <div className={styles.newsRightText}>
                     <div className={styles.newsRightTitle}>
@@ -270,7 +270,7 @@ class Index extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={styles.newsItem} onClick={() => {gotoNews("https://www.sohu.com/a/635385164_115362?scm=1102.xchannel:1649:110036.0.1.0~9110.8000.0.0.6634&spm=smpc.channel_114.block3_77_O0F7zf_1_fd.33.1675009296343sb2SYJ9_1524")}}>
+                <div className={styles.newsItem} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image className={styles.cImage} src="/c-3.jpg" width={234} height={132} alt="site"/>
                   <div className={styles.newsRightText}>
                     <div className={styles.newsRightTitle}>
@@ -281,7 +281,7 @@ class Index extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={styles.newsItem} onClick={() => {gotoNews("https://www.sohu.com/a/635383322_632178?scm=1102.xchannel:1649:110036.0.1.0~9110.8000.0.0.6634&spm=smpc.channel_114.block3_77_O0F7zf_1_fd.36.1675009296343sb2SYJ9_1524")}}>
+                <div className={styles.newsItem} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image className={styles.cImage} src="/c-4.jpg" width={234} height={132} alt="site"/>
                   <div className={styles.newsRightText}>
                     <div className={styles.newsRightTitle}>
@@ -292,7 +292,7 @@ class Index extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={styles.newsItem} onClick={() => {gotoNews("https://www.sohu.com/a/635381345_162522?scm=1102.xchannel:1649:110036.0.1.0~9110.8000.0.0.6634&spm=smpc.channel_114.block3_77_O0F7zf_1_fd.43.1675009296343sb2SYJ9_1524")}}>
+                <div className={styles.newsItem} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image className={styles.cImage} src="/c-5.jpg" width={234} height={132} alt="site"/>
                   <div className={styles.newsRightText}>
                     <div className={styles.newsRightTitle}>
@@ -303,7 +303,7 @@ class Index extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={styles.newsItem} onClick={() => {gotoNews("https://www.sohu.com/a/635377053_494439?scm=1102.xchannel:1649:110036.0.1.0~9110.8000.0.0.6634&spm=smpc.channel_114.block3_77_O0F7zf_1_fd.57.1675009296343sb2SYJ9_1524")}}>
+                <div className={styles.newsItem} onClick={() => {this.gotoNews("https://www.google.com")}}>
                   <Image className={styles.cImage} src="/c-6.jpg" width={234} height={132} alt="site"/>
                   <div className={styles.newsRightText}>
                     <div className={styles.newsRightTitle}>
@@ -320,42 +320,42 @@ class Index extends Component {
           
           <div className={styles.footer}>
             <div className={styles.footerTags}>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
+                Some links or tags
+              </div>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
+                Some links or tags
+              </div>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
+                Some links or tags
+              </div>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
               <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
-                Some links or tags
-              </div>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
-                Some links or tags
-              </div>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
-                Some links or tags
-              </div>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
             </div>
             <div className={styles.footerTags}>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
+                Some links or tags
+              </div>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
               <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
               <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
-                Some links or tags
-              </div>
-              <div className={styles.tag} onClick={() => {gotoNews("https://www.google.com")}}>
+              <div className={styles.tag} onClick={() => {this.gotoNews("https://www.google.com")}}>
                 Some links or tags
               </div>
             </div>
