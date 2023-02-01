@@ -83,12 +83,13 @@
 
 .accordion {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     padding: 10px 20px;
 }
 
 .accordion-title {
     color: black;
+    padding: 0px 0px 10px 0px;
 }
 
 .accordion-description {
