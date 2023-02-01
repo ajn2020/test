@@ -43,6 +43,7 @@
   .accordion-grid-item {
     padding: 10px;
     text-align: center;
+    height: 100%;
   }
 
 /*========================================
@@ -50,12 +51,17 @@
 ========================================*/
 
 .accordion-wrapper {
+    display: grid;
+    grid-template-rows: 1fr auto;
     background-color: #AF63BB;
     border-style: solid;
     border-width: 3px;
+    height: 100%;
 }
 
 .accordion {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     padding: 10px 20px;
 }
 
