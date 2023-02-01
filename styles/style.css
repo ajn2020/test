@@ -1,4 +1,14 @@
 /*========================================
+    PAGE CONTENT
+========================================*/
+
+.page-content {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/*========================================
     HEADER
 ========================================*/
 
@@ -89,8 +99,6 @@
 ========================================*/
 
 .footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     background-color: #642f6c;
     color: grey;
