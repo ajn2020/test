@@ -29,6 +29,28 @@
 }
 
 /*========================================
+    SUBHEADING
+========================================*/
+
+.subheading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+    background-color: #90449C;
+}
+
+.subheading-text {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.subheading-separator {
+    width: 100%;
+    border: 2px solid black;
+}
+
+/*========================================
     ACCORDION GRID
 ========================================*/
 
