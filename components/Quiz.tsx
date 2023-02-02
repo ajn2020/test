@@ -205,6 +205,10 @@ const questions = [
     
   };
 
+  const handleReset = () => {
+    setCurrentQuestion(0);
+  };
+
   const currentQuizQuestion = questions[currentQuestion];
 
   return (
@@ -223,6 +227,7 @@ const questions = [
             </button>
         ))}
         </div>
+        <button onClick={handleReset}>Restart</button>
       </div>  
     </div>
   );
