@@ -116,6 +116,9 @@
     border-width: 2px 0px 0px 0px;
     background-color: inherit;
     cursor: pointer;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid none none none;
 }
 
 .accordion-button:hover {
