@@ -1,6 +1,6 @@
 import AccordionGrid from '@/components/AccordionGrid'
 import Subheading from '@/components/Subheading'
-import Quiz from '@/components/Quiz'
+import DecisionTree from '@/components/DecisionTree'
 import Head from 'next/head'
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Quiz/>
+      <DecisionTree/>
       <Subheading
         title="Recycling Services Available"
       />

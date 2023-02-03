@@ -69,9 +69,9 @@
   }
   
 /*======================================
-    QUIZ
+    DECISION TREE
 ========================================*/
-.quiz-wrapper {
+.decision-tree-wrapper {
     background-color: white;
     border-style: solid;
     border-width: 3px;
@@ -79,18 +79,18 @@
     text-align: center;
 }
 
-.qiuz-title {
+.decision-tree-title {
     color: black;
     text-align: center;
 }
 
-.quiz {
+.decision-tree {
     color: black;
     padding: 20px 20px;;
     text-align: center;
 }
 
-.quiz-option {
+.decision-tree-option {
     width: 20%;
     margin: 10px 10px;
     padding: 20px 20px;
