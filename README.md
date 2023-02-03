@@ -28,7 +28,7 @@ Every other time, run without --build:
 sudo docker compose up
 ```
 
-Open http://localhost:5000 with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
 ## Run app normally
 
