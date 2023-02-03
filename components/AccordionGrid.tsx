@@ -68,15 +68,15 @@ export default function AccordionGrid() {
       </div>
       <div className='accordion-grid-item'>
       <RecyclingServiceAccordion
-          title="Hounslow Furniture Recycling Project"
-          description="The Hounslow Furniture Recycling Project is dedicated to redistributing reusable furniture and electrical household appliances to those who may otherwise struggle to afford such items."
+          title="Clinical Waste Collection Service"
+          description="The Clinical Waste Collection Service can be used to collect waste that is considered as hazardous and can be infectious to others."
           content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et pretium orci. Aliquam nec maximus felis, nec fringilla augue. In turpis lorem, tincidunt eget mi non, lobortis condimentum turpis. Pellentesque fermentum lorem et enim vulputate varius. Nam sit amet convallis orci. Etiam lorem turpis, dignissim id sapien at, sodales finibus arcu. Curabitur auctor vehicula turpis, ac mollis neque maximus eu. Integer blandit placerat pellentesque. Nullam auctor lorem nec ante finibus venenatis. Morbi quis felis velit. Curabitur id felis ultrices, auctor mi in, viverra enim. Quisque iaculis tellus quis velit blandit consequat. Quisque in congue neque, eget lacinia elit. Cras malesuada maximus varius. Curabitur eget maximus nibh. Ut a eleifend velit, sed tempor est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vel sem sagittis, volutpat elit sit amet, malesuada erat."
         />
       </div>
       <div className='accordion-grid-item'>
       <RecyclingServiceAccordion
-          title="Clinical Waste Collection Service"
-          description="The Clinical Waste Collection Service can be used to collect waste that is considered as hazardous and can be infectious to others."
+          title="Hounslow Furniture Recycling Project"
+          description="The Hounslow Furniture Recycling Project is dedicated to redistributing reusable furniture and electrical household appliances to those who may otherwise struggle to afford such items."
           content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et pretium orci. Aliquam nec maximus felis, nec fringilla augue. In turpis lorem, tincidunt eget mi non, lobortis condimentum turpis. Pellentesque fermentum lorem et enim vulputate varius. Nam sit amet convallis orci. Etiam lorem turpis, dignissim id sapien at, sodales finibus arcu. Curabitur auctor vehicula turpis, ac mollis neque maximus eu. Integer blandit placerat pellentesque. Nullam auctor lorem nec ante finibus venenatis. Morbi quis felis velit. Curabitur id felis ultrices, auctor mi in, viverra enim. Quisque iaculis tellus quis velit blandit consequat. Quisque in congue neque, eget lacinia elit. Cras malesuada maximus varius. Curabitur eget maximus nibh. Ut a eleifend velit, sed tempor est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vel sem sagittis, volutpat elit sit amet, malesuada erat."
         />
       </div>

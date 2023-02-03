@@ -50,24 +50,6 @@
     border: 2px solid black;
 }
 
-/*========================================
-    ACCORDION GRID
-========================================*/
-
-.accordion-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 20px;
-  }
-
-  .accordion-grid-item {
-    padding: 10px;
-    text-align: center;
-    height: 100%;
-  }
-  
 /*======================================
     DECISION TREE
 ========================================*/
@@ -98,6 +80,24 @@
     background-color: #c29ec7;
     cursor: pointer;
 }
+
+/*========================================
+    ACCORDION GRID
+========================================*/
+
+.accordion-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+  }
+
+  .accordion-grid-item {
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+  }
 
 /*========================================
     ACCORDION
