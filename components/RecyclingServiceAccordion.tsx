@@ -1,5 +1,6 @@
+import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 import { useState } from 'react'
-
+import picDress from "./pictureAddress";
 type RecyclingServiceProps = {
     title: string;
     description: string;
@@ -7,10 +8,16 @@ type RecyclingServiceProps = {
 }
 
 export default function RecyclingServiceAccordion(props: RecyclingServiceProps) {
+const {PictureAddress,topAddress}=picDress;
     const [isOpen, setOpen] = useState(false);
-
+    const [accordionButton,SetAccordionButton]=useState('accordion-button')
     const handleClick = () => {
-        setOpen(!isOpen)
+        setOpen(!isOpen);
+        if(accordionButton==="accordion-button"){
+            SetAccordionButton("accordion-button accordion-button-active");
+        }else{
+            SetAccordionButton("accordion-button");
+        }
     }
 
     return (
@@ -26,8 +33,9 @@ export default function RecyclingServiceAccordion(props: RecyclingServiceProps) 
                     <br />
                     <p>{props.content}</p>
                 </div>
-            </div>        
-            <button className="accordion-button" type="button" onClick={handleClick}>{isOpen? "Collapse" : "Expand"}</button>
+            </div>  
+            {/* "Expand"       */}
+            <button className={accordionButton} type="button" onClick={handleClick}>{isOpen? <img src={topAddress}/>: <img className='' src={PictureAddress}/>}</button>
         </div>
     )
 }
