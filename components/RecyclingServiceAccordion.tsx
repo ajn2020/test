@@ -9,10 +9,6 @@ type RecyclingServiceProps = {
 export default function RecyclingServiceAccordion(props: RecyclingServiceProps) {
     const [isOpen, setOpen] = useState(false);
 
-    const handleClick = () => {
-        setOpen(!isOpen)
-    }
-
     return (
         <div className="accordion-wrapper">
             <div className="accordion">
@@ -27,7 +23,7 @@ export default function RecyclingServiceAccordion(props: RecyclingServiceProps) 
                     <p>{props.content}</p>
                 </div>
             </div>        
-            <button className="accordion-button" type="button" onClick={handleClick}>{isOpen? "Collapse" : "Expand"}</button>
+            <button className="accordion-button" type="button" onClick={() => setOpen(!isOpen)}>{isOpen? "Collapse" : "Expand"}</button>
         </div>
     )
 }
