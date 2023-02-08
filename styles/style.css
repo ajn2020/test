@@ -147,10 +147,10 @@
 }
 
 /*========================================
-    ACCORDION GRID
+    RECYCLING SERVICE ACCORDION GRID
 ========================================*/
 
-.accordion-grid {
+.recycling-service-accordion-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
@@ -158,10 +158,10 @@
   }
 
 /*========================================
-    ACCORDION
+    RECYCLING SERVICE ACCORDION
 ========================================*/
 
-.accordion-wrapper {
+.recycling-service-accordion-wrapper {
     display: grid;
     grid-template-rows: 1fr auto;
     background-color: #AF63BB;
@@ -170,37 +170,37 @@
     height: 100%;
 }
 
-.accordion {
+.recycling-service-accordion {
     display: grid;
     grid-template-rows: auto 1fr;
     padding: 10px 20px;
     text-align: center;
 }
 
-.accordion-title {
+.recycling-service-accordion-title {
     color: black;
     padding: 0px 0px 10px 0px;
 }
 
-.accordion-description {
+.recycling-service-accordion-description {
     color: black;
 }
 
-.accordion-content-hidden {
+.recycling-service-accordion-content-hidden {
     color: black;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
 
-.accordion-content-displayed {
+.recycling-service-accordion-content-displayed {
     color: black;
     max-height: 1000px;
     overflow: hidden;
     transition: max-height 0.2s ease-in;
 }
 
-.accordion-button {
+.recycling-service-accordion-button {
     width: 100%;
     padding: 5px;
     border-width: 2px 0px 0px 0px;
@@ -211,7 +211,7 @@
     border-style: solid none none none;
 }
 
-.accordion-button:hover {
+.recycling-service-accordion-button:hover {
     filter: brightness(80%);
 }
 
