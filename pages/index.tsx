@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import DecisionTree from '@/components/DecisionTree'
 import Subheading from '@/components/Subheading'
-import CardGrid from '@/components/CardGrid'
+import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
 import AccordionGrid from '@/components/AccordionGrid'
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <DecisionTree />
 
       <Subheading title="How to recycle..." />
-      <CardGrid />
+      <ItemTypeCardGrid />
 
       <Subheading title="Recycling Services Available" />
       <AccordionGrid />

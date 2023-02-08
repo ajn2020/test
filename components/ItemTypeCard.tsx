@@ -1,23 +1,23 @@
 import { useState } from 'react'
 
-type ItemCategoryProps = {
+type ItemTypeCardProps = {
     frontTitle: string;
     frontImage: string;
     backTitle: string;
     backImage: string;
 }
 
-export default function ItemCategoryCard(props: ItemCategoryProps) {
+export default function ItemTypeCard(props: ItemTypeCardProps) {
     const [isFlipped, setFlipped] = useState(false);
 
     return (
-        <div className="card-container" onClick={() => setFlipped(!isFlipped)}>
-          <div className={`card ${isFlipped ? 'card-flipped' : ''}`}>
-            <div className="card-front">
+        <div className="item-type-card-container" onClick={() => setFlipped(!isFlipped)}>
+          <div className={`item-type-card ${isFlipped ? 'item-type-card-flipped' : ''}`}>
+            <div className="item-type-card-front">
               <h2>{props.frontTitle}</h2>
               <img src={props.frontImage} />
             </div>
-            <div className="card-back">
+            <div className="item-type-card-back">
               <h3>{props.backTitle}</h3>
               <img src={props.backImage} />
             </div>

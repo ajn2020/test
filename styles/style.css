@@ -82,22 +82,22 @@
 }
 
 /*========================================
-    CARD GRID
+    ITEM TYPE CARD GRID
 ========================================*/
 
-.card-grid {
+.item-type-card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 20px;
     grid-gap: 20px;
     justify-items: center;
-  }
+}
 
 /*========================================
-    CARD
+    ITEM TYPE CARD
 ========================================*/
 
-.card-container {
+.item-type-card-container {
     width: 100%;
     min-width: 200px;
     height: 200px;
@@ -105,11 +105,11 @@
     cursor: pointer;
 }
 
-.card-container:hover {
+.item-type-card-container:hover {
     filter: brightness(80%);
 }
 
-.card {
+.item-type-card {
     border-style: solid;
     border-width: 3px;
     width: 100%;
@@ -119,11 +119,11 @@
     transition: all 0.5s ease;
 }
 
-.card-flipped {
+.item-type-card-flipped {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.item-type-card-front, .item-type-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -136,12 +136,12 @@
     backface-visibility: hidden;
 }
 
-.card-front {
+.item-type-card-front {
     background: #AF63BB;
     transform: rotateY(0deg);
 }
 
-.card-back {
+.item-type-card-back {
     background: #c29ec7;
     transform: rotateY(180deg);
 }
