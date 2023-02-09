@@ -19,8 +19,14 @@ export default function Home() {
 
       <DecisionTree />
 
-      <Subheading title="Events" />
-      <EventCardCarousel events={events} />
+      {
+        events.length > 0 ? (
+          <>
+            <Subheading title="Events" />
+            <EventCardCarousel events={events} />
+          </>
+        ) : ''
+      }
 
       <Subheading title="How to recycle..." />
       <ItemTypeCardGrid />
