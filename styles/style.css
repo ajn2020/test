@@ -124,7 +124,7 @@
     overflow: hidden;
 }
 .accordion-wrapper:hover{
-    background-color: bisque;
+    background-color: #9ef77e;
 }
 .accordion {
     display: grid;
