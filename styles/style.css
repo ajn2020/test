@@ -82,6 +82,52 @@
 }
 
 /*========================================
+    EVENT CARD CAROUSEL
+========================================*/
+
+.event-card-carousel {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    padding: 20px;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.event-card-carousel-button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-card-carousel-button {
+    height: 50px;
+    width: 75px;
+}
+
+/*========================================
+    EVENT CARD
+========================================*/
+
+.event-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    border-style: solid;
+    border-width: 3px;
+    background-color: #AF63BB;
+}
+
+.event-card-image-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-card-content {
+    padding: 10px;
+}
+
+/*========================================
     ITEM TYPE CARD GRID
 ========================================*/
 
