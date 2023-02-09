@@ -1,4 +1,4 @@
-type EventCardProps = {
+export type EventCardProps = {
     image: string;
     title: string;
     date: string;

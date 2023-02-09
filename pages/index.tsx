@@ -4,6 +4,7 @@ import Subheading from '@/components/Subheading'
 import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
 import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
 import EventCardCarousel from '@/components/EventCardCarousel'
+import events from '@/data/Events'
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <DecisionTree />
 
       <Subheading title="Events" />
-      <EventCardCarousel />
+      <EventCardCarousel events={events} />
 
       <Subheading title="How to recycle..." />
       <ItemTypeCardGrid />
