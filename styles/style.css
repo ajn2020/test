@@ -85,12 +85,18 @@
     EVENT CARD CAROUSEL
 ========================================*/
 
-.event-card-carousel {
+.event-card-carousel-container {
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr auto;
+    grid-template-columns: auto 1fr auto;
     padding: 20px;
     grid-gap: 20px;
     justify-items: center;
+}
+
+.event-card-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
 }
 
 .event-card-carousel-button-div {
