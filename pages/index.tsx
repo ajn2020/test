@@ -18,6 +18,7 @@ export default function Home() {
 
       <DecisionTree />
 
+      <Subheading title="Events" />
       <EventCardCarousel />
 
       <Subheading title="How to recycle..." />
