@@ -82,22 +82,74 @@
 }
 
 /*========================================
-    CARD GRID
+    EVENT CARD CAROUSEL
 ========================================*/
 
-.card-grid {
+.event-card-carousel-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 20px;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.event-card-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.event-card-carousel-button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-card-carousel-button {
+    height: 50px;
+    width: 75px;
+}
+
+/*========================================
+    EVENT CARD
+========================================*/
+
+.event-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    border-style: solid;
+    border-width: 3px;
+    background-color: #AF63BB;
+}
+
+.event-card-image-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-card-content {
+    padding: 10px;
+}
+
+/*========================================
+    ITEM TYPE CARD GRID
+========================================*/
+
+.item-type-card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 20px;
     grid-gap: 20px;
     justify-items: center;
-  }
+}
 
 /*========================================
-    CARD
+    ITEM TYPE CARD
 ========================================*/
 
-.card-container {
+.item-type-card-container {
     width: 100%;
     min-width: 200px;
     height: 200px;
@@ -105,11 +157,11 @@
     cursor: pointer;
 }
 
-.card-container:hover {
+.item-type-card-container:hover {
     filter: brightness(80%);
 }
 
-.card {
+.item-type-card {
     border-style: solid;
     border-width: 3px;
     width: 100%;
@@ -119,11 +171,11 @@
     transition: all 0.5s ease;
 }
 
-.card-flipped {
+.item-type-card-flipped {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.item-type-card-front, .item-type-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -136,21 +188,21 @@
     backface-visibility: hidden;
 }
 
-.card-front {
+.item-type-card-front {
     background: #AF63BB;
     transform: rotateY(0deg);
 }
 
-.card-back {
+.item-type-card-back {
     background: #c29ec7;
     transform: rotateY(180deg);
 }
 
 /*========================================
-    ACCORDION GRID
+    RECYCLING SERVICE ACCORDION GRID
 ========================================*/
 
-.accordion-grid {
+.recycling-service-accordion-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
@@ -158,10 +210,10 @@
   }
 
 /*========================================
-    ACCORDION
+    RECYCLING SERVICE ACCORDION
 ========================================*/
 
-.accordion-wrapper {
+.recycling-service-accordion-wrapper {
     display: grid;
     grid-template-rows: 1fr auto;
     background-color: #AF63BB;
@@ -170,37 +222,37 @@
     height: 100%;
 }
 
-.accordion {
+.recycling-service-accordion {
     display: grid;
     grid-template-rows: auto 1fr;
     padding: 10px 20px;
     text-align: center;
 }
 
-.accordion-title {
+.recycling-service-accordion-title {
     color: black;
     padding: 0px 0px 10px 0px;
 }
 
-.accordion-description {
+.recycling-service-accordion-description {
     color: black;
 }
 
-.accordion-content-hidden {
+.recycling-service-accordion-content-hidden {
     color: black;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
 
-.accordion-content-displayed {
+.recycling-service-accordion-content-displayed {
     color: black;
     max-height: 1000px;
     overflow: hidden;
     transition: max-height 0.2s ease-in;
 }
 
-.accordion-button {
+.recycling-service-accordion-button {
     width: 100%;
     padding: 5px;
     border-width: 2px 0px 0px 0px;
@@ -211,7 +263,7 @@
     border-style: solid none none none;
 }
 
-.accordion-button:hover {
+.recycling-service-accordion-button:hover {
     filter: brightness(80%);
 }
 
