@@ -19,6 +19,7 @@ export default React.forwardRef((props: RecyclingServiceProps, ref: Ref<HTMLDivE
                 <p>{props.description}</p>
             </div>
             <div className={props.isOpen ? "accordion-content-displayed" : "accordion-content-hidden"}>
+                <br />
                 <p>{props.content}</p>
             </div>
         </div>
