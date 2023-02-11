@@ -212,6 +212,10 @@ a:hover {
     transform: rotateY(180deg);
 }
 
+.item-type-card-image {
+    height: 75px;
+}
+
 /*========================================
     RECYCLING SERVICE ACCORDION GRID
 ========================================*/
