@@ -111,6 +111,7 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    width: 100%;
 }
 
 .event-card-carousel-button-div {
@@ -128,23 +129,58 @@ a:hover {
     EVENT CARD
 ========================================*/
 
-.event-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.event-card-container {
     width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.event-card-container:hover {
+    filter: brightness(80%);
+}
+
+.event-card {
     border-style: solid;
     border-width: 3px;
-    background-color: #AF63BB;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
 }
 
-.event-card-image-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.event-card-flipped {
+    transform: rotateY(180deg);
 }
 
-.event-card-content {
+.event-card-front, .event-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     padding: 10px;
+    place-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.event-card-front {
+    background: #AF63BB;
+    transform: rotateY(0deg);
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.event-card-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+.event-card-back {
+    background: #c29ec7;
+    transform: rotateY(180deg);
+    display: grid;
+    overflow: auto;
 }
 
 /*========================================
