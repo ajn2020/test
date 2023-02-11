@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import EventCard from "./EventCard";
-import { EventCardProps } from "./EventCard";
+import EventCard, { EventCardProps } from "./EventCard";
 import { v4 as uuidv4 } from 'uuid';
 
 type EventCardCarouselProps = {
