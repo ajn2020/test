@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-type RecyclingServiceAccordionProps = {
+export type RecyclingServiceAccordionProps = {
     title: string;
     description: string;
     content: string;
