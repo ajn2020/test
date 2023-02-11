@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import RecyclingServiceAccordion, { RecyclingServiceAccordionProps } from '@/components/RecyclingServiceAccordion'
 
 type RecyclingServiceAccordionGridProps = {
@@ -8,7 +9,7 @@ export default function RecyclingServiceAccordionGrid(props: RecyclingServiceAcc
   return (
     <div className='recycling-service-accordion-grid'>
       {props.recyclingServices.map(recyclingService => (
-          <RecyclingServiceAccordion title={recyclingService.title} description={recyclingService.description} content={recyclingService.content} />
+          <RecyclingServiceAccordion key={uuidv4()} title={recyclingService.title} description={recyclingService.description} content={recyclingService.content} />
         ))}
     </div>
   )
