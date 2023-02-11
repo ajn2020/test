@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import DecisionTree from '@/components/DecisionTree'
 import Subheading from '@/components/Subheading'
-import CardGrid from '@/components/CardGrid'
-import AccordionGrid from '@/components/AccordionGrid'
+import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
+import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
+import EventCardCarousel from '@/components/EventCardCarousel'
+import events from '@/data/Events'
 
 export default function Home() {
   return (
@@ -17,11 +19,20 @@ export default function Home() {
 
       <DecisionTree />
 
+      {
+        events.length > 0 ? (
+          <>
+            <Subheading title="Events" />
+            <EventCardCarousel events={events} />
+          </>
+        ) : ''
+      }
+
       <Subheading title="How to recycle..." />
-      <CardGrid />
+      <ItemTypeCardGrid />
 
       <Subheading title="Recycling Services Available" />
-      <AccordionGrid />
+      <RecyclingServiceAccordionGrid />
     </>
   )
 }

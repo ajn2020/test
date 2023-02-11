@@ -1,8 +1,8 @@
 import RecyclingServiceAccordion from '@/components/RecyclingServiceAccordion'
 
-export default function AccordionGrid() {
+export default function RecyclingServiceAccordionGrid() {
   return (
-    <div className='accordion-grid'>
+    <div className='recycling-service-accordion-grid'>
       <RecyclingServiceAccordion
         title="Red Recycling Box"
         description="The red recycling box is used to recycle plastic and metal cans."
