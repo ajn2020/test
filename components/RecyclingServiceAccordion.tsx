@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown'
 import { useState } from 'react'
 
 export type RecyclingServiceAccordionProps = {
@@ -20,7 +21,7 @@ export default function RecyclingServiceAccordion(props: RecyclingServiceAccordi
                 </div>
                 <div className={isOpen? "recycling-service-accordion-content-displayed" : "recycling-service-accordion-content-hidden"}>                    
                     <br />
-                    <p>{props.content}</p>
+                    <ReactMarkdown>{props.content}</ReactMarkdown>
                 </div>
             </div>        
             <button className="recycling-service-accordion-button" type="button" onClick={() => setOpen(!isOpen)}>{isOpen? "Collapse" : "Expand"}</button>
