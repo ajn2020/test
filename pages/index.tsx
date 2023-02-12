@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import DecisionTree from '@/components/DecisionTree'
 import Subheading from '@/components/Subheading'
+import EngagingBox from '@/components/EngagingBox'
 import EventCardCarousel from '@/components/EventCardCarousel'
 import events from '@/data/Events'
 import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
@@ -18,6 +19,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <EngagingBox />
+
+      <Subheading title="Find out how to recycle your item" />
       <DecisionTree />
 
       {

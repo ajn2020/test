@@ -66,6 +66,65 @@ a:hover {
 }
 
 /*======================================
+    ENGAGING BOX
+========================================*/
+.engaging-box-wrapper {
+    background-color: #e0d3e2;
+    border-style: ridge;
+    border-color: black;
+    border-width: 3px;
+    margin: 20px 100px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+/*======================================
+    QUESTION BOX
+========================================*/
+.question-box {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.question-box-answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    width: fit-content;
+}
+
+.answer-button {
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.answer-button.border-correct {
+    border-color: green;
+    border-width: 5px 5px 5px 5px;
+}
+  
+.answer-button.border-incorrect {
+    border-color: red;
+    border-width: 5px 5px 5px 5px;
+}
+
+.answer-button.correct {
+    background-color: green;
+    border-width: 2px 2px 2px 2px;
+}
+  
+.answer-button.incorrect {
+    background-color: red;
+    border-width: 2px 2px 2px 2px;
+}
+
+/*======================================
     DECISION TREE
 ========================================*/
 
