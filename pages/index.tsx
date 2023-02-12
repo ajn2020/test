@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <EngagingBox/>
+      <EngagingBox />
 
       <Subheading title="Find out how to recycle your item" />
       <DecisionTree />
