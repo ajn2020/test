@@ -19,6 +19,7 @@ export default function Fact() {
       <div>
         <h3>{currentFact?.title}</h3>
       </div>
+      <br />
       {typeof currentFact?.content === 'string' && (
         <div>
           <ReactMarkdown>
