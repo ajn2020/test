@@ -1,17 +1,25 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import {quizQuestions} from '@/data/Quiz'
 
-export type Option = {
+type QuizQuestion = {
+  question: string,
+  answers: Array<Option>
+}
+
+type Option = {
   answer: string;
   correct: boolean;
 }
 
 export default function Question() {
-  // Choose at random question from the list of quiz questions
-  const randQuestionIndex = Math.floor(Math.random() * quizQuestions.length);
-  const currentQuestion = quizQuestions[randQuestionIndex];
+  const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>();
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+
+  useEffect(() => {
+    setCurrentQuestion(quizQuestions[Math.floor(Math.random() * quizQuestions.length)]);
+    console.log(currentQuestion)
+  }, [])
 
   const handleAnswerClick = (selectedOption: Option) => {
     setIsAnswered(true)
@@ -27,11 +35,10 @@ export default function Question() {
 
   return (
     <div className="quiz">
-      <h2>{currentQuestion.question}</h2>
+      <h2>{currentQuestion?.question}</h2>
       <div className="options">
-        {currentQuestion.answers.map((option) => (
-          <button style={style} onClick={() => handleAnswerClick(option)}
-          >
+        {currentQuestion?.answers.map((option) => (
+          <button style={style} onClick={() => handleAnswerClick(option)}>
             {option.answer}
           </button>
         ))}
