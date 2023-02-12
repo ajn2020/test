@@ -1,3 +1,9 @@
+export type RecyclingServices = {
+    title: string,
+    description: string,
+    content: string
+}
+
 export default [
     {
         title: "Red Recycling Box",
