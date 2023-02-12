@@ -1,3 +1,10 @@
+export type Events = {
+    image: string,
+    title: string,
+    date: string,
+    description: string
+}
+
 // Images need to be 500px tall and 1000px wide!
 export default [
     {

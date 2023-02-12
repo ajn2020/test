@@ -52,6 +52,7 @@ a:hover {
     align-items: center;
     margin: 10px 0px;
     background-color: #90449C;
+    margin-bottom:50px;
 }
 
 .subheading-text {
@@ -67,6 +68,7 @@ a:hover {
 /*======================================
     DECISION TREE
 ========================================*/
+
 .decision-tree-wrapper {
     background-color: white;
     border-style: solid;
@@ -261,7 +263,13 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     padding: 20px;
     grid-gap: 20px;
-  }
+}
+
+.recycling-service-accordion-grid-col {
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content;
+    grid-gap: 20px;
+}
 
 /*========================================
     RECYCLING SERVICE ACCORDION
@@ -270,10 +278,15 @@ a:hover {
 .recycling-service-accordion-wrapper {
     display: grid;
     grid-template-rows: 1fr auto;
-    background-color: #AF63BB;
+    background-color: #fff;
     border-style: solid;
     border-width: 3px;
-    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.recycling-service-accordion-wrapper:hover{
+    background-color: #AF63BB;
 }
 
 .recycling-service-accordion {
@@ -286,6 +299,7 @@ a:hover {
 .recycling-service-accordion-title {
     color: black;
     padding: 0px 0px 10px 0px;
+    font-size: 20px;
 }
 
 .recycling-service-accordion-description {
@@ -302,23 +316,7 @@ a:hover {
 .recycling-service-accordion-content-displayed {
     color: black;
     max-height: 1000px;
-    overflow: hidden;
     transition: max-height 0.2s ease-in;
-}
-
-.recycling-service-accordion-button {
-    width: 100%;
-    padding: 5px;
-    border-width: 2px 0px 0px 0px;
-    background-color: inherit;
-    cursor: pointer;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid none none none;
-}
-
-.recycling-service-accordion-button:hover {
-    filter: brightness(80%);
 }
 
 /*========================================
