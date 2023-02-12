@@ -51,6 +51,23 @@
 }
 
 /*======================================
+    QUIZ
+========================================*/
+.answer-button {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .answer-button.correct {
+    background-color: green;
+  }
+  
+  .answer-button.incorrect {
+    background-color: red;
+  }
+
+/*======================================
     DECISION TREE
 ========================================*/
 .decision-tree-wrapper {

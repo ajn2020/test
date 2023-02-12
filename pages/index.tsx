@@ -5,6 +5,7 @@ import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
 import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
 import EventCardCarousel from '@/components/EventCardCarousel'
 import events from '@/data/Events'
+import EngagingBox from '@/components/EngagingBox'
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <EngagingBox/>
 
       <DecisionTree />
 
