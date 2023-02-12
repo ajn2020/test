@@ -17,7 +17,6 @@ type Option = {
 
   useEffect(() => {
     setCurrentQuestion(quizQuestions[Math.floor(Math.random() * quizQuestions.length)]);
-    console.log(currentQuestion)
   }, [])
 
   const handleAnswerClick = (selectedOption: Option) => {
@@ -50,7 +49,6 @@ export default function Question() {
 
   useEffect(() => {
     setCurrentQuestion(quizQuestions[Math.floor(Math.random() * quizQuestions.length)]);
-    console.log(currentQuestion)
   }, [])
 
   const handleAnswerClick = (selectedOption: Option) => {
@@ -58,9 +56,9 @@ export default function Question() {
   }
 
   return (
-    <div>
+    <div className='question-box'>
       <h3>{currentQuestion?.question}</h3>
-      <div>
+      <div className='question-box-answers'>
         {currentQuestion?.answers.map((option) => (
           <button key={currentQuestion?.answers.indexOf(option)}
             className={`answer-button ${isAnswerSelected
