@@ -11,10 +11,9 @@ type Option = {
   correct: boolean;
 }
 
-export default function Question() {
+/*export default function Question() {
   const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>();
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number>();
 
   useEffect(() => {
     setCurrentQuestion(quizQuestions[Math.floor(Math.random() * quizQuestions.length)]);
@@ -22,23 +21,54 @@ export default function Question() {
   }, [])
 
   const handleAnswerClick = (selectedOption: Option) => {
-    setIsAnswered(true)
-    setIsCorrect(selectedOption.correct);
-  };
-  
-  const style = {
-    color: "white",
-    backgroundColor: isAnswered === true && isCorrect === true ? "green" : isAnswered === true && isCorrect === false ? "red" : "",
-    padding: "10px 20px",
-    borderRadius: "5px"
+    setSelectedAnswerIndex(currentQuestion?.answers.indexOf(selectedOption));
   }
 
   return (
-    <div className="quiz">
+    <div>
       <h2>{currentQuestion?.question}</h2>
-      <div className="options">
+      <div>
         {currentQuestion?.answers.map((option) => (
-          <button style={style} onClick={() => handleAnswerClick(option)}>
+          <button key={currentQuestion?.answers.indexOf(option)}
+            className={`answer-button ${selectedAnswerIndex === currentQuestion?.answers.indexOf(option)
+              ? option.correct
+                ? "border-correct"
+                : "border-incorrect"
+              : ""}`} 
+            onClick={() => handleAnswerClick(option)}>
+            {option.answer}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}*/
+
+export default function Question() {
+  const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>();
+  const [isAnswerSelected, setAnswerSelected] = useState(false);
+
+  useEffect(() => {
+    setCurrentQuestion(quizQuestions[Math.floor(Math.random() * quizQuestions.length)]);
+    console.log(currentQuestion)
+  }, [])
+
+  const handleAnswerClick = (selectedOption: Option) => {
+    setAnswerSelected(true);
+  }
+
+  return (
+    <div>
+      <h3>{currentQuestion?.question}</h3>
+      <div>
+        {currentQuestion?.answers.map((option) => (
+          <button key={currentQuestion?.answers.indexOf(option)}
+            className={`answer-button ${isAnswerSelected
+              ? option.correct
+                ? "border-correct"
+                : "border-incorrect"
+              : ""}`} 
+            onClick={() => handleAnswerClick(option)}>
             {option.answer}
           </button>
         ))}

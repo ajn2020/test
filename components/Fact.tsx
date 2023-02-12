@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown'
 import {facts} from '@/data/Facts'
 
 type Fact = {
@@ -16,11 +17,16 @@ export default function Fact() {
   return (
     <div>
       <div>
-        <h2>{currentFact?.title}</h2>
+        <h3>{currentFact?.title}</h3>
       </div>
-      <div>
-        {currentFact?.content}
-      </div>
+      {typeof currentFact?.content === 'string' && (
+        <div>
+          <ReactMarkdown>
+            {currentFact.content}
+          </ReactMarkdown>
+        </div>
+      )}
+      
     </div>
   )
 }

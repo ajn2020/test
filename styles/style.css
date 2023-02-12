@@ -51,21 +51,49 @@
 }
 
 /*======================================
-    QUIZ
+    ENGAGING BOX
+========================================*/
+.engaging-box-wrapper {
+    background-color: #e0d3e2;
+    border-style: ridge;
+    border-color: black;
+    border-width: 3px;
+    margin: 20px 100px;
+    text-align: center;
+}
+
+/*======================================
+    QUESTION
 ========================================*/
 .answer-button {
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
+    color: black;
+    font-weight: bold;
+    width: 10%;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-width: 1px 1px 1px 1px;
+    cursor: pointer;
+}
+
+.answer-button.border-correct {
+    border-color: green;
+    border-width: 5px 5px 5px 5px;
+}
   
-  .answer-button.correct {
+.answer-button.border-incorrect {
+    border-color: red;
+    border-width: 5px 5px 5px 5px;
+}
+
+.answer-button.correct {
     background-color: green;
-  }
+    border-width: 2px 2px 2px 2px;
+}
   
-  .answer-button.incorrect {
+.answer-button.incorrect {
     background-color: red;
-  }
+    border-width: 2px 2px 2px 2px;
+}
 
 /*======================================
     DECISION TREE

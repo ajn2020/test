@@ -20,6 +20,7 @@ export default function Home() {
 
       <EngagingBox/>
 
+      <Subheading title="Find out how to recycle your item" />
       <DecisionTree />
 
       {
