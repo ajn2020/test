@@ -1,7 +1,7 @@
 export const facts = [
     {
         title: "Top tips for recycling plastic bags and wrapping:",
-        content: "* Find your nearest supermarket recycling point.\n* Make sure they are food-free and as clean as possible.\n*  Keep them all together and bring in bulk on your next supermarket trip.\n* Note down on your shopping list."
+        content: "Find your nearest supermarket recycling point.  \nMake sure they are food-free and as clean as possible.  \n Keep them all together and bring in bulk on your next supermarket trip.  \nNote down on your shopping list."
     },
     {
         title: "Why batteries cannot be recycled in the red recycling box?",
@@ -65,7 +65,7 @@ export const facts = [
     },
     {
         title: "What to do if you want to recycle disposable BBQs?",
-        content: "* To prevent fires and ensure that the BBQ has been extinguished, it should be sprayed with water.\n* The ash should be placed in a bag and put in the black wheelie bin along with the metal grill.\n* The aluminium tray can go to the red recycling box."
+        content: "To prevent fires and ensure that the BBQ has been extinguished, it should be sprayed with water.  \nThe ash should be placed in a bag and put in the black wheelie bin along with the metal grill.  \nThe aluminium tray can go to the red recycling box."
     },
     {
         title: "What happens to the collected non-recyclable household waste?",
@@ -77,7 +77,7 @@ export const facts = [
     },
     {
         title: "Any alternative ways that you can get your bulky waste recycled?",
-        content: "Visit [Space Waye](https://www.hounslow.gov.uk/info/20017/space_waye_re-use_and_recycling_centre) or your nearby household waste recycling centres.\n* Sell or donate your unwanted items via social media groups or websites like [eBay](https://www.ebay.co.uk/), [Freecycle](https://www.freecycle.org/), [Facebook Marketplace](https://www.facebook.com/marketplace) etc.\n* Use a registered waste carrier such as [Love Junk](https://www.lovejunk.com/)."
+        content: "Visit [Space Waye](https://www.hounslow.gov.uk/info/20017/space_waye_re-use_and_recycling_centre) or your nearby household waste recycling centres.  \nSell or donate your unwanted items via social media groups or websites like [eBay](https://www.ebay.co.uk/), [Freecycle](https://www.freecycle.org/), [Facebook Marketplace](https://www.facebook.com/marketplace) etc.  \nUse a registered waste carrier such as [Love Junk](https://www.lovejunk.com/)."
     },
     {
         title: "What to do if your bulky waste hasn't been collected on the collection day?",
@@ -101,10 +101,10 @@ export const facts = [
     },
     {
         title: "What are the current strategies to reduce waste and increase recycling in London?",
-        content: "* Collaborating with London's boroughs to assist in delivering their Reduction and Recycling Plans.\n* Helping London's food companies decrease waste and save money through Foodsave.\n* Working to reduce the number of single-use plastic bottles in the city by sponsoring programmes across London to enhance access to free drinking water.\n* [Source.](https://www.london.gov.uk/programmes-strategies/environment-and-climate-change/waste-and-recycling)"
+        content: "Collaborating with London's boroughs to assist in delivering their Reduction and Recycling Plans.  \nHelping London's food companies decrease waste and save money through Foodsave.  \nWorking to reduce the number of single-use plastic bottles in the city by sponsoring programmes across London to enhance access to free drinking water.  \n[Source.](https://www.london.gov.uk/programmes-strategies/environment-and-climate-change/waste-and-recycling)"
     },
     {
         title: "What is the current state-of-the-art of recycling in the UK?",
-        content: "* Every year, British households create over 26m tonnes of waste, which is equivalent to 260 large cruise ships. This implies that the average person in the UK generates 400kg of waste per year, which is 7 times their body weight.\n* The average recycling rate is approximately 45% (i.e. 12m tonnes are recycled while the rest are sent to landfill sites).\n* [Source.](https://www.recyclingbins.co.uk/recycling-facts/)"
+        content: "Every year, British households create over 26m tonnes of waste, which is equivalent to 260 large cruise ships. This implies that the average person in the UK generates 400kg of waste per year, which is 7 times their body weight.  \nThe average recycling rate is approximately 45% (i.e. 12m tonnes are recycled while the rest are sent to landfill sites).  \n[Source.](https://www.recyclingbins.co.uk/recycling-facts/)"
     }
 ]
