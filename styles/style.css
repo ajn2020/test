@@ -278,7 +278,7 @@ a:hover {
 .recycling-service-accordion-wrapper {
     display: grid;
     grid-template-rows: 1fr auto;
-    background-color: #fff;
+    background-color: #90449C;
     border-style: solid;
     border-width: 3px;
     border-radius: 15px;
