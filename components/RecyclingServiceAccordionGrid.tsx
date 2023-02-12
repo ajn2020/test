@@ -1,5 +1,4 @@
 import { useState, useEffect, createRef } from 'react'
-import { v4 as uuidv4 } from 'uuid';
 import RecyclingServiceAccordion from '@/components/RecyclingServiceAccordion'
 import { RecyclingServices } from '@/data/RecyclingServices';
 
