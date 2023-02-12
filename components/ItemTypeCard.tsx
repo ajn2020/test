@@ -15,11 +15,11 @@ export default function ItemTypeCard(props: ItemTypeCardProps) {
           <div className={`item-type-card ${isFlipped ? 'item-type-card-flipped' : ''}`}>
             <div className="item-type-card-front">
               <h2>{props.frontTitle}</h2>
-              <img src={props.frontImage} />
+              <img className='item-type-card-image' src={props.frontImage} />
             </div>
             <div className="item-type-card-back">
               <h3>{props.backTitle}</h3>
-              <img src={props.backImage} />
+              <img className='item-type-card-image' src={props.backImage} />
             </div>
           </div>
         </div>
