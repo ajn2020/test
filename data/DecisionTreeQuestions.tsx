@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 export const questions = [
     {
       id: 0,
@@ -174,3 +172,4 @@ export const questions = [
       options: []
     }
   ];
+  

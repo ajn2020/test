@@ -1,6 +1,7 @@
-import React, { Ref} from "react";
+import React, { useState, Ref } from "react";
+import ReactMarkdown from 'react-markdown'
 
-type RecyclingServiceProps = {
+export type RecyclingServiceAccordionProps = {
     id: string;
     title: string;
     description: string;
@@ -9,18 +10,18 @@ type RecyclingServiceProps = {
     handleClick: (id: string) => void;
 }
 
-export default React.forwardRef((props: RecyclingServiceProps, ref: Ref<HTMLDivElement>) => (
-    <div ref={ref} id={props.id} className="accordion-wrapper" onClick={() => props.handleClick(props.id)}>
-        <div className="accordion">
-            <div className="accordion-title">
+export default React.forwardRef((props: RecyclingServiceAccordionProps, ref: Ref<HTMLDivElement>) => (
+    <div ref={ref} id={props.id} className="recycling-service-accordion-wrapper" onClick={() => props.handleClick(props.id)}>
+        <div className="recycling-service-accordion">
+            <div className="recycling-service-accordion-title">
                 <h2>{props.title}</h2>
             </div>
-            <div className="accordion-description">
+            <div className="recycling-service-accordion-description">
                 <p>{props.description}</p>
             </div>
-            <div className={props.isOpen ? "accordion-content-displayed" : "accordion-content-hidden"}>
+            <div className={props.isOpen ? "recycling-service-accordion-content-displayed" : "recycling-service-accordion-content-hidden"}>
                 <br />
-                <p>{props.content}</p>
+                <ReactMarkdown>{props.content}</ReactMarkdown>
             </div>
         </div>
     </div>
