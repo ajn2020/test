@@ -1,4 +1,18 @@
 /*========================================
+    ALL LINKS
+========================================*/
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: purple;
+    text-decoration: underline;
+}
+
+/*========================================
     PAGE CONTENT
 ========================================*/
 
@@ -38,6 +52,7 @@
     align-items: center;
     margin: 10px 0px;
     background-color: #90449C;
+    margin-bottom:50px;
 }
 
 .subheading-text {
@@ -98,6 +113,7 @@
 /*======================================
     DECISION TREE
 ========================================*/
+
 .decision-tree-wrapper {
     background-color: white;
     border-style: solid;
@@ -142,6 +158,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    width: 100%;
 }
 
 .event-card-carousel-button-div {
@@ -159,23 +176,58 @@
     EVENT CARD
 ========================================*/
 
-.event-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.event-card-container {
     width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.event-card-container:hover {
+    filter: brightness(80%);
+}
+
+.event-card {
     border-style: solid;
     border-width: 3px;
-    background-color: #AF63BB;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
 }
 
-.event-card-image-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.event-card-flipped {
+    transform: rotateY(180deg);
 }
 
-.event-card-content {
+.event-card-front, .event-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     padding: 10px;
+    place-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.event-card-front {
+    background: #AF63BB;
+    transform: rotateY(0deg);
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.event-card-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+.event-card-back {
+    background: #c29ec7;
+    transform: rotateY(180deg);
+    display: grid;
+    overflow: auto;
 }
 
 /*========================================
@@ -243,6 +295,10 @@
     transform: rotateY(180deg);
 }
 
+.item-type-card-image {
+    height: 75px;
+}
+
 /*========================================
     RECYCLING SERVICE ACCORDION GRID
 ========================================*/
@@ -252,7 +308,13 @@
     grid-template-columns: 1fr 1fr;
     padding: 20px;
     grid-gap: 20px;
-  }
+}
+
+.recycling-service-accordion-grid-col {
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content;
+    grid-gap: 20px;
+}
 
 /*========================================
     RECYCLING SERVICE ACCORDION
@@ -264,7 +326,12 @@
     background-color: #AF63BB;
     border-style: solid;
     border-width: 3px;
-    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.recycling-service-accordion-wrapper:hover{
+    filter: brightness(80%);
 }
 
 .recycling-service-accordion {
@@ -277,6 +344,7 @@
 .recycling-service-accordion-title {
     color: black;
     padding: 0px 0px 10px 0px;
+    font-size: 20px;
 }
 
 .recycling-service-accordion-description {
@@ -293,23 +361,7 @@
 .recycling-service-accordion-content-displayed {
     color: black;
     max-height: 1000px;
-    overflow: hidden;
     transition: max-height 0.2s ease-in;
-}
-
-.recycling-service-accordion-button {
-    width: 100%;
-    padding: 5px;
-    border-width: 2px 0px 0px 0px;
-    background-color: inherit;
-    cursor: pointer;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid none none none;
-}
-
-.recycling-service-accordion-button:hover {
-    filter: brightness(80%);
 }
 
 /*========================================

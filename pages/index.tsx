@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import DecisionTree from '@/components/DecisionTree'
 import Subheading from '@/components/Subheading'
-import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
-import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
+import EngagingBox from '@/components/EngagingBox'
 import EventCardCarousel from '@/components/EventCardCarousel'
 import events from '@/data/Events'
-import EngagingBox from '@/components/EngagingBox'
+import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
+import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
+import recyclingServices from '@/data/RecyclingServices'
 
 export default function Home() {
   return (
@@ -35,8 +36,8 @@ export default function Home() {
       <Subheading title="How to recycle..." />
       <ItemTypeCardGrid />
 
-      <Subheading title="Recycling Services Available" />
-      <RecyclingServiceAccordionGrid />
+      <Subheading title="Recycling Services" />
+      <RecyclingServiceAccordionGrid recyclingServices={recyclingServices} />
     </>
   )
 }

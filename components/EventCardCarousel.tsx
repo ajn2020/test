@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import EventCard from "./EventCard";
-import { EventCardProps } from "./EventCard";
 import { v4 as uuidv4 } from 'uuid';
+import EventCard from "./EventCard";
+import { Events } from '@/data/Events';
 
 type EventCardCarouselProps = {
-  events: Array<EventCardProps>
+  events: Array<Events>
 }
 
 export default function EventCardCarousel(props: EventCardCarouselProps) {
