@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "paths": {
+    "/recyclingservices/{title}": {
+      "name": "/recyclingservices/{title}",
+      "lambdaFunction": "apihrhFrecyclingservices",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "read"
+        ]
+      }
+    }
+  }
+}
