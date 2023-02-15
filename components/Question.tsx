@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import {quizQuestions} from '@/data/Quiz'
+import React, { useState, useEffect } from "react";
+import { quizQuestions } from "@/data/Quiz";
 
 type QuizQuestion = {
-  question: string,
-  answers: Array<Option>
-}
+  question: string;
+  answers: Array<Option>;
+};
 
 type Option = {
   answer: string;
   correct: boolean;
-}
+};
 
 /*export default function Question() {
   const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>();
@@ -48,25 +48,31 @@ export default function Question() {
   const [isAnswerSelected, setAnswerSelected] = useState(false);
 
   useEffect(() => {
-    setCurrentQuestion(quizQuestions[Math.floor(Math.random() * quizQuestions.length)]);
-  }, [])
+    setCurrentQuestion(
+      quizQuestions[Math.floor(Math.random() * quizQuestions.length)]
+    );
+  }, []);
 
   const handleAnswerClick = (selectedOption: Option) => {
     setAnswerSelected(true);
-  }
+  };
 
   return (
-    <div className='question-box'>
+    <div className="question-box">
       <h3>{currentQuestion?.question}</h3>
-      <div className='question-box-answers'>
+      <div className="question-box-answers">
         {currentQuestion?.answers.map((option) => (
-          <button key={currentQuestion?.answers.indexOf(option)}
-            className={`answer-button ${isAnswerSelected
-              ? option.correct
-                ? "border-correct"
-                : "border-incorrect"
-              : ""}`} 
-            onClick={() => handleAnswerClick(option)}>
+          <button
+            key={currentQuestion?.answers.indexOf(option)}
+            className={`answer-button ${
+              isAnswerSelected
+                ? option.correct
+                  ? "border-correct"
+                  : "border-incorrect"
+                : ""
+            }`}
+            onClick={() => handleAnswerClick(option)}
+          >
             {option.answer}
           </button>
         ))}
