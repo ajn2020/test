@@ -1,4 +1,4 @@
-import { useState, useEffect, createRef } from "react";
+import { useState, useEffect, createRef, useRef } from "react";
 import RecyclingServiceAccordion from "@/components/RecyclingServiceAccordion";
 import { RecyclingServices } from "@/data/RecyclingServices";
 
@@ -38,6 +38,52 @@ export default function RecyclingServiceAccordionGrid(
     hounslowFurnitureRecyclingProjectRef,
   ];
 
+  const accordionsMaxHeight = useRef(0); // This is the (closed) height of the tallest accordion.
+  const previousOpenAccordionID = useRef("");
+
+  // This hook runs when an accordion is opened or closed. It updates the
+  // variable keeping track of the max height of the accordions.
+  useEffect(() => {
+    // We need to add a delay to take into account an accordion closing before
+    // we can calculate the max height.
+    const timer = setTimeout(() => {
+      // We only need to update max height if an accordion was just closed.
+      if (previousOpenAccordionID.current != "") {
+        // Find the ref for the accordion that just closed and set the min
+        // height of that accordion to 0 so that it uses it's default height.
+        // Update max height only if this default height is greater.
+        refs.forEach((ref) => {
+          if (ref.current?.id == previousOpenAccordionID.current) {
+            ref.current!.style.minHeight = "0px";
+            accordionsMaxHeight.current = Math.max(
+              accordionsMaxHeight.current,
+              ref.current?.offsetHeight
+            );
+          }
+        });
+
+        // Set the min height of the accordions to the max height.
+        refs.forEach((ref) => {
+          if (ref.current) {
+            ref.current!.style.minHeight = `${accordionsMaxHeight.current}px`;
+          }
+        });
+      }
+
+      // Update the previous open accordion ID.
+      previousOpenAccordionID.current = openAccordionID;
+    }, 200);
+
+    // Cleanup timer
+    return () => {
+      clearTimeout(timer);
+    };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openAccordionID]);
+
+  // This hook runs when the width of the browser window changes. It updates the
+  // variable keeping track of the max height of the accordions.
   useEffect(() => {
     // Set the min height of the accordions to 0, so that they use their default height.
     refs.forEach((ref) => {
@@ -46,18 +92,24 @@ export default function RecyclingServiceAccordionGrid(
       }
     });
 
-    // Find the height of the tallest accordion, ignoring the one that is open.
-    let max_height = 0;
+    // Find the height of the tallest accordion, ignoring the one that is potentially open.
+    let calculatedMaxHeight = 0;
     refs.forEach((ref) => {
       if (ref.current?.id != openAccordionID) {
-        max_height = Math.max(max_height, ref.current?.offsetHeight || 0);
+        calculatedMaxHeight = Math.max(
+          calculatedMaxHeight,
+          ref.current?.offsetHeight || 0
+        );
       }
     });
+
+    // Update max height.
+    accordionsMaxHeight.current = calculatedMaxHeight;
 
     // Set the min height of the accordions to the max height.
     refs.forEach((ref) => {
       if (ref.current) {
-        ref.current!.style.minHeight = `${max_height}px`;
+        ref.current!.style.minHeight = `${accordionsMaxHeight.current}px`;
       }
     });
 
@@ -69,6 +121,7 @@ export default function RecyclingServiceAccordionGrid(
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [windowWidth]);
 
@@ -113,25 +166,3 @@ export default function RecyclingServiceAccordionGrid(
     </div>
   );
 }
-
-// There is a known bug with the approach used to keep the accordions the same
-// height as the tallest one. To recreate this bug, start off with the browser
-// window being the maximum width and then open the tallest accordion (the one
-// that sets the height for all the other accordions). Next, resize the window
-// to be a significantly smaller width and then close the accordion. The closed
-// accordion will now be taller than all the other accordions.
-//
-// This is because when you resized the window and the height of the tallest
-// accordion was calculated, the opened accordion was ignored (after all we care
-// about the height of the tallest closed accordion). So the height calculated
-// was the height of the second tallest accordion, which by definition is less
-// than the height of the tallest accordion. So when the tallest accordion is
-// closed, the other accordions will be at a smaller height than it is.
-//
-// While I was able to solve this bug (add openAccordionID to useEffect
-// dependencies, keep track of previous openAccordionID using useRef, add a
-// setTimeout to the useEffect body with the time being 0 if the previous
-// openAccordionID is "" and 200 otherwise, clear timeout in the callback
-// function), the solution produced unintended side-effects which I deemed to be
-// less desirable than the bug itself. As I was unable to produce a solution
-// without these side-effects, the bug remains.
