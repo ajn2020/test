@@ -15,7 +15,7 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
         <div ref={ref} id={props.id} className="recycling-service-accordion-wrapper" onClick={() => props.handleClick(props.id)}>
             <div className="recycling-service-accordion">
                 <div className="recycling-service-accordion-title">
-                    <h2>{process.env.CONTENT_API}</h2>
+                    <h2>{"lol" + process.env.CONTENT_API}</h2>
                     <h2>{props.title}</h2>
                 </div>
                 <div className="recycling-service-accordion-description">
