@@ -22,11 +22,19 @@ export default function ItemTypeCard(props: ItemTypeCardProps) {
       >
         <div className="item-type-card-front">
           <h2>{props.frontTitle}</h2>
-          <img className="item-type-card-image" src={props.frontImage} />
+          <img
+            className="item-type-card-image"
+            src={props.frontImage}
+            alt={props.frontTitle}
+          />
         </div>
         <div className="item-type-card-back">
           <h3>{props.backTitle}</h3>
-          <img className="item-type-card-image" src={props.backImage} />
+          <img
+            className="item-type-card-image"
+            src={props.backImage}
+            alt={props.backTitle}
+          />
         </div>
       </div>
     </div>

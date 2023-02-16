@@ -19,7 +19,7 @@ export default function EventCard(props: EventCardProps) {
       <div className={`event-card ${isFlipped ? "event-card-flipped" : ""}`}>
         <div className="event-card-front">
           <div>
-            <img className="event-card-image" src={props.image} />
+            <img className="event-card-image" src={props.image} alt="" />
           </div>
           <div>
             <h2>{props.title}</h2>

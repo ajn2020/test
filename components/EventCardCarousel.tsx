@@ -24,7 +24,7 @@ export default function EventCardCarousel(props: EventCardCarouselProps) {
     } else {
       setDisabledNext(false);
     }
-  }, [range]);
+  }, [range, props.events.length]);
 
   return (
     <div className="event-card-carousel-container">
