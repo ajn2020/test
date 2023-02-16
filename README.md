@@ -9,7 +9,6 @@ Mirela Manoleva (K19016984)\
 Fatlir Topalli (K1921543)\
 Zihao You (K1923149)
 
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
