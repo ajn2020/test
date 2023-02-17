@@ -3,12 +3,13 @@ import DecisionTree from '@/components/DecisionTree'
 import Subheading from '@/components/Subheading'
 import EngagingBox from '@/components/EngagingBox'
 import EventCardCarousel from '@/components/EventCardCarousel'
-import events from '@/data/Events'
 import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
 import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
-import recyclingServices from '@/data/RecyclingServices'
+import events from '@/data/Events'
+// import recyclingServices from '@/data/RecyclingServices'
+import api from '@/config/api'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Head>
@@ -28,7 +29,7 @@ export default function Home() {
         events.length > 0 ? (
           <>
             <Subheading title="Events" />
-            <EventCardCarousel events={events} />
+            <EventCardCarousel events={props.events} />
           </>
         ) : ''
       }
@@ -37,7 +38,20 @@ export default function Home() {
       <ItemTypeCardGrid />
 
       <Subheading title="Recycling Services" />
-      <RecyclingServiceAccordionGrid recyclingServices={recyclingServices} />
+      <RecyclingServiceAccordionGrid recyclingServices={props.recyclingServices} />
     </>
   )
+}
+
+export const getServerSideProps = async () => {
+
+  const res = await fetch(`${api}/accordions`)
+  const recyclingServices = await res.json()
+
+  return{
+    props: {
+      events: events,
+      recyclingServices: recyclingServices,
+    },
+  }
 }
