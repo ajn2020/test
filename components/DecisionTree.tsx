@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { questions } from "@/data/DecisionTreeQuestions";
-
+import { Button } from 'antd';
 type Option = {
   id: string;
   value: string;
@@ -27,7 +27,7 @@ export default function DecisionTree() {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="decision-tree-wrapper">
+    <div className="decision-tree-wrapper" id="twoPast">
       <div className="decision-tree-title">
         <h2>Find the right recycling service for your item here!</h2>
       </div>
@@ -44,7 +44,8 @@ export default function DecisionTree() {
             </button>
           ))}
         </div>
-        <button onClick={handleReset}>Restart</button>
+        <Button onClick={handleReset}>Restart</Button>
+        {/* <button onClick={handleReset}>Restart</button> */}
       </div>
     </div>
   );
