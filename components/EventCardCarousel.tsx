@@ -38,7 +38,7 @@ export default function EventCardCarousel(props: EventCardCarouselProps) {
           Previous
         </button>
       </div>
-      <div className="event-card-carousel">
+      <div className="event-card-carousel" id="threePast">
         {displayedEvents.map((event) => (
           <EventCard
             key={uuidv4()}
