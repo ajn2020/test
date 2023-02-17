@@ -5,11 +5,16 @@ import EngagingBox from '@/components/EngagingBox'
 import EventCardCarousel from '@/components/EventCardCarousel'
 import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
 import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
-import events from '@/data/Events'
-// import recyclingServices from '@/data/RecyclingServices'
+import { RecyclingServices } from '@/data/RecyclingServices'
+import events, { Events } from '@/data/Events'
 import {api} from '@/config/api'
 
-export default function Home(props) {
+type Props = {
+  events: Events[], 
+  recyclingServices: RecyclingServices[] 
+}
+
+export default function Home(props: Props)  {
   return (
     <>
       <Head>
