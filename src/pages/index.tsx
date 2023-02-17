@@ -45,7 +45,7 @@ export default function Home(props) {
 
 export const getServerSideProps = async () => {
 
-  const res = await fetch(`${api}/accordions`)
+  const res = await fetch(`${api}/recyclingservices`)
   const recyclingServices = await res.json()
 
   return{
