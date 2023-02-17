@@ -7,7 +7,7 @@ import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
 import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
 import events from '@/data/Events'
 // import recyclingServices from '@/data/RecyclingServices'
-import api from '@/config/api'
+import {api} from '@/config/api'
 
 export default function Home(props) {
   return (
