@@ -1,0 +1,23 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mgprblack-prod-210943-authRole",
+      "UnauthRoleArn": "arn:aws:iam::238983707433:role/amplify-mgprblack-prod-210943-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::238983707433:role/amplify-mgprblack-prod-210943-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-mgprblack-prod-210943-deployment",
+      "UnauthRoleName": "amplify-mgprblack-prod-210943-unauthRole",
+      "StackName": "amplify-mgprblack-prod-210943",
+      "StackId": "arn:aws:cloudformation:eu-west-1:238983707433:stack/amplify-mgprblack-prod-210943/91cca640-afd0-11ed-aa9b-0aa87bc56f89",
+      "AmplifyAppId": "d3mupzq88it1f9"
+    },
+    "categories": {
+      "function": {
+        "apihrhF": {}
+      },
+      "auth": {
+        "mgprblack": {}
+      }
+    }
+  }
+}

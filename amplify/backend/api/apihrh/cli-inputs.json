@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "paths": {
+    "/{client}/{type}": {
+      "name": "/{client}/{type}",
+      "lambdaFunction": "apihrhF",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "read"
+        ]
+      }
+    }
+  }
+}
