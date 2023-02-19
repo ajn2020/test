@@ -27,11 +27,13 @@ a:hover {
 ========================================*/
 
 .header {
-  background-color: #642f6c;
+  /* background-color: #cfa4d5; */
+  background: linear-gradient(#d860f9, #642f6c);
   color: white;
   font-family: Lato;
   text-align: center;
   padding: 30px;
+  position: relative;
 }
 
 .header-title {
@@ -46,7 +48,7 @@ a:hover {
   /* width: 400px; */
   /* background-color: #af63bb; */
   display: flex;
-  padding: 15px 250px;
+  padding: 15px 100px;
   margin-top: 20px;
 }
 
@@ -54,8 +56,28 @@ a:hover {
   color: aliceblue;
   flex: 1;
   background-color: #af63bb;
-  margin: 0 60px;
-  padding: 5px 0;
+  border-radius: 10px;
+  margin: 0 30px;
+  padding: 5px 5px;
+
+}
+
+.Seach_tan {
+  font-size: 30px;
+  width: 50px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.Seach_tan:hover {
+  color: rgb(31, 154, 241);
+}
+
+.Seach_input {
+  position: absolute;
+  top: 40px;
+  right: 20px;
 }
 
 /*========================================
@@ -68,7 +90,8 @@ a:hover {
   align-items: center;
   margin: 10px 0px;
   background-color: #90449c;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+  margin-top: 85px;
 }
 
 .subheading-text {
@@ -89,7 +112,8 @@ a:hover {
   border-style: ridge;
   border-color: black;
   border-width: 3px;
-  margin: 25px 100px;
+  margin: 55px 100px;
+  margin-bottom: -31px;
   padding: 20px;
   text-align: center;
   justify-content: center;
@@ -204,7 +228,7 @@ a:hover {
   padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
-  text-align: center;   
+  text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
@@ -214,13 +238,16 @@ a:hover {
   box-shadow: 0 9px #999;
 }
 
-.event-card-carousel-button:hover {background-color: #3e8e41}
+.event-card-carousel-button:hover {
+  background-color: #3e8e41
+}
 
 .event-card-carousel-button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 /*========================================
     EVENT CARD
 ========================================*/
@@ -357,7 +384,7 @@ a:hover {
 .recycling-service-accordion-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 20px;
+  padding: 20px 40px;
   grid-gap: 20px;
 }
 
