@@ -1,6 +1,4 @@
 export type RecyclingServices = {
-    client: string,
-    type: string,
     title: string,
     description: string,
     content: string
