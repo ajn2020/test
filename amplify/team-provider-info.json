@@ -9,14 +9,24 @@
       "UnauthRoleName": "amplify-mgprblack-prod-210943-unauthRole",
       "StackName": "amplify-mgprblack-prod-210943",
       "StackId": "arn:aws:cloudformation:eu-west-1:238983707433:stack/amplify-mgprblack-prod-210943/91cca640-afd0-11ed-aa9b-0aa87bc56f89",
-      "AmplifyAppId": "d3mupzq88it1f9"
+      "AmplifyAppId": "d3mupzq88it1f9",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-mgprblack-prod-210943-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "function": {
-        "apihrhF": {}
+        "apihrhF": {
+          "deploymentBucketName": "amplify-mgprblack-prod-210943-deployment",
+          "s3Key": "amplify-builds/apihrhF-47526663454c3269744c-build.zip"
+        }
       },
       "auth": {
         "mgprblack": {}
+      },
+      "storage": {
+        "hrhD": {}
+      },
+      "api": {
+        "apihrh": {}
       }
     }
   }
