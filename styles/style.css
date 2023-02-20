@@ -3,13 +3,13 @@
 ========================================*/
 
 a {
-    color: blue;
-    text-decoration: none;
+  color: blue;
+  text-decoration: none;
 }
 
 a:hover {
-    color: purple;
-    text-decoration: underline;
+  color: purple;
+  text-decoration: underline;
 }
 
 /*========================================
@@ -17,9 +17,9 @@ a:hover {
 ========================================*/
 
 .page-content {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 /*========================================
@@ -27,19 +27,57 @@ a:hover {
 ========================================*/
 
 .header {
-    background-color: #642f6c;
-    color: white;
-    font-family: Lato;
-    text-align: center;
-    padding: 30px;
+  /* background-color: #cfa4d5; */
+  background: linear-gradient(#d860f9, #642f6c);
+  color: white;
+  font-family: Lato;
+  text-align: center;
+  padding: 30px;
+  position: relative;
 }
 
 .header-title {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .header-description {
-    font-size: 15px;
+  font-size: 15px;
+}
+
+.stepFind {
+  /* width: 400px; */
+  /* background-color: #af63bb; */
+  display: flex;
+  padding: 15px 100px;
+  margin-top: 20px;
+}
+
+.stepFind a {
+  color: aliceblue;
+  flex: 1;
+  background-color: #af63bb;
+  border-radius: 10px;
+  margin: 0 30px;
+  padding: 5px 5px;
+
+}
+
+.Seach_tan {
+  font-size: 30px;
+  width: 50px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.Seach_tan:hover {
+  color: rgb(31, 154, 241);
+}
+
+.Seach_input {
+  position: absolute;
+  top: 40px;
+  right: 20px;
 }
 
 /*========================================
@@ -47,81 +85,83 @@ a:hover {
 ========================================*/
 
 .subheading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0px;
-    background-color: #90449C;
-    margin-bottom:50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+  background-color: #90449c;
+  margin-bottom: 45px;
+  margin-top: 85px;
 }
 
 .subheading-text {
-    font-size: 30px;
-    margin: 20px 0;
+  font-size: 30px;
+  margin: 20px 0;
 }
 
 .subheading-separator {
-    width: 100%;
-    border: 2px solid black;
+  width: 100%;
+  border: 2px solid black;
 }
 
 /*======================================
     ENGAGING BOX
 ========================================*/
 .engaging-box-wrapper {
-    background-color: #e0d3e2;
-    border-style: ridge;
-    border-color: black;
-    border-width: 3px;
-    margin: 20px 100px;
-    padding: 10px;
-    text-align: center;
-    justify-content: center;
+  background-color: #e0d3e2;
+  border-style: ridge;
+  border-color: black;
+  border-width: 3px;
+  margin: 55px 100px;
+  margin-bottom: -31px;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
 }
 
 /*======================================
     QUESTION BOX
 ========================================*/
 .question-box {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: 10px;
-    justify-items: center;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  justify-items: center;
 }
 
 .question-box-answers {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 30px;
-    width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  width: fit-content;
 }
 
 .answer-button {
-    color: black;
-    font-weight: bold;
-    padding: 10px;
-    border-width: 1px;
-    cursor: pointer;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-width: 1px;
+  cursor: pointer;
 }
 
 .answer-button.border-correct {
-    border-color: green;
-    border-width: 5px 5px 5px 5px;
+  border-color: green;
+  border-width: 5px 5px 5px 5px;
 }
-  
+
 .answer-button.border-incorrect {
-    border-color: red;
-    border-width: 5px 5px 5px 5px;
+  border-color: red;
+  border-width: 5px 5px 5px 5px;
 }
 
 .answer-button.correct {
-    background-color: green;
-    border-width: 2px 2px 2px 2px;
+  background-color: green;
+  border-width: 2px 2px 2px 2px;
 }
-  
+
 .answer-button.incorrect {
-    background-color: red;
-    border-width: 2px 2px 2px 2px;
+  background-color: red;
+  border-width: 2px 2px 2px 2px;
 }
 
 /*======================================
@@ -129,31 +169,32 @@ a:hover {
 ========================================*/
 
 .decision-tree-wrapper {
-    background-color: white;
-    border-style: solid;
-    border-width: 3px;
-    margin: 30px 300px;
-    text-align: center;
+  background-color: white;
+  border-style: solid;
+  border-width: 3px;
+  margin: 30px 300px;
+  text-align: center;
+  padding: 25px 0;
 }
 
 .decision-tree-title {
-    color: black;
-    text-align: center;
+  color: black;
+  text-align: center;
 }
 
 .decision-tree {
-    color: black;
-    padding: 20px 20px;;
-    text-align: center;
+  color: black;
+  padding: 20px 20px;
+  text-align: center;
 }
 
 .decision-tree-option {
-    width: 20%;
-    margin: 10px 10px;
-    padding: 20px 20px;
-    border-width: 1px 1px 1px 1px;
-    background-color: #c29ec7;
-    cursor: pointer;
+  width: 20%;
+  margin: 10px 10px;
+  padding: 20px 20px;
+  border-width: 1px 1px 1px 1px;
+  background-color: #c29ec7;
+  cursor: pointer;
 }
 
 /*========================================
@@ -161,29 +202,50 @@ a:hover {
 ========================================*/
 
 .event-card-carousel-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    padding: 20px;
-    grid-gap: 20px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 20px;
+  grid-gap: 20px;
+  justify-items: center;
 }
 
 .event-card-carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
 }
 
 .event-card-carousel-button-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .event-card-carousel-button {
-    height: 50px;
-    width: 75px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ce5add;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.event-card-carousel-button:hover {
+  background-color: #3e8e41
+}
+
+.event-card-carousel-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /*========================================
@@ -191,57 +253,58 @@ a:hover {
 ========================================*/
 
 .event-card-container {
-    width: 100%;
-    height: 300px;
-    perspective: 1000px;
-    cursor: pointer;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
 .event-card-container:hover {
-    filter: brightness(80%);
+  filter: brightness(80%);
 }
 
 .event-card {
-    border-style: solid;
-    border-width: 3px;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
+  border-style: solid;
+  border-width: 3px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
 }
 
 .event-card-flipped {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.event-card-front, .event-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    place-items: center;
-    text-align: center;
-    backface-visibility: hidden;
+.event-card-front,
+.event-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  place-items: center;
+  text-align: center;
+  backface-visibility: hidden;
 }
 
 .event-card-front {
-    background: #AF63BB;
-    transform: rotateY(0deg);
-    display: grid;
-    grid-template-rows: auto auto;
+  background: #af63bb;
+  transform: rotateY(0deg);
+  display: grid;
+  grid-template-rows: auto auto;
 }
 
 .event-card-image {
-    width: 100%;
-    max-width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .event-card-back {
-    background: #c29ec7;
-    transform: rotateY(180deg);
-    display: grid;
-    overflow: auto;
+  background: #c29ec7;
+  transform: rotateY(180deg);
+  display: grid;
+  overflow: auto;
 }
 
 /*========================================
@@ -249,11 +312,11 @@ a:hover {
 ========================================*/
 
 .item-type-card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 20px;
-    grid-gap: 20px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 20px;
+  grid-gap: 20px;
+  justify-items: center;
 }
 
 /*========================================
@@ -261,56 +324,57 @@ a:hover {
 ========================================*/
 
 .item-type-card-container {
-    width: 100%;
-    min-width: 200px;
-    height: 200px;
-    perspective: 1000px;
-    cursor: pointer;
+  width: 100%;
+  min-width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
 .item-type-card-container:hover {
-    filter: brightness(80%);
+  filter: brightness(80%);
 }
 
 .item-type-card {
-    border-style: solid;
-    border-width: 3px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
+  border-style: solid;
+  border-width: 3px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
 }
 
 .item-type-card-flipped {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.item-type-card-front, .item-type-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 10px;
-    place-items: center;
-    text-align: center;
-    backface-visibility: hidden;
+.item-type-card-front,
+.item-type-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  place-items: center;
+  text-align: center;
+  backface-visibility: hidden;
 }
 
 .item-type-card-front {
-    background: #AF63BB;
-    transform: rotateY(0deg);
+  background: #af63bb;
+  transform: rotateY(0deg);
 }
 
 .item-type-card-back {
-    background: #c29ec7;
-    transform: rotateY(180deg);
+  background: #c29ec7;
+  transform: rotateY(180deg);
 }
 
 .item-type-card-image {
-    height: 75px;
+  height: 75px;
 }
 
 /*========================================
@@ -318,16 +382,16 @@ a:hover {
 ========================================*/
 
 .recycling-service-accordion-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 40px;
+  grid-gap: 20px;
 }
 
 .recycling-service-accordion-grid-col {
-    display: grid;
-    grid-template-rows: min-content min-content min-content min-content min-content min-content;
-    grid-gap: 20px;
+  display: grid;
+  grid-template-rows: min-content min-content min-content min-content min-content min-content;
+  grid-gap: 20px;
 }
 
 /*========================================
@@ -335,47 +399,47 @@ a:hover {
 ========================================*/
 
 .recycling-service-accordion-wrapper {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    background-color: #AF63BB;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 15px;
-    cursor: pointer;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: #af63bb;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.recycling-service-accordion-wrapper:hover{
-    filter: brightness(80%);
+.recycling-service-accordion-wrapper:hover {
+  filter: brightness(80%);
 }
 
 .recycling-service-accordion {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    padding: 10px 20px;
-    text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 10px 20px;
+  text-align: center;
 }
 
 .recycling-service-accordion-title {
-    color: black;
-    padding: 0px 0px 10px 0px;
-    font-size: 20px;
+  color: black;
+  padding: 0px 0px 10px 0px;
+  font-size: 20px;
 }
 
 .recycling-service-accordion-description {
-    color: black;
+  color: black;
 }
 
 .recycling-service-accordion-content-hidden {
-    color: black;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+  color: black;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 .recycling-service-accordion-content-displayed {
-    color: black;
-    max-height: 1000px;
-    transition: max-height 0.2s ease-in;
+  color: black;
+  max-height: 1000px;
+  transition: max-height 0.2s ease-in;
 }
 
 /*========================================
@@ -383,11 +447,11 @@ a:hover {
 ========================================*/
 
 .footer {
-    width: 100%;
-    background-color: #642f6c;
-    color: grey;
-    font-family: Lato;
-    font-size: 20px;
-    text-align: center;
-    padding: 20px;
+  width: 100%;
+  background-color: #642f6c;
+  color: grey;
+  font-family: Lato;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
 }
