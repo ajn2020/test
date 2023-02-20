@@ -55,7 +55,7 @@
             "Arn"
           ],
           "category": "storage",
-          "resourceName": "hrhD"
+          "resourceName": "hrhDB"
         },
         {
           "attributes": [
@@ -64,7 +64,7 @@
             "StreamArn"
           ],
           "category": "storage",
-          "resourceName": "hrhD"
+          "resourceName": "hrhDB"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -79,22 +79,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_apihrhF_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "apihrhF"
-        }
-      ]
-    },
-    "AMPLIFY_function_apihrhF_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "apihrhF"
-        }
-      ]
-    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
@@ -113,7 +97,7 @@
     }
   },
   "storage": {
-    "hrhD": {
+    "hrhDB": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
     }

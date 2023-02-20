@@ -1,8 +1,8 @@
 {
   "version": 1,
   "paths": {
-    "/{item-category}/{item-id}": {
-      "name": "/{item-category}/{item-id}",
+    "/{category}/{id}": {
+      "name": "/{category}/{id}",
       "lambdaFunction": "apihrhF",
       "permissions": {
         "setting": "protected",

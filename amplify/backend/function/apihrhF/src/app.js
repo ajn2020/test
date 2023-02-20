@@ -9,9 +9,9 @@ See the License for the specific language governing permissions and limitations 
 /* Amplify Params - DO NOT EDIT
 	ENV
 	REGION
-	STORAGE_HRHD_ARN
-	STORAGE_HRHD_NAME
-	STORAGE_HRHD_STREAMARN
+	STORAGE_HRHDB_ARN
+	STORAGE_HRHDB_NAME
+	STORAGE_HRHDB_STREAMARN
 Amplify Params - DO NOT EDIT */
 
 const AWS = require('aws-sdk')
@@ -23,18 +23,18 @@ AWS.config.update({ region: process.env.TABLE_REGION });
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
-let tableName = "hrhDT";
+let tableName = "hrhDBT";
 if (process.env.ENV && process.env.ENV !== "NONE") {
   tableName = tableName + '-' + process.env.ENV;
 }
 
 const userIdPresent = false; // TODO: update in case is required to use that definition
-const partitionKeyName = "item-category";
+const partitionKeyName = "category";
 const partitionKeyType = "S";
-const sortKeyName = "item-id";
+const sortKeyName = "id";
 const sortKeyType = "S";
 const hasSortKey = sortKeyName !== "";
-const path = "/:item-category/:item-id";
+const path = "/:category/:id";
 const UNAUTH = 'UNAUTH';
 const hashKeyPath = '/:' + partitionKeyName;
 const sortKeyPath = hasSortKey ? '/:' + sortKeyName : '';

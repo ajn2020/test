@@ -27,7 +27,7 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "storage": {
-    "hrhD": {
+    "hrhDB": {
       "Arn": "string",
       "Name": "string",
       "PartitionKeyName": "string",

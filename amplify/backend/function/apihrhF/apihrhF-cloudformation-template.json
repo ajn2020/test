@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"10.7.3\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "Lambda Function resource stack creation using Amplify CLI",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -16,17 +16,17 @@
     "s3Key": {
       "Type": "String"
     },
-    "storagehrhDName": {
+    "storagehrhDBName": {
       "Type": "String",
-      "Default": "storagehrhDName"
+      "Default": "storagehrhDBName"
     },
-    "storagehrhDArn": {
+    "storagehrhDBArn": {
       "Type": "String",
-      "Default": "storagehrhDArn"
+      "Default": "storagehrhDBArn"
     },
-    "storagehrhDStreamArn": {
+    "storagehrhDBStreamArn": {
       "Type": "String",
-      "Default": "storagehrhDStreamArn"
+      "Default": "storagehrhDBStreamArn"
     }
   },
   "Conditions": {
@@ -82,14 +82,14 @@
             "REGION": {
               "Ref": "AWS::Region"
             },
-            "STORAGE_HRHD_NAME": {
-              "Ref": "storagehrhDName"
+            "STORAGE_HRHDB_NAME": {
+              "Ref": "storagehrhDBName"
             },
-            "STORAGE_HRHD_ARN": {
-              "Ref": "storagehrhDArn"
+            "STORAGE_HRHDB_ARN": {
+              "Ref": "storagehrhDBArn"
             },
-            "STORAGE_HRHD_STREAMARN": {
-              "Ref": "storagehrhDStreamArn"
+            "STORAGE_HRHDB_STREAMARN": {
+              "Ref": "storagehrhDBStreamArn"
             }
           }
         },
@@ -110,12 +110,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "mgprblackLambdaRole59459e49",
+            "mgprblackLambdaRoled116851a",
             {
               "Fn::Join": [
                 "",
                 [
-                  "mgprblackLambdaRole59459e49",
+                  "mgprblackLambdaRoled116851a",
                   "-",
                   {
                     "Ref": "env"
@@ -195,14 +195,14 @@
               ],
               "Resource": [
                 {
-                  "Ref": "storagehrhDArn"
+                  "Ref": "storagehrhDBArn"
                 },
                 {
                   "Fn::Join": [
                     "/",
                     [
                       {
-                        "Ref": "storagehrhDArn"
+                        "Ref": "storagehrhDBArn"
                       },
                       "index/*"
                     ]
@@ -247,14 +247,14 @@
               ],
               "Resource": [
                 {
-                  "Ref": "storagehrhDArn"
+                  "Ref": "storagehrhDBArn"
                 },
                 {
                   "Fn::Join": [
                     "/",
                     [
                       {
-                        "Ref": "storagehrhDArn"
+                        "Ref": "storagehrhDBArn"
                       },
                       "index/*"
                     ]
