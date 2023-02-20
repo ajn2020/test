@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    container_name: devhrhfrontend
+    container_name: devhrhfrontend3
     command: npm run dev
     ports:
       - 3000:3000
