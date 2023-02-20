@@ -1,4 +1,4 @@
-import { useState, useEffect, createRef } from 'react'
+import { useState, useEffect, createRef, useRef } from 'react'
 import RecyclingServiceAccordion from '@/components/RecyclingServiceAccordion'
 import { RecyclingServices } from '@/data/RecyclingServices';
 
