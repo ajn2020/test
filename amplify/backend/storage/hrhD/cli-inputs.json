@@ -1,0 +1,14 @@
+{
+  "resourceName": "hrhD",
+  "tableName": "hrhDT",
+  "partitionKey": {
+    "fieldName": "item-category",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "item-id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

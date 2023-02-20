@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "paths": {
+    "/{item-category}/{item-id}": {
+      "name": "/{item-category}/{item-id}",
+      "lambdaFunction": "apihrhF",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "read"
+        ]
+      }
+    }
+  }
+}
