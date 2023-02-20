@@ -79,6 +79,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_apihrhF_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apihrhF"
+        }
+      ]
+    },
+    "AMPLIFY_function_apihrhF_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apihrhF"
+        }
+      ]
+    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {

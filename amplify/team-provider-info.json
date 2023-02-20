@@ -14,7 +14,10 @@
     },
     "categories": {
       "function": {
-        "apihrhF": {}
+        "apihrhF": {
+          "deploymentBucketName": "amplify-mgprblack-prod-140641-deployment",
+          "s3Key": "amplify-builds/apihrhF-6d7a5457396c306b3256-build.zip"
+        }
       },
       "auth": {
         "mgprblack": {}
@@ -24,6 +27,12 @@
           "appId": "dep5gc6leapu",
           "type": "cicd"
         }
+      },
+      "storage": {
+        "hrhDB": {}
+      },
+      "api": {
+        "apihrh": {}
       }
     }
   }
