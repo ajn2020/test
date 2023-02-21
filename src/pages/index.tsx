@@ -7,9 +7,9 @@ import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
 import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
 import {api} from '@/config/api'
 
-// Data Types
-import { RecyclingServices } from '@/data/RecyclingServices'
-import { Events } from '@/data/Events'
+// Data and Data Types
+import mockRecyclingServices, { RecyclingServices } from '@/data/RecyclingServices'
+import mockEvents, { Events } from '@/data/Events'
 
 
 
@@ -54,11 +54,21 @@ export default function Home(props: Props)  {
 
 export const getServerSideProps = async () => {
 
-  const resRS = await fetch(`${api}/recyclingservices`)
-  const recyclingServices = await resRS.json()
+  /*  
+      FETCHING DATA FROM BACKEND
+      UNCOMMENT WHEN READY TO DEPLOY
+      
+        const resRS = await fetch(`${api}/recyclingservices`)
+        const recyclingServices = await resRS.json()
+        
+        const resE = await fetch(`${api}/events`)
+        const events = await resE.json()
+  */
 
-  const resE = await fetch(`${api}/events`)
-  const events = await resE.json()
+  // Mock data from data folder
+
+  const recyclingServices = mockRecyclingServices
+  const events = mockEvents
 
   return{
     props: {
