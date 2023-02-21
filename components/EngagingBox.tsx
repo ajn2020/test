@@ -11,7 +11,7 @@ export default function EngagingBox() {
   }, []);
 
   return (
-    <div className="engaging-box-wrapper" id="onePast">
+    <div className="engaging-box-wrapper">
       {randNum == 0 && <Fact />}
       {randNum == 1 && <Question />}
     </div>

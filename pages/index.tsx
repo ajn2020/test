@@ -1,7 +1,7 @@
 import Head from "next/head";
-import DecisionTree from "@/components/DecisionTree";
-import Subheading from "@/components/Subheading";
 import EngagingBox from "@/components/EngagingBox";
+import Subheading from "@/components/Subheading";
+import DecisionTree from "@/components/DecisionTree";
 import EventCardCarousel from "@/components/EventCardCarousel";
 import events from "@/data/Events";
 import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
@@ -24,22 +24,25 @@ export default function Home() {
 
       <EngagingBox />
 
-      <Subheading title="Find out how to recycle your item" />
+      <Subheading title="Find out how to recycle your item" id="DecisionTree" />
       <DecisionTree />
 
       {events.length > 0 ? (
         <>
-          <Subheading title="Events" />
+          <Subheading title="Events" id="EventCardCarousel" />
           <EventCardCarousel events={events} />
         </>
       ) : (
         ""
       )}
 
-      <Subheading title="How to recycle..." />
+      <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
       <ItemTypeCardGrid />
 
-      <Subheading title="Recycling Services" />
+      <Subheading
+        title="Recycling Services"
+        id="RecyclingServiceAccordionGrid"
+      />
       <RecyclingServiceAccordionGrid recyclingServices={recyclingServices} />
     </>
   );

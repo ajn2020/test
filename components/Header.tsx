@@ -23,11 +23,10 @@ export default function Header() {
           Hounslow!
         </div>
         <div className="stepFind">
-          <a href="#onePast">frist component</a>
-          <a href="#twoPast">second component</a>
-          <a href="#threePast">events</a>
-          <a href="#fourPast">4th component</a>
-          <a href="#fivePast">5th component</a>
+          <a href="#DecisionTree">Find out how to recycle your item</a>
+          <a href="#EventCardCarousel">Events</a>
+          <a href="#ItemTypeCardGrid">How to recycle...</a>
+          <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
         </div>
         {isInput ? (
           <div className="Seach_input" onBlur={onBlur}>

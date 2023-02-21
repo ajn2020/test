@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { questions } from "@/data/DecisionTreeQuestions";
 import { Button } from "antd";
+
 type Option = {
   id: string;
   value: string;
   followUpQuestion: number;
 };
 
-type Question = {
-  id: number;
-  question: string;
-  options: Array<Option>;
-};
+// type Question = {
+//   id: number;
+//   question: string;
+//   options: Array<Option>;
+// };
 
 export default function DecisionTree() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -27,7 +28,7 @@ export default function DecisionTree() {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="decision-tree-wrapper" id="twoPast">
+    <div className="decision-tree-wrapper">
       <div className="decision-tree-title">
         <h2>Find the right recycling service for your item here!</h2>
       </div>
