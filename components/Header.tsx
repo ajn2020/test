@@ -1,10 +1,10 @@
-import { SearchOutlined } from "@ant-design/icons";
-import { Input } from "antd";
 import { useState } from "react";
+import { Input } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 
 export default function Header() {
-  const { Search } = Input;
   const [isInput, setIsInput] = useState(false);
+  const { Search } = Input;
   const onSearch = (value: string) => console.log(value);
   const iconClick = () => {
     setIsInput(true);
@@ -22,14 +22,14 @@ export default function Header() {
           Your go-to stop for all recycling things in the London Borough of
           Hounslow!
         </div>
-        <div className="stepFind">
+        <div className="header-anchors">
           <a href="#DecisionTree">Find out how to recycle your item</a>
           <a href="#EventCardCarousel">Events</a>
           <a href="#ItemTypeCardGrid">How to recycle...</a>
           <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
         </div>
         {isInput ? (
-          <div className="Seach_input" onBlur={onBlur}>
+          <div className="header-search-input" onBlur={onBlur}>
             <Search
               placeholder="input search text"
               onSearch={onSearch}
@@ -37,8 +37,8 @@ export default function Header() {
             />
           </div>
         ) : (
-          <div className="Seach_tan">
-            <SearchOutlined onClick={iconClick} />{" "}
+          <div className="header-search">
+            <SearchOutlined onClick={iconClick} />
           </div>
         )}
       </div>

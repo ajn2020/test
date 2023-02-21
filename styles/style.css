@@ -44,7 +44,7 @@ a:hover {
   font-size: 15px;
 }
 
-.stepFind {
+.header-anchors {
   /* width: 400px; */
   /* background-color: #af63bb; */
   display: flex;
@@ -52,7 +52,7 @@ a:hover {
   margin-top: 20px;
 }
 
-.stepFind a {
+.header-anchors a {
   color: aliceblue;
   flex: 1;
   background-color: #af63bb;
@@ -61,7 +61,7 @@ a:hover {
   padding: 5px 5px;
 }
 
-.Seach_tan {
+.header-search {
   font-size: 30px;
   width: 50px;
   position: absolute;
@@ -69,38 +69,14 @@ a:hover {
   right: 20px;
 }
 
-.Seach_tan:hover {
+.header-search:hover {
   color: rgb(31, 154, 241);
 }
 
-.Seach_input {
+.header-search-input {
   position: absolute;
   top: 40px;
   right: 20px;
-}
-
-/*========================================
-    SUBHEADING
-========================================*/
-
-.subheading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 0px;
-  background-color: #90449c;
-  margin-bottom: 45px;
-  margin-top: 85px;
-}
-
-.subheading-text {
-  font-size: 30px;
-  margin: 20px 0;
-}
-
-.subheading-separator {
-  width: 100%;
-  border: 2px solid black;
 }
 
 /*======================================
@@ -161,6 +137,30 @@ a:hover {
 .answer-button.incorrect {
   background-color: red;
   border-width: 2px 2px 2px 2px;
+}
+
+/*========================================
+    SUBHEADING
+========================================*/
+
+.subheading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+  background-color: #90449c;
+  margin-bottom: 45px;
+  margin-top: 85px;
+}
+
+.subheading-text {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.subheading-separator {
+  width: 100%;
+  border: 2px solid black;
 }
 
 /*======================================
