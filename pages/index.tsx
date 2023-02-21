@@ -3,10 +3,10 @@ import EngagingBox from "@/components/EngagingBox";
 import Subheading from "@/components/Subheading";
 import DecisionTree from "@/components/DecisionTree";
 import EventCardCarousel from "@/components/EventCardCarousel";
-import events from "@/data/Events";
+import { events } from "@/data/Events";
 import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
 import RecyclingServiceAccordionGrid from "@/components/RecyclingServiceAccordionGrid";
-import recyclingServices from "@/data/RecyclingServices";
+import { recyclingServices } from "@/data/RecyclingServices";
 
 export default function Home() {
   return (
