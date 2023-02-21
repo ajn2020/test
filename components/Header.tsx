@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="header">
+      <div className="header" id="Header">
         <div className="header-title">Hounslow Recycling Hub</div>
         <br />
         <div className="header-description">

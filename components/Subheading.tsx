@@ -5,9 +5,17 @@ type SubheadingProps = {
 
 export default function Subheading(props: SubheadingProps) {
   return (
-    <div className="subheading-container" id={props.id}>
+    <div className="subheading-container-wrapper" id={props.id}>
       <hr className="subheading-separator" />
-      <h2 className="subheading-text">{props.title}</h2>
+      <div className="subheading-container">
+        <div className="subheading-anchors">
+          <a href="#Header">Back to top</a>
+        </div>
+        <h2 className="subheading-text">{props.title}</h2>
+        <div className="subheading-anchors">
+          <a href="#Header">Back to top</a>
+        </div>
+      </div>
       <hr className="subheading-separator" />
     </div>
   );
