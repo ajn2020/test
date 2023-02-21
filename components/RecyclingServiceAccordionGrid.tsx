@@ -130,7 +130,7 @@ export default function RecyclingServiceAccordionGrid(
   }
 
   return (
-    <div className="recycling-service-accordion-grid" id="fivePast">
+    <div className="recycling-service-accordion-grid">
       <div className="recycling-service-accordion-grid-col">
         {props.recyclingServices
           .slice(0, Math.ceil(props.recyclingServices.length / 2))

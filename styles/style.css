@@ -44,7 +44,7 @@ a:hover {
   font-size: 15px;
 }
 
-.stepFind {
+.header-anchors {
   /* width: 400px; */
   /* background-color: #af63bb; */
   display: flex;
@@ -52,17 +52,16 @@ a:hover {
   margin-top: 20px;
 }
 
-.stepFind a {
+.header-anchors a {
   color: aliceblue;
   flex: 1;
   background-color: #af63bb;
   border-radius: 10px;
   margin: 0 30px;
-  padding: 5px 5px;
-
+  padding: 5px;
 }
 
-.Seach_tan {
+.header-search {
   font-size: 30px;
   width: 50px;
   position: absolute;
@@ -70,38 +69,14 @@ a:hover {
   right: 20px;
 }
 
-.Seach_tan:hover {
+.header-search:hover {
   color: rgb(31, 154, 241);
 }
 
-.Seach_input {
+.header-search-input {
   position: absolute;
   top: 40px;
   right: 20px;
-}
-
-/*========================================
-    SUBHEADING
-========================================*/
-
-.subheading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 0px;
-  background-color: #90449c;
-  margin-bottom: 45px;
-  margin-top: 85px;
-}
-
-.subheading-text {
-  font-size: 30px;
-  margin: 20px 0;
-}
-
-.subheading-separator {
-  width: 100%;
-  border: 2px solid black;
 }
 
 /*======================================
@@ -164,6 +139,50 @@ a:hover {
   border-width: 2px 2px 2px 2px;
 }
 
+/*========================================
+    SUBHEADING
+========================================*/
+
+.subheading-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  background-color: #90449c;
+  margin-bottom: 45px;
+  margin-top: 85px;
+}
+
+.subheading-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.subheading-anchors {
+  display: flex;
+  margin: 0 30px;
+}
+
+.subheading-anchors a {
+  color: aliceblue;
+  flex: 1;
+  background-color: #af63bb;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.subheading-text {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.subheading-separator {
+  width: 100%;
+  border: 2px solid black;
+}
+
 /*======================================
     DECISION TREE
 ========================================*/
@@ -222,8 +241,9 @@ a:hover {
   justify-content: center;
 }
 
-
 .event-card-carousel-button {
+  height: 70x;
+  width: 150px;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -238,14 +258,18 @@ a:hover {
   box-shadow: 0 9px #999;
 }
 
-.event-card-carousel-button:hover {
-  background-color: #3e8e41
+.event-card-carousel-button:not(:disabled):hover {
+  background-color: #3e8e41;
 }
 
-.event-card-carousel-button:active {
-  background-color: #3e8e41;
+.event-card-carousel-button:not(:disabled):active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.event-card-carousel-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
 }
 
 /*========================================
