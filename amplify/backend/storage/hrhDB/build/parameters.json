@@ -1,7 +1,0 @@
-{
-  "tableName": "hrhDBT",
-  "partitionKeyName": "category",
-  "partitionKeyType": "S",
-  "sortKeyName": "id",
-  "sortKeyType": "S"
-}
