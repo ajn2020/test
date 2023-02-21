@@ -8,8 +8,9 @@ import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordio
 import {api} from '@/config/api'
 
 // Data and Data Types
-import { RecyclingServices, mockRecyclingServices } from '@/data/RecyclingServices'
-import { Events, mockEvents } from '@/data/Events'
+import mockRecyclingServices, { RecyclingServices } from '@/data/RecyclingServices'
+import mockEvents, { Events } from '@/data/Events'
+
 
 
 
@@ -60,15 +61,16 @@ export const getServerSideProps = async () => {
       
         const resRS = await fetch(`${api}/recyclingservices`)
         const recyclingServices = await resRS.json()
-
+        
         const resE = await fetch(`${api}/events`)
         const events = await resE.json()
   */
-  
+
+
   // Mock data from data folder
-  
-  recyclingService = mockRecyclingServices
-  events = mockEvents
+  const recyclingServices = mockRecyclingServices
+  const events = mockEvents
+
   
   return{
     props: {
