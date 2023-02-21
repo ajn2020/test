@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "@/components/Header";
 import EngagingBox from "@/components/EngagingBox";
 import Subheading from "@/components/Subheading";
 import DecisionTree from "@/components/DecisionTree";
@@ -7,6 +8,7 @@ import { events } from "@/data/Events";
 import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
 import RecyclingServiceAccordionGrid from "@/components/RecyclingServiceAccordionGrid";
 import { recyclingServices } from "@/data/RecyclingServices";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header />
 
       <EngagingBox />
 
@@ -44,6 +48,8 @@ export default function Home() {
         id="RecyclingServiceAccordionGrid"
       />
       <RecyclingServiceAccordionGrid recyclingServices={recyclingServices} />
+
+      <Footer />
     </>
   );
 }
