@@ -13,6 +13,7 @@ import mockEvents, { Events } from '@/data/Events'
 
 
 
+
 type Props = {
   events: Events[], 
   recyclingServices: RecyclingServices[] 
@@ -65,11 +66,12 @@ export const getServerSideProps = async () => {
         const events = await resE.json()
   */
 
-  // Mock data from data folder
 
+  // Mock data from data folder
   const recyclingServices = mockRecyclingServices
   const events = mockEvents
 
+  
   return{
     props: {
       events: events,
