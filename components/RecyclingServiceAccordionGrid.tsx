@@ -1,6 +1,6 @@
-import { useState, useEffect, createRef, useRef } from "react";
-import RecyclingServiceAccordion from "@/components/RecyclingServiceAccordion";
-import { RecyclingServices } from "@/data/RecyclingServices";
+import { useState, useEffect, createRef, useRef } from 'react'
+import RecyclingServiceAccordion from '@/components/RecyclingServiceAccordion'
+import { RecyclingServices } from '@/data/RecyclingServices';
 
 type RecyclingServiceAccordionGridProps = {
   recyclingServices: Array<RecyclingServices>;

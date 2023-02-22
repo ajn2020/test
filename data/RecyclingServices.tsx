@@ -4,7 +4,7 @@ export type RecyclingServices = {
   content: string;
 };
 
-export const recyclingServices = [
+export default [
   {
     title: "Red Recycling Box",
     description:
