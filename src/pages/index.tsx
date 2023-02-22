@@ -1,10 +1,14 @@
-import Head from 'next/head'
-import DecisionTree from '@/components/DecisionTree'
-import Subheading from '@/components/Subheading'
-import EngagingBox from '@/components/EngagingBox'
-import EventCardCarousel from '@/components/EventCardCarousel'
-import ItemTypeCardGrid from '@/components/ItemTypeCardGrid'
-import RecyclingServiceAccordionGrid from '@/components/RecyclingServiceAccordionGrid'
+import Head from "next/head";
+import Header from "@/components/Header";
+import EngagingBox from "@/components/EngagingBox";
+import Subheading from "@/components/Subheading";
+import DecisionTree from "@/components/DecisionTree";
+import EventCardCarousel from "@/components/EventCardCarousel";
+import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
+import RecyclingServiceAccordionGrid from "@/components/RecyclingServiceAccordionGrid";
+import Footer from "@/components/Footer";
+
+// API url
 import {api} from '@/config/api'
 
 // Data and Data Types
@@ -12,46 +16,55 @@ import mockRecyclingServices, { RecyclingServices } from '@/data/RecyclingServic
 import mockEvents, { Events } from '@/data/Events'
 
 
-
-
 type Props = {
   events: Events[], 
   recyclingServices: RecyclingServices[] 
 }
 
-export default function Home(props: Props)  {
+export default function Home(props: Props) {
   return (
     <>
       <Head>
         <title>Hounslow Recycling Hub</title>
         <meta name="application-name" content="Hounslow Recycling Hub" />
-        <meta name="description" content="Your go-to stop for all recycling things in the London Borough of Hounslow!" />
+        <meta
+          name="description"
+          content="Your go-to stop for all recycling things in the London Borough of Hounslow!"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
+
       <EngagingBox />
 
-      <Subheading title="Find out how to recycle your item" />
+      <Subheading title="Find out how to recycle your item" id="DecisionTree" />
       <DecisionTree />
 
-      {
-        props.events.length > 0 ? (
-          <>
-            <Subheading title="Events" />
-            <EventCardCarousel events={props.events} />
-          </>
-        ) : ''
-      }
+      {props.events.length > 0 ? (
+        <>
+          <Subheading title="Events" id="EventCardCarousel" />
+          <EventCardCarousel events={props.events} />
+        </>
+      ) : (
+        ""
+      )}
 
-      <Subheading title="How to recycle..." />
+      <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
       <ItemTypeCardGrid />
 
-      <Subheading title="Recycling Services" />
+      <Subheading
+        title="Recycling Services"
+        id="RecyclingServiceAccordionGrid"
+      />
       <RecyclingServiceAccordionGrid recyclingServices={props.recyclingServices} />
+
+      <Footer />
     </>
-  )
+  );
 }
+
 
 export const getServerSideProps = async () => {
 
