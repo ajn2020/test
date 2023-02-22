@@ -12,8 +12,8 @@ import Footer from "@/components/Footer";
 import {api} from '@/config/api'
 
 // Data and Data Types
-import mockRecyclingServices, { RecyclingServices } from '@/data/RecyclingServices'
-import mockEvents, { Events } from '@/data/Events'
+import { recyclingServices, RecyclingServices } from '@/data/RecyclingServices'
+import { events, Events } from '@/data/Events'
 
 
 type Props = {
@@ -81,14 +81,14 @@ export const getServerSideProps = async () => {
 
 
   // Mock data from data folder
-  const recyclingServices = mockRecyclingServices
-  const events = mockEvents
+  const mockRecyclingServices = recyclingServices
+  const mockEvents = events
 
   
   return{
     props: {
-      events: events,
-      recyclingServices: recyclingServices,
+      events: mockEvents,
+      recyclingServices: mockRecyclingServices,
     },
   }
 }
