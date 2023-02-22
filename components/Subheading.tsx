@@ -11,7 +11,7 @@ export default function Subheading(props: SubheadingProps) {
         <div className="subheading-anchors">
           <a href="#Header">Back to top</a>
         </div>
-        <h2 className="subheading-text">{props.title}</h2>
+        <h3 className="subheading-text">{props.title}</h3>
         <div className="subheading-anchors">
           <a href="#Header">Back to top</a>
         </div>
