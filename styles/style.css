@@ -34,6 +34,9 @@ a:hover {
   text-align: center;
   padding: 30px;
   position: relative;
+
+
+
 }
 
 .header-title {
@@ -44,25 +47,35 @@ a:hover {
   font-size: 15px;
 }
 
-.stepFind {
+.header-anchors {
   /* width: 400px; */
-  /* background-color: #af63bb; */
+
   display: flex;
   padding: 15px 100px;
   margin-top: 20px;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  left: 0;
 }
 
-.stepFind a {
+.header-quan {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.header-anchors a {
   color: aliceblue;
   flex: 1;
   background-color: #af63bb;
   border-radius: 10px;
-  margin: 0 30px;
-  padding: 5px 5px;
-
+  margin: 0 50px;
+  padding: 8px;
 }
 
-.Seach_tan {
+.header-search {
   font-size: 30px;
   width: 50px;
   position: absolute;
@@ -70,47 +83,25 @@ a:hover {
   right: 20px;
 }
 
-.Seach_tan:hover {
+.header-search:hover {
   color: rgb(31, 154, 241);
 }
 
-.Seach_input {
+.header-search-input {
   position: absolute;
   top: 40px;
   right: 20px;
-}
-
-/*========================================
-    SUBHEADING
-========================================*/
-
-.subheading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 0px;
-  background-color: #90449c;
-  margin-bottom: 45px;
-  margin-top: 85px;
-}
-
-.subheading-text {
-  font-size: 30px;
-  margin: 20px 0;
-}
-
-.subheading-separator {
-  width: 100%;
-  border: 2px solid black;
 }
 
 /*======================================
     ENGAGING BOX
 ========================================*/
 .engaging-box-wrapper {
-  background-color: #e0d3e2;
-  border-style: ridge;
-  border-color: black;
+  background-color: #bda0c3;
+  /* border-style: ridge; */
+  /* border-color: black; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
   border-width: 3px;
   margin: 55px 100px;
   margin-bottom: -31px;
@@ -140,8 +131,11 @@ a:hover {
   color: black;
   font-weight: bold;
   padding: 10px;
-  border-width: 1px;
+  margin: 5px 20px;
+  /* border-width: 1px; */
   cursor: pointer;
+  border: 0;
+  border-radius: 5px;
 }
 
 .answer-button.border-correct {
@@ -164,6 +158,52 @@ a:hover {
   border-width: 2px 2px 2px 2px;
 }
 
+/*========================================
+    SUBHEADING
+========================================*/
+
+.subheading-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  background-color: #90449c;
+  margin-bottom: 45px;
+  margin-top: 85px;
+}
+
+.subheading-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.subheading-anchors {
+  display: flex;
+  margin: 0 30px;
+
+}
+
+.subheading-anchors a {
+  color: aliceblue;
+  flex: 1;
+  background-color: #af63bb;
+  border-radius: 10px;
+  padding: 7px 15px;
+}
+
+.subheading-text {
+  font-size: 30px;
+  margin: 20px 0;
+  color: aliceblue;
+}
+
+.subheading-separator {
+  width: 100%;
+  border: 1px solid #999;
+}
+
 /*======================================
     DECISION TREE
 ========================================*/
@@ -171,7 +211,7 @@ a:hover {
 .decision-tree-wrapper {
   background-color: white;
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
   margin: 30px 300px;
   text-align: center;
   padding: 25px 0;
@@ -190,10 +230,12 @@ a:hover {
 
 .decision-tree-option {
   width: 20%;
-  margin: 10px 10px;
+  margin: 22px 22px;
   padding: 20px 20px;
-  border-width: 1px 1px 1px 1px;
+  border-width: 0;
+  border-radius: 5px;
   background-color: #c29ec7;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -222,8 +264,9 @@ a:hover {
   justify-content: center;
 }
 
-
 .event-card-carousel-button {
+  height: 70x;
+  width: 150px;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -232,20 +275,24 @@ a:hover {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #ce5add;
+  background-color: #c29ec7;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-.event-card-carousel-button:hover {
-  background-color: #3e8e41
+.event-card-carousel-button:not(:disabled):hover {
+  background-color: #3e8e41;
 }
 
-.event-card-carousel-button:active {
-  background-color: #3e8e41;
+.event-card-carousel-button:not(:disabled):active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.event-card-carousel-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
 }
 
 /*========================================
@@ -264,8 +311,10 @@ a:hover {
 }
 
 .event-card {
-  border-style: solid;
-  border-width: 3px;
+  /* border-style: solid; */
+  border-width: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
   height: 100%;
   width: 100%;
   position: relative;
@@ -289,7 +338,8 @@ a:hover {
 }
 
 .event-card-front {
-  background: #af63bb;
+  /* background: #ae69b9; */
+  background: #bda0c3;
   transform: rotateY(0deg);
   display: grid;
   grid-template-rows: auto auto;

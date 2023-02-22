@@ -2,7 +2,7 @@ import ItemTypeCard from "@/components/ItemTypeCard";
 
 export default function ItemTypeCardGrid() {
   return (
-    <div className="item-type-card-grid" id="fourPast">
+    <div className="item-type-card-grid">
       <ItemTypeCard
         frontTitle="Plastic"
         frontImage="./plastic.png"
