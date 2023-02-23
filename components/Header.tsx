@@ -28,11 +28,11 @@ export default function Header(props: HeaderProps) {
         </div>
         <div className="header-anchors">
           <a href="#DecisionTree">Find out how...</a>
-          <div className="header-quan"></div>
+          <div className="header-dot"></div>
           {props.displayEvents ? <a href="#EventCardCarousel">Events</a> : ""}
-          <div className="header-quan"></div>
+          <div className="header-dot"></div>
           <a href="#ItemTypeCardGrid">How to recycle...</a>
-          <div className="header-quan"></div>
+          <div className="header-dot"></div>
           <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
         </div>
         {isInput ? (
