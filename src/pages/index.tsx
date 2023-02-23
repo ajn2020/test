@@ -9,17 +9,16 @@ import RecyclingServiceAccordionGrid from "@/components/RecyclingServiceAccordio
 import Footer from "@/components/Footer";
 
 // API url
-import {api} from '@/config/api'
+import { api } from "@/config/api";
 
 // Data and Data Types
-import { recyclingServices, RecyclingServices } from '@/data/RecyclingServices'
-import { events, Events } from '@/data/Events'
-
+import { recyclingServices, RecyclingServices } from "@/data/RecyclingServices";
+import { events, Events } from "@/data/Events";
 
 type Props = {
-  events: Events[], 
-  recyclingServices: RecyclingServices[] 
-}
+  events: Events[];
+  recyclingServices: RecyclingServices[];
+};
 
 export default function Home(props: Props) {
   return (
@@ -58,16 +57,16 @@ export default function Home(props: Props) {
         title="Recycling Services"
         id="RecyclingServiceAccordionGrid"
       />
-      <RecyclingServiceAccordionGrid recyclingServices={props.recyclingServices} />
+      <RecyclingServiceAccordionGrid
+        recyclingServices={props.recyclingServices}
+      />
 
       <Footer />
     </>
   );
 }
 
-
 export const getServerSideProps = async () => {
-
   /*  
       FETCHING DATA FROM BACKEND
       UNCOMMENT WHEN READY TO DEPLOY
@@ -79,16 +78,14 @@ export const getServerSideProps = async () => {
         const events = await resE.json()
   */
 
-
   // Mock data from data folder
-  const mockRecyclingServices = recyclingServices
-  const mockEvents = events
+  const mockRecyclingServices = recyclingServices;
+  const mockEvents = events;
 
-  
-  return{
+  return {
     props: {
       events: mockEvents,
       recyclingServices: mockRecyclingServices,
     },
-  }
-}
+  };
+};
