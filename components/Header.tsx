@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import { events } from "@/data/Events";
 
-export default function Header() {
+type HeaderProps = {
+  displayEvents: boolean;
+};
+
+export default function Header(props: HeaderProps) {
   const [isInput, setIsInput] = useState(false);
   const { Search } = Input;
   const onSearch = (value: string) => console.log(value);
@@ -26,7 +29,7 @@ export default function Header() {
         <div className="header-anchors">
           <a href="#DecisionTree">Find out how...</a>
           <div className="header-quan"></div>
-          {events.length > 0 ? <a href="#EventCardCarousel">Events</a> : ""}
+          {props.displayEvents ? <a href="#EventCardCarousel">Events</a> : ""}
           <div className="header-quan"></div>
           <a href="#ItemTypeCardGrid">How to recycle...</a>
           <div className="header-quan"></div>
