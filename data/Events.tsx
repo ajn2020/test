@@ -6,7 +6,7 @@ export type Events = {
 };
 
 // Images need to be 500px tall and 1000px wide!
-export default [
+export const events = [
   {
     image: "/brentford_recycling_action_group.png",
     title: "Brentford Recycling Action Group Monthly Meeting",

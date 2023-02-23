@@ -9,17 +9,16 @@ import RecyclingServiceAccordionGrid from "@/components/RecyclingServiceAccordio
 import Footer from "@/components/Footer";
 
 // API url
-import {api} from '@/config/api'
+import { api } from "@/config/api";
 
 // Data and Data Types
-import mockRecyclingServices, { RecyclingServices } from '@/data/RecyclingServices'
-import mockEvents, { Events } from '@/data/Events'
-
+import { recyclingServices, RecyclingServices } from "@/data/RecyclingServices";
+import { events, Events } from "@/data/Events";
 
 type Props = {
-  events: Events[], 
-  recyclingServices: RecyclingServices[] 
-}
+  events: Events[];
+  recyclingServices: RecyclingServices[];
+};
 
 export default function Home(props: Props) {
   return (
@@ -35,7 +34,7 @@ export default function Home(props: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header displayEvents={props.events.length > 0} />
 
       <EngagingBox />
 
@@ -58,37 +57,35 @@ export default function Home(props: Props) {
         title="Recycling Services"
         id="RecyclingServiceAccordionGrid"
       />
-      <RecyclingServiceAccordionGrid recyclingServices={props.recyclingServices} />
+      <RecyclingServiceAccordionGrid
+        recyclingServices={props.recyclingServices}
+      />
 
       <Footer />
     </>
   );
 }
 
-
 export const getServerSideProps = async () => {
-
   /*  
-      FETCHING DATA FROM BACKEND
-      UNCOMMENT WHEN READY TO DEPLOY
-      
-        const resRS = await fetch(`${api}/recyclingservices`)
-        const recyclingServices = await resRS.json()
-        
-        const resE = await fetch(`${api}/events`)
-        const events = await resE.json()
+  FETCHING DATA FROM BACKEND
+  UNCOMMENT WHEN READY TO DEPLOY
+
+  const resRS = await fetch(`${api}/recyclingservices`)
+  const recyclingServices = await resRS.json()
+
+  const resE = await fetch(`${api}/events`)
+  const events = await resE.json()
   */
 
-
   // Mock data from data folder
-  const recyclingServices = mockRecyclingServices
-  const events = mockEvents
+  const mockRecyclingServices = recyclingServices;
+  const mockEvents = events;
 
-  
-  return{
+  return {
     props: {
-      events: events,
-      recyclingServices: recyclingServices,
+      events: mockEvents,
+      recyclingServices: mockRecyclingServices,
     },
-  }
-}
+  };
+};
