@@ -68,14 +68,14 @@ export default function Home(props: Props) {
 
 export const getServerSideProps = async () => {
   /*  
-      FETCHING DATA FROM BACKEND
-      UNCOMMENT WHEN READY TO DEPLOY
-      
-        const resRS = await fetch(`${api}/recyclingservices`)
-        const recyclingServices = await resRS.json()
-        
-        const resE = await fetch(`${api}/events`)
-        const events = await resE.json()
+  FETCHING DATA FROM BACKEND
+  UNCOMMENT WHEN READY TO DEPLOY
+
+  const resRS = await fetch(`${api}/recyclingservices`)
+  const recyclingServices = await resRS.json()
+
+  const resE = await fetch(`${api}/events`)
+  const events = await resE.json()
   */
 
   // Mock data from data folder
