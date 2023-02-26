@@ -6,5 +6,4 @@ Helpful resources:
 - Amplify CLI documentation: https://docs.amplify.aws/cli
 - More details on this folder & generated files: https://docs.amplify.aws/cli/reference/files
 - Join Amplify's community: https://amplify.aws/community/
-- To deploy this backend on your account, See: https://codeolives.com/2020/02/18/how-to-setup-aws-amplify-for-multiple-developers-using-the-same-environments/
 
