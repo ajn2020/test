@@ -53,8 +53,15 @@ export default function Question() {
     );
   }, []);
 
-  const handleAnswerClick = (selectedOption: Option) => {
-    setAnswerSelected(true);
+  const handleAnswerClick = async (selectedOption: Option) => {
+    if (!isAnswerSelected) {
+      setAnswerSelected(true);
+      await new Promise((r) => setTimeout(r, 10000));
+      setAnswerSelected(false);
+      setCurrentQuestion(
+        quizQuestions[Math.floor(Math.random() * quizQuestions.length)]
+      );
+    }
   };
 
   return (
