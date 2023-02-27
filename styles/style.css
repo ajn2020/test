@@ -419,6 +419,19 @@ a:hover {
   transform: rotateY(180deg);
 }
 
+.item-type-card-back-title {
+  margin: 10px 0px;
+}
+
+.item-type-card-button {
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+}
+
 .item-type-card-image {
   height: 75px;
 }

@@ -5,10 +5,22 @@ type ItemTypeCardProps = {
   frontImage: string;
   backTitle: string;
   backImage: string;
+  serviceID: string;
+  openAccordion(id: string): void;
 };
 
 export default function ItemTypeCard(props: ItemTypeCardProps) {
   const [isFlipped, setFlipped] = useState(false);
+
+  async function jumpToAccordion(
+    event: React.MouseEvent<HTMLButtonElement>,
+    id: string
+  ) {
+    event.stopPropagation();
+    props.openAccordion(id);
+    await new Promise((r) => setTimeout(r, 200));
+    document.getElementById(id)?.scrollIntoView();
+  }
 
   return (
     <div
@@ -29,7 +41,16 @@ export default function ItemTypeCard(props: ItemTypeCardProps) {
           />
         </div>
         <div className="item-type-card-back">
-          <h3>{props.backTitle}</h3>
+          <div>
+            <h3 className="item-type-card-back-title">{props.backTitle}</h3>
+            <button
+              className="item-type-card-button"
+              type="button"
+              onClick={(event) => jumpToAccordion(event, props.serviceID)}
+            >
+              Take me there!
+            </button>
+          </div>
           <img
             className="item-type-card-image"
             src={props.backImage}

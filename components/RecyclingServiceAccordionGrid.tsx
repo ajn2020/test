@@ -1,14 +1,25 @@
-import { useState, useEffect, createRef, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  createRef,
+  useRef,
+  useImperativeHandle,
+} from "react";
 import RecyclingServiceAccordion from "@/components/RecyclingServiceAccordion";
 import { RecyclingServices } from "@/data/RecyclingServices";
+
+export type RecyclingServiceAccordionGridRef = {
+  openAccordion(id: string): void;
+};
 
 type RecyclingServiceAccordionGridProps = {
   recyclingServices: Array<RecyclingServices>;
 };
 
-export default function RecyclingServiceAccordionGrid(
-  props: RecyclingServiceAccordionGridProps
-) {
+export default React.forwardRef<
+  RecyclingServiceAccordionGridRef,
+  RecyclingServiceAccordionGridProps
+>(function RecyclingServiceAccordionGrid(props, ref) {
   const [openAccordionID, setOpenAccordionID] = useState("");
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -125,6 +136,13 @@ export default function RecyclingServiceAccordionGrid(
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [windowWidth]);
 
+  useImperativeHandle(ref, () => ({
+    openAccordion(id: string) {
+      setOpenAccordionID("");
+      setOpenAccordionID(id);
+    },
+  }));
+
   function handleClick(id: string) {
     setOpenAccordionID(id == openAccordionID ? "" : id);
   }
@@ -165,4 +183,4 @@ export default function RecyclingServiceAccordionGrid(
       </div>
     </div>
   );
-}
+});

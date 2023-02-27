@@ -11,10 +11,7 @@ export type RecyclingServiceAccordionProps = {
 };
 
 export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
-  function RecyclingServiceAccordion(
-    props: RecyclingServiceAccordionProps,
-    ref: Ref<HTMLDivElement>
-  ) {
+  function RecyclingServiceAccordion(props, ref) {
     return (
       <div
         ref={ref}
