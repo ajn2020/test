@@ -8,23 +8,15 @@ type Fact = {
 };
 
 export default function Fact() {
-  const [currentFact, setCurrentFact] = useState<Fact>();
-
-  useEffect(() => {
-    setCurrentFact(facts[Math.floor(Math.random() * facts.length)]);
-  }, []);
+  const [currentFact, setCurrentFact] = useState<Fact>(
+    facts[Math.floor(Math.random() * facts.length)]
+  );
 
   return (
     <div>
-      <div>
-        <h3>{currentFact?.title}</h3>
-      </div>
+      <h3>{currentFact.title}</h3>
       <br />
-      {typeof currentFact?.content === "string" && (
-        <div>
-          <ReactMarkdown>{currentFact.content}</ReactMarkdown>
-        </div>
-      )}
+      <ReactMarkdown>{currentFact.content}</ReactMarkdown>
     </div>
   );
 }

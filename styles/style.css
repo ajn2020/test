@@ -131,7 +131,7 @@ a:hover {
   margin: 5px 20px;
   /* border-width: 1px; */
   cursor: pointer;
-  border: 0;
+  border: 1;
   border-radius: 5px;
 }
 
