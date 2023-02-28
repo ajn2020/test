@@ -48,7 +48,7 @@ export default function ItemTypeCard(props: ItemTypeCardProps) {
               type="button"
               onClick={(event) => jumpToAccordion(event, props.serviceID)}
             >
-              Take me there!
+              Click me for more info!
             </button>
           </div>
           <img
