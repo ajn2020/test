@@ -5,8 +5,11 @@ import Subheading from "@/components/Subheading";
 import DecisionTree from "@/components/DecisionTree";
 import EventCardCarousel from "@/components/EventCardCarousel";
 import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
-import RecyclingServiceAccordionGrid from "@/components/RecyclingServiceAccordionGrid";
+import RecyclingServiceAccordionGrid, {
+  RecyclingServiceAccordionGridRef,
+} from "@/components/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
+import { useRef } from "react";
 
 // API url
 import { api } from "@/config/api";
@@ -21,6 +24,13 @@ type Props = {
 };
 
 export default function Home(props: Props) {
+  const recyclingServiceAccordionGridRef =
+    useRef<RecyclingServiceAccordionGridRef>(null);
+
+  function openAccordion(id: string) {
+    recyclingServiceAccordionGridRef.current?.openAccordion(id);
+  }
+
   return (
     <>
       <Head>
@@ -51,7 +61,7 @@ export default function Home(props: Props) {
       )}
 
       <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
-      <ItemTypeCardGrid />
+      <ItemTypeCardGrid openAccordion={openAccordion} />
 
       <Subheading
         title="Recycling Services"
@@ -59,6 +69,7 @@ export default function Home(props: Props) {
       />
       <RecyclingServiceAccordionGrid
         recyclingServices={props.recyclingServices}
+        ref={recyclingServiceAccordionGridRef}
       />
 
       <Footer />
