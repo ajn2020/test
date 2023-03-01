@@ -1,21 +1,26 @@
 import { useState } from "react";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-
+import { AlignCenterOutlined } from '@ant-design/icons';
 type HeaderProps = {
   displayEvents: boolean;
 };
 
 export default function Header(props: HeaderProps) {
-  const [isInput, setIsInput] = useState(false);
+
   const { Search } = Input;
   const onSearch = (value: string) => console.log(value);
-  const iconClick = () => {
-    setIsInput(true);
-  };
-  const onBlur = () => {
-    setIsInput(false);
-  };
+
+
+  const [isGuide, setIsGuide] = useState(true);
+  const isGuideChange = () => {
+    if (isGuide) {
+      setIsGuide(false);
+    } else {
+      setIsGuide(true)
+    }
+
+  }
 
   return (
     <>
@@ -35,19 +40,25 @@ export default function Header(props: HeaderProps) {
           <div className="header-quan"></div>
           <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
         </div>
-        {isInput ? (
-          <div className="header-search-input" onBlur={onBlur}>
-            <Search
-              placeholder="input search text"
-              onSearch={onSearch}
-              style={{ width: 200 }}
-            />
-          </div>
-        ) : (
-          <div className="header-search">
-            <SearchOutlined onClick={iconClick} />
-          </div>
-        )}
+
+
+        <div className="guide_div">
+          {isGuide ? <div className="isGuide" onClick={() => { isGuideChange }}>
+            <div>
+              <div><a href="#DecisionTree">Find out how...</a></div>
+
+              <div><a href="#EventCardCarousel">Events</a></div>
+
+              <div><a href="#ItemTypeCardGrid">How to recycle...</a></div>
+
+              <div><a href="#RecyclingServiceAccordionGrid">Recycling Services</a></div>
+            </div>
+          </div> : <div className="guide_retraction" onClick={() => { isGuideChange }}><AlignCenterOutlined /></div>}
+
+
+        </div>
+
+
       </div>
     </>
   );
