@@ -129,30 +129,17 @@ a:hover {
   font-weight: bold;
   padding: 10px;
   margin: 5px 20px;
-  /* border-width: 1px; */
   cursor: pointer;
-  border: 1;
+  border: 5px solid transparent;
   border-radius: 5px;
 }
 
 .answer-button.border-correct {
-  border-color: green;
-  border-width: 5px 5px 5px 5px;
+  border: 5px solid green;
 }
 
 .answer-button.border-incorrect {
-  border-color: red;
-  border-width: 5px 5px 5px 5px;
-}
-
-.answer-button.correct {
-  background-color: green;
-  border-width: 2px 2px 2px 2px;
-}
-
-.answer-button.incorrect {
-  background-color: red;
-  border-width: 2px 2px 2px 2px;
+  border: 5px solid red;
 }
 
 /*========================================
@@ -498,6 +485,7 @@ a:hover {
 .recycling-service-accordion-content-displayed {
   color: black;
   max-height: 1000px;
+  overflow: hidden;
   transition: max-height 0.2s ease-in;
 }
 
