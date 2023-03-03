@@ -24,7 +24,7 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
             <h2>{props.title}</h2>
           </div>
           <div className="recycling-service-accordion-description">
-            <p>{props.description}</p>
+            <ReactMarkdown>{props.description}</ReactMarkdown>
           </div>
           <div
             className={

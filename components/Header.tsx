@@ -27,7 +27,7 @@ export default function Header(props: HeaderProps) {
           Hounslow!
         </div>
         <div className="header-anchors">
-          <a href="#DecisionTree">Find out how...</a>
+          <a href="#DecisionTree">Recycling Assistant</a>
           <div className="header-quan"></div>
           {props.displayEvents ? <a href="#EventCardCarousel">Events</a> : ""}
           <div className="header-quan"></div>
