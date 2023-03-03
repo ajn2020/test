@@ -485,7 +485,6 @@ a:hover {
 .recycling-service-accordion-content-displayed {
   color: black;
   max-height: 1000px;
-  overflow: hidden;
   transition: max-height 0.2s ease-in;
 }
 
