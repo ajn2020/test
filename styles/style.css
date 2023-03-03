@@ -129,17 +129,30 @@ a:hover {
   font-weight: bold;
   padding: 10px;
   margin: 5px 20px;
+  /* border-width: 1px; */
   cursor: pointer;
-  border: 5px solid transparent;
+  border: 1;
   border-radius: 5px;
 }
 
 .answer-button.border-correct {
-  border: 5px solid green;
+  border-color: green;
+  border-width: 5px 5px 5px 5px;
 }
 
 .answer-button.border-incorrect {
-  border: 5px solid red;
+  border-color: red;
+  border-width: 5px 5px 5px 5px;
+}
+
+.answer-button.correct {
+  background-color: green;
+  border-width: 2px 2px 2px 2px;
+}
+
+.answer-button.incorrect {
+  background-color: red;
+  border-width: 2px 2px 2px 2px;
 }
 
 /*========================================

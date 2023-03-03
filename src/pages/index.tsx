@@ -9,7 +9,7 @@ import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
 } from "@/components/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 
 // API url
 import { api } from "@/config/api";
@@ -30,62 +30,49 @@ export default function Home(props: Props) {
   function openAccordion(id: string) {
     recyclingServiceAccordionGridRef.current?.openAccordion(id);
   }
-  const [isNextPage, setIsNextPage] = useState(false);
-  const nextPageButton = () => {
 
-    setTimeout(() => {
-      setIsNextPage(true)
-    }, 500)
-  }
-  useEffect(() => {
-    nextPageButton()
-
-
-  }, [])
   return (
     <>
-      {isNextPage ? <div>
-        <Head>
-          <title>Hounslow Recycling Hub</title>
-          <meta name="application-name" content="Hounslow Recycling Hub" />
-          <meta
-            name="description"
-            content="Your go-to stop for all recycling things in the London Borough of Hounslow!"
-          />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <Header displayEvents={props.events.length > 0} />
-
-        <EngagingBox />
-
-        <Subheading title="Find out how to recycle your item" id="DecisionTree" />
-        <DecisionTree />
-
-        {props.events.length > 0 ? (
-          <>
-            <Subheading title="Events" id="EventCardCarousel" />
-            <EventCardCarousel events={props.events} />
-          </>
-        ) : (
-          ""
-        )}
-
-        <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
-        <ItemTypeCardGrid openAccordion={openAccordion} />
-
-        <Subheading
-          title="Recycling Services"
-          id="RecyclingServiceAccordionGrid"
+      <Head>
+        <title>Hounslow Recycling Hub</title>
+        <meta name="application-name" content="Hounslow Recycling Hub" />
+        <meta
+          name="description"
+          content="Your go-to stop for all recycling things in the London Borough of Hounslow!"
         />
-        <RecyclingServiceAccordionGrid
-          recyclingServices={props.recyclingServices}
-          ref={recyclingServiceAccordionGridRef}
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <Footer />
-      </div> : <div className="welcome_page"><h1 className="animate__animated animate__heartBeat">welcome</h1></div>}
+      <Header displayEvents={props.events.length > 0} />
+
+      <EngagingBox />
+
+      <Subheading title="Find out how to recycle your item" id="DecisionTree" />
+      <DecisionTree />
+
+      {props.events.length > 0 ? (
+        <>
+          <Subheading title="Events" id="EventCardCarousel" />
+          <EventCardCarousel events={props.events} />
+        </>
+      ) : (
+        ""
+      )}
+
+      <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
+      <ItemTypeCardGrid openAccordion={openAccordion} />
+
+      <Subheading
+        title="Recycling Services"
+        id="RecyclingServiceAccordionGrid"
+      />
+      <RecyclingServiceAccordionGrid
+        recyclingServices={props.recyclingServices}
+        ref={recyclingServiceAccordionGridRef}
+      />
+
+      <Footer />
     </>
   );
 }
