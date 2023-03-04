@@ -23,31 +23,7 @@ export default React.forwardRef<
   const [openAccordionID, setOpenAccordionID] = useState("");
   const [windowWidth, setWindowWidth] = useState(0);
 
-  const redRecyclingBoxRef = createRef<HTMLDivElement>();
-  const blueRecyclingBoxRef = createRef<HTMLDivElement>();
-  const greenRecyclingBoxRef = createRef<HTMLDivElement>();
-  const tiedCarrierBagOneRef = createRef<HTMLDivElement>();
-  const tiedCarrierBagTwoRef = createRef<HTMLDivElement>();
-  const foodWasteBinRef = createRef<HTMLDivElement>();
-  const brownWheeledBinRef = createRef<HTMLDivElement>();
-  const blackWheeledBinRef = createRef<HTMLDivElement>();
-  const bulkyWasteCollectionServiceRef = createRef<HTMLDivElement>();
-  const clinicalWasteCollectionServiceRef = createRef<HTMLDivElement>();
-  const hounslowFurnitureRecyclingProjectRef = createRef<HTMLDivElement>();
-
-  let refs = [
-    redRecyclingBoxRef,
-    blueRecyclingBoxRef,
-    greenRecyclingBoxRef,
-    tiedCarrierBagOneRef,
-    tiedCarrierBagTwoRef,
-    foodWasteBinRef,
-    brownWheeledBinRef,
-    blackWheeledBinRef,
-    bulkyWasteCollectionServiceRef,
-    clinicalWasteCollectionServiceRef,
-    hounslowFurnitureRecyclingProjectRef,
-  ];
+  let refs: Array<React.RefObject<HTMLDivElement>> = [];
 
   const accordionsMaxHeight = useRef(0); // This is the (closed) height of the tallest accordion.
   const previousOpenAccordionID = useRef("");
@@ -136,6 +112,7 @@ export default React.forwardRef<
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [windowWidth]);
 
+  // Allows other components to call the openAccordion method.
   useImperativeHandle(ref, () => ({
     openAccordion(id: string) {
       setOpenAccordionID("");
@@ -147,12 +124,18 @@ export default React.forwardRef<
     setOpenAccordionID(id == openAccordionID ? "" : id);
   }
 
+  function createAndPushRef() {
+    const ref = createRef<HTMLDivElement>();
+    refs.push(ref);
+    return ref;
+  }
+
   return (
     <div className="recycling-service-accordion-grid">
       <div className="recycling-service-accordion-grid-col">
         {props.recyclingServices
           .slice(0, Math.ceil(props.recyclingServices.length / 2))
-          .map((recyclingService, index) => (
+          .map((recyclingService) => (
             <RecyclingServiceAccordion
               key={recyclingService.title}
               id={recyclingService.title}
@@ -161,14 +144,14 @@ export default React.forwardRef<
               content={recyclingService.content}
               isOpen={openAccordionID == recyclingService.title}
               handleClick={handleClick}
-              ref={refs[index]}
+              ref={createAndPushRef()}
             />
           ))}
       </div>
       <div className="recycling-service-accordion-grid-col">
         {props.recyclingServices
           .slice(Math.ceil(props.recyclingServices.length / 2))
-          .map((recyclingService, index) => (
+          .map((recyclingService) => (
             <RecyclingServiceAccordion
               key={recyclingService.title}
               id={recyclingService.title}
@@ -177,7 +160,7 @@ export default React.forwardRef<
               content={recyclingService.content}
               isOpen={openAccordionID == recyclingService.title}
               handleClick={handleClick}
-              ref={refs[index + Math.ceil(props.recyclingServices.length / 2)]}
+              ref={createAndPushRef()}
             />
           ))}
       </div>
