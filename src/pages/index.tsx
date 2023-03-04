@@ -9,7 +9,7 @@ import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
 } from "@/components/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 // API url
 import { api } from "@/config/api";
@@ -24,6 +24,12 @@ type Props = {
 };
 
 export default function Home(props: Props) {
+  const [showFlatVersion, setShowFlatVersion] = useState(false);
+
+  function toggle() {
+    setShowFlatVersion(!showFlatVersion);
+  }
+
   const recyclingServiceAccordionGridRef =
     useRef<RecyclingServiceAccordionGridRef>(null);
 
@@ -44,7 +50,7 @@ export default function Home(props: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header displayEvents={props.events.length > 0} />
+      <Header displayEvents={props.events.length > 0} toggle={toggle} />
 
       <EngagingBox />
 
@@ -61,7 +67,10 @@ export default function Home(props: Props) {
       )}
 
       <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
-      <ItemTypeCardGrid openAccordion={openAccordion} />
+      <ItemTypeCardGrid
+        showFlatVersion={showFlatVersion}
+        openAccordion={openAccordion}
+      />
 
       <Subheading
         title="Recycling Services"
