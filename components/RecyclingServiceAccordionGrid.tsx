@@ -13,7 +13,9 @@ export type RecyclingServiceAccordionGridRef = {
 };
 
 type RecyclingServiceAccordionGridProps = {
-  recyclingServices: Array<RecyclingServices>;
+  showFlatVersion: boolean;
+  houseRecyclingServices: Array<RecyclingServices>;
+  flatRecyclingServices: Array<RecyclingServices>;
 };
 
 export default React.forwardRef<
@@ -133,8 +135,19 @@ export default React.forwardRef<
   return (
     <div className="recycling-service-accordion-grid">
       <div className="recycling-service-accordion-grid-col">
-        {props.recyclingServices
-          .slice(0, Math.ceil(props.recyclingServices.length / 2))
+        {(props.showFlatVersion
+          ? props.flatRecyclingServices
+          : props.houseRecyclingServices
+        )
+          .slice(
+            0,
+            Math.ceil(
+              (props.showFlatVersion
+                ? props.flatRecyclingServices
+                : props.houseRecyclingServices
+              ).length / 2
+            )
+          )
           .map((recyclingService) => (
             <RecyclingServiceAccordion
               key={recyclingService.title}
@@ -149,8 +162,18 @@ export default React.forwardRef<
           ))}
       </div>
       <div className="recycling-service-accordion-grid-col">
-        {props.recyclingServices
-          .slice(Math.ceil(props.recyclingServices.length / 2))
+        {(props.showFlatVersion
+          ? props.flatRecyclingServices
+          : props.houseRecyclingServices
+        )
+          .slice(
+            Math.ceil(
+              (props.showFlatVersion
+                ? props.flatRecyclingServices
+                : props.houseRecyclingServices
+              ).length / 2
+            )
+          )
           .map((recyclingService) => (
             <RecyclingServiceAccordion
               key={recyclingService.title}
