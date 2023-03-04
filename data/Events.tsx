@@ -26,7 +26,7 @@ export const events = [
     title: "Brentford Recycling Action Group Monthly Meeting",
     date: "07/03/2023",
     description:
-      "**What:** *BRAG (Brentford Recycling Action Group)* is a non-political community waste action group made up of local Brentford residents. We work to raise awareness of waste issues and to promote activities and facilities to improve the local environment for the benefit of local people.  \n&nbsp;  \n**Where/When:** To see how you could get involved, come along to one of our *monthly meetings*, which take place the *first Tuesday of the month* at the *Residents Clubroom, Brentford Dock, 1 Augustus Close, Brentford, TW8 8QU*. The meeting *starts at 7pm* and *finishes at 8pm*. Meet our fun and enthusiastic group and get inspired!",
+      "**What:** *BRAG (Brentford Recycling Action Group)* is a non-political community waste action group made up of local Brentford residents. We work to raise awareness of waste issues and to promote activities and facilities to improve the local environment for the benefit of local people. Meet our fun and enthusiastic group and get inspired!  \n&nbsp;  \n**When:** Our *monthly meetings* take place the *first Tuesday of the month*. The meeting *starts at 7pm* and *finishes at 8pm*.  \n&nbsp;  \n**Where:** At the *Residents Clubroom, Brentford Dock, 1 Augustus Close, Brentford, TW8 8QU*.",
   },
   {
     image: "/global_recycling_day.png",
