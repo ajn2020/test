@@ -1,29 +1,41 @@
 export const facts = [
   {
-    title: "Top tips for recycling plastic bags and wrapping:",
+    title: "Top tips for recycling [plastic bags and wrapping](https://londonrecycles.co.uk/a-to-z/plastic-bags/):",
     content:
-      "Find your nearest supermarket recycling point.  \nMake sure they are food-free and as clean as possible.  \n Keep them all together and bring in bulk on your next supermarket trip.  \nNote down on your shopping list.",
+      "Find your nearest supermarket [recycling point](https://www.recyclenow.com/recycling-locator).  \n" +
+      "Make sure the bags and wrapping are food-free and as clean as possible.  \n" +
+      "Keep them all together and bring in bulk on your next supermarket trip.  \n" +
+      "Note down a reminder to recycle them on your shopping list.",
   },
   {
-    title: "Why batteries cannot be recycled in the red recycling box?",
+    title: "Did you know that batteries can cause fire whithin our vehicles?",
     content:
-      "This can cause fires within our vehicles. Instead, the retailers who sell batteries can usually recycle batteries.",
+      "That's why batteries cannot be put in the red recycling bin. " +
+      "Instead, they can be [recycled](https://westlondonwaste.gov.uk/materials/batteries) " +
+      "with [retailers](https://www.recyclenow.com/recycling-locator).",
   },
   {
     title:
-      "Why plastic carrier bags cannot be recycled in the red recycling box?",
+      "Did you know that plastic carrier bags can become tangled in the sorting machinery which may lead to breakdowns or even fires?",
     content:
-      "This can become tangled in the sorting machinery which may lead to breakdowns or even fires.",
+      "This is why they cannot be recycled in the red recycling box. " +
+      "However, you can still recycle them - just find your nearest " +
+      "supermarket [recycling point](https://www.recyclenow.com/recycling-locator).",
   },
   {
-    title: "What happens to the collected plastic and cans?",
+    title: "Did you know that the collected plastic and cans undergo mechanical separation" +
+      " and are split into three material streams: aluminium, steel and mixed plastics? " +
+      "Then they are baled and sent to re-processors.",
     content:
-      "They undergo mechanical separation and are split into three material streams: aluminium, steel (they both get remelted and used to produce new cans) and mixed plastics (they are transported to a plastic recycling factory where they are separated, baled, and can be reused in a number of ways afterwards). Then they are baled and sent to re-processors.",
+      "The aluminium and steel are then remelted and used to produce new cans." +
+      "The plastics are transported to a plastic recycling factory where they are again " +
+      "separated, baled, and can be reused in a number of ways afterwards",
   },
   {
-    title: "Why shredded paper cannot be recycled in the blue recycling box?",
+    title: "Did you know that shredded paper is deemed too short and can pose issues with the sorting machinery?",
     content:
-      "They are deemed too short and can pose issues with the sorting machinery. However, you can place small quantities into your food waste bin.",
+      "That's why it cannot be recycled in the blue recycling box. " +
+      "However, you can place small quantities of it into your **food waste bin**.",
   },
   {
     title: "Why do the cardboard boxes need to be flattened?",
