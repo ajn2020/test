@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import EngagingBox from "@/components/EngagingBox";
 import Subheading from "@/components/Subheading";
 import DecisionTree from "@/components/DecisionTree";
+import ImageUpload from "@/components/ImageUpload";
 import EventCardCarousel from "@/components/EventCardCarousel";
 import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
 import RecyclingServiceAccordionGrid, {
@@ -49,6 +50,7 @@ export default function Home(props: Props) {
       <EngagingBox />
 
       <Subheading title="Find out how to recycle your item" id="DecisionTree" />
+      <ImageUpload />
       <DecisionTree />
 
       {props.events.length > 0 ? (
