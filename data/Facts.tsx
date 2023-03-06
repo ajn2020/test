@@ -40,7 +40,7 @@ export const facts = [
     title: "Why do the cardboard boxes need to be flattened?",
     content:
       "The collection crew needs to be able to carry them and fit them into the collection vehicle, hence the size must be strictly less than 70cm x 70cm. " +
-      "Boxes that are larger than 70cm can be recycled via sending them to Spacewaye or other local amenity sites.",
+      "Boxes that are larger than 70cm can be recycled via sending them to Space Waye or other local amenity sites.",
   },
   {
     title: "What happens to the collected paper and card?",
@@ -168,7 +168,7 @@ export const facts = [
       "What are the current strategies to reduce waste and increase recycling in London?",
     content:
       "Collaborating with London's boroughs to assist in delivering their Reduction and Recycling Plans.  \n" +
-      "Helping London's food companies decrease waste and save money through Foodsave.  \n" +
+      "Helping London's food companies decrease waste and save money through FoodSave.  \n" +
       "Working to reduce the number of single-use plastic bottles in the city by sponsoring programmes across London to enhance access to free drinking water.  \n" +
       "[Source.](https://www.london.gov.uk/programmes-strategies/environment-and-climate-change/waste-and-recycling)",
   },
