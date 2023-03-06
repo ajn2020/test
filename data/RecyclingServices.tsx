@@ -5,62 +5,13 @@ export type RecyclingServices = {
 };
 
 export const recyclingServices = [
-  /*{
-    //Version 1 - original
+  {
     title: "Red Recycling Box",
     description:
       "The red recycling box is used to recycle plastic and metal cans.",
     content:
       "**What can be recycled:** This service mainly collects plastic bottles, drink cans, food tins, aluminium foil and so on.  \n&nbsp;  \n**How:** The recycling process takes place weekly with the collection between 7am and 5pm. You should place the box at the front edge of your property by 7am and ensure that all items have been washed, squashed and with lids included for plastics.  \n&nbsp;  \n**What cannot be recycled:** Things that cannot be collected involve plastic carrier bags, plastic wrapping and packaging, hard plastics and batteries.  \n&nbsp;  \n[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box)",
-  },*/
-  {
-    //Version 2 - small content changes
-    title: "Red Recycling Box",
-    description:
-      "The red recycling box is used to recycle plastic and metal cans.",
-    content:
-      "**What can be recycled:** bottles, drink cans, food tins, aluminium foil, ...  \n" +
-      "&nbsp;  \n" +
-      "**How:** The recycling process takes place weekly with the collection between 7am and 5pm. " +
-      "You should place the box at the front edge of your property by 7am " +
-      "and ensure that all items have been washed, squashed and for plastics - with lids included.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** plastic carrier bags, plastic wrapping and packaging, hard plastics, batteries.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box)",
   },
-  /*{
-    //Version 3 - structural changes
-    title: "Plastic Recycling and Metal Recycling",
-    description:
-      "Plastic can be recycled using the following bins: red box, green communal bins with red lid, green wheelie bin with red sticker.",
-    content:
-      "**What can be recycled:** bottles, aluminium foil, ...  \n" +
-      "&nbsp;  \n" +
-      "**How:** The recycling process takes place weekly with the collection between 7am and 5pm. " +
-      "You should place the box at the front edge of your property by 7am " +
-      "and ensure that all items have been washed, squashed and with lids included.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** plastic carrier bags, plastic wrapping and packaging, hard plastics.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box)",
-  },
-  {
-    //Version 3 - structural changes
-    title: "Metal Recycling",
-    description:
-      "Metal can be recycled using the following bins: red box, green wheelie bin with grey sticker.",
-    content:
-      "**What can be recycled:** drink cans, food tins, ...  \n" +
-      "&nbsp;  \n" +
-      "**How:** The recycling process takes place weekly with the collection between 7am and 5pm. " +
-      "You should place the box at the front edge of your property by 7am " +
-      "and ensure that all items have been washed and squashed.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** batteries.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box)",
-  },*/
   {
     title: "Blue Recycling Box",
     description: "The blue recycling box is used to recycle card and paper.",
