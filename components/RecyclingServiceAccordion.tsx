@@ -1,12 +1,9 @@
+import { RecyclingServices } from "@/data/RecyclingServices";
 import React, { Ref } from "react";
 import ReactMarkdown from "react-markdown";
 
-export type RecyclingServiceAccordionProps = {
+export type RecyclingServiceAccordionProps = RecyclingServices & {
   id: string;
-  title: string;
-  description: string;
-  content: string;
-  infographic: string;
   isOpen: boolean;
   handleClick: (id: string) => void;
 };
