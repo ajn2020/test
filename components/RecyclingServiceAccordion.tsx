@@ -6,6 +6,7 @@ export type RecyclingServiceAccordionProps = {
   title: string;
   description: string;
   content: string;
+  infographic: string;
   isOpen: boolean;
   handleClick: (id: string) => void;
 };
@@ -35,6 +36,18 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
           >
             <br />
             <ReactMarkdown>{props.content}</ReactMarkdown>
+            {props.infographic != null ? (
+              <>
+                <br />
+                <img
+                  className="recycling-service-accordion-infographic"
+                  src={props.infographic}
+                  alt=""
+                />
+              </>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

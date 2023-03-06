@@ -2,6 +2,7 @@ export type RecyclingServices = {
   title: string;
   description: string;
   content: string;
+  infographic: string;
 };
 
 export const recyclingServices = [
@@ -18,6 +19,7 @@ export const recyclingServices = [
       "**What cannot be recycled:** Things that cannot be collected involve plastic carrier bags, plastic wrapping and packaging, hard plastics and batteries.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box)",
+    infographic: "/red_recycling_box_infographic.png",
   },
   {
     title: "Blue Recycling Box",
@@ -31,6 +33,7 @@ export const recyclingServices = [
       "**What cannot be recycled:** Things that cannot be collected involve shredded paper, plastic sleeves, coated paper and unflattened cardboard boxes.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1598/paper_and_card_recycling_in_your_blue_box)",
+    infographic: "/blue_recycling_box_infographic.png",
   },
   {
     title: "Green Recycling Box",
@@ -45,6 +48,7 @@ export const recyclingServices = [
       "**What cannot be recycled:** Things that cannot be collected involve lightbulbs, ceramics, drinking glasses and window glass.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1599/glass_recycling_in_your_green_box)",
+    infographic: "/green_recycling_box_infographic.png",
   },
   {
     title: "Tied Carrier Bag (1)",
@@ -93,6 +97,7 @@ export const recyclingServices = [
       "**What cannot be recycled:** Excess liquids and oils should be drained from the food waste beforehand, otherwise they will not be collected.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1602/food_waste_recycling)",
+    infographic: "/food_waste_bin_infographic.png",
   },
   {
     title: "Brown Wheeled Bin",
