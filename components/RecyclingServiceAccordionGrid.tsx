@@ -23,15 +23,65 @@ export default React.forwardRef<
   RecyclingServiceAccordionGridProps
 >(function RecyclingServiceAccordionGrid(props, ref) {
   const [openAccordionID, setOpenAccordionID] = useState("");
+  const previousOpenAccordionID = useRef("");
+  const accordionsMaxHeight = useRef(0); // This is the (closed) height of the tallest accordion.
   const [windowWidth, setWindowWidth] = useState(0);
-
   let refs: Array<React.RefObject<HTMLDivElement>> = [];
 
-  const accordionsMaxHeight = useRef(0); // This is the (closed) height of the tallest accordion.
-  const previousOpenAccordionID = useRef("");
+  ////////////////////////////////////////////////////////////////////////////////
 
-  // This hook runs when an accordion is opened or closed. It updates the
-  // variable keeping track of the max height of the accordions.
+  // Problem 2: when all accordions are closed and the toggle is toggled, the
+  // accordions will be the wrong size, since they are loaded in the wrong size.
+
+  // Problem 3: when an accordion is open and the toggle is toggled, the
+  // openAccordionID hook is called. However, since this hook has a delay, its
+  // effects occur on the new accordions. While this does fix the problem of the
+  // new accordions being the wrong size, this is some spaghetti functionality!
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+  // This hook runs when the page version changes. It updates the variable
+  // keeping track of the max height of the accordions.
+  useEffect(() => {
+    // Close any currently open accordions.
+    setOpenAccordionID("");
+
+    // Set the min height of the accordions to 0, so that they use their default
+    // height.
+    refs.forEach((ref) => {
+      if (ref.current) {
+        ref.current!.style.minHeight = "0px";
+      }
+    });
+
+    // Find the height of the tallest accordion, ignoring the one that is
+    // potentially open.
+    let calculatedMaxHeight = 0;
+    refs.forEach((ref) => {
+      if (ref.current?.id != openAccordionID) {
+        calculatedMaxHeight = Math.max(
+          calculatedMaxHeight,
+          ref.current?.offsetHeight || 0
+        );
+      }
+    });
+
+    // Update max height.
+    accordionsMaxHeight.current = calculatedMaxHeight;
+
+    // Set the min height of the accordions to the max height.
+    refs.forEach((ref) => {
+      if (ref.current) {
+        ref.current!.style.minHeight = `${accordionsMaxHeight.current}px`;
+      }
+    });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.showFlatVersion]);
+
+  // This hook runs when an accordion is opened or closed (but only has an
+  // effect if an accordion was closed). It updates the variable keeping track
+  // of the max height of the accordions.
   useEffect(() => {
     // We need to add a delay to take into account an accordion closing before
     // we can calculate the max height.
@@ -74,14 +124,16 @@ export default React.forwardRef<
   // This hook runs when the width of the browser window changes. It updates the
   // variable keeping track of the max height of the accordions.
   useEffect(() => {
-    // Set the min height of the accordions to 0, so that they use their default height.
+    // Set the min height of the accordions to 0, so that they use their default
+    // height.
     refs.forEach((ref) => {
       if (ref.current) {
         ref.current!.style.minHeight = "0px";
       }
     });
 
-    // Find the height of the tallest accordion, ignoring the one that is potentially open.
+    // Find the height of the tallest accordion, ignoring the one that is
+    // potentially open.
     let calculatedMaxHeight = 0;
     refs.forEach((ref) => {
       if (ref.current?.id != openAccordionID) {
@@ -117,7 +169,6 @@ export default React.forwardRef<
   // Allows other components to call the openAccordion method.
   useImperativeHandle(ref, () => ({
     openAccordion(id: string) {
-      setOpenAccordionID("");
       setOpenAccordionID(id);
     },
   }));
