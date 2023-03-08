@@ -1,4 +1,12 @@
 /*========================================
+    ALL
+========================================*/
+
+* {
+  font-family: "Lato";
+}
+
+/*========================================
     ALL LINKS
 ========================================*/
 
@@ -30,7 +38,7 @@ a:hover {
   /* background-color: #cfa4d5; */
   background: linear-gradient(#d860f9, #642f6c);
   color: white;
-  font-family: Lato;
+  font-family: "Lato";
   text-align: center;
   padding: 30px;
   position: relative;
@@ -41,7 +49,7 @@ a:hover {
 }
 
 .header-description {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .header-anchors {
@@ -69,6 +77,7 @@ a:hover {
   border-radius: 10px;
   margin: 0 50px;
   padding: 8px;
+  font-size: 18px;
 }
 
 .header-search {
@@ -101,10 +110,17 @@ a:hover {
   border-radius: 10px;
   border-width: 3px;
   margin: 55px 100px;
-  margin-bottom: -31px;
   padding: 20px;
   text-align: center;
   justify-content: center;
+}
+
+/*======================================
+    FACT BOX
+========================================*/
+
+.fact-box-content {
+  font-size: 18px;
 }
 
 /*======================================
@@ -127,6 +143,7 @@ a:hover {
 
 .answer-button {
   color: black;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px;
   margin: 5px 20px;
@@ -154,7 +171,7 @@ a:hover {
   margin: 10px 0px;
   background-color: #90449c;
   margin-bottom: 45px;
-  margin-top: 85px;
+  margin-top: 45px;
 }
 
 .subheading-container {
@@ -168,6 +185,7 @@ a:hover {
 .subheading-anchors {
   display: flex;
   margin: 0 30px;
+  font-size: 17px;
 }
 
 .subheading-anchors a {
@@ -199,7 +217,7 @@ a:hover {
   border-width: 1px;
   margin: 30px 300px;
   text-align: center;
-  padding: 25px 0;
+  padding: 25px 0px;
 }
 
 .decision-tree-title {
@@ -215,13 +233,14 @@ a:hover {
 
 .decision-tree-option {
   width: 20%;
-  margin: 22px 22px;
-  padding: 20px 20px;
+  margin: 20px 20px 0px 20px;
+  padding: 20px;
   border-width: 0;
   border-radius: 5px;
   background-color: #c29ec7;
   color: #fff;
   cursor: pointer;
+  font-size: 18px;
 }
 
 /*========================================
@@ -250,15 +269,13 @@ a:hover {
 }
 
 .event-card-carousel-button {
-  height: 70x;
-  width: 150px;
+  height: 60px;
+  width: 120px;
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 15px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
-  outline: none;
   color: #fff;
   background-color: #c29ec7;
   border: none;
@@ -323,8 +340,7 @@ a:hover {
 }
 
 .event-card-front {
-  /* background: #ae69b9; */
-  background: #bda0c3;
+  background: #ae69b9;
   transform: rotateY(0deg);
   display: grid;
   grid-template-rows: auto auto;
@@ -336,6 +352,7 @@ a:hover {
 }
 
 .event-card-back {
+  font-size: 17px;
   background: #c29ec7;
   transform: rotateY(180deg);
   display: grid;
@@ -475,6 +492,7 @@ a:hover {
 
 .recycling-service-accordion-description {
   color: black;
+  font-size: 19px;
 }
 
 .recycling-service-accordion-content-hidden {
@@ -482,6 +500,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  font-size: 18px;
 }
 
 .recycling-service-accordion-content-displayed {
@@ -489,6 +508,11 @@ a:hover {
   max-height: 1000px;
   overflow: hidden;
   transition: max-height 0.2s ease-in;
+  font-size: 18px;
+}
+
+.recycling-service-accordion-infographic {
+  width: 100%;
 }
 
 /*========================================

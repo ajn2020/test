@@ -159,6 +159,7 @@ export default React.forwardRef<
               title={recyclingService.title}
               description={recyclingService.description}
               content={recyclingService.content}
+              infographic={recyclingService.infographic}
               isOpen={openAccordionID == recyclingService.title}
               handleClick={handleClick}
               ref={refs[index]}
@@ -175,6 +176,7 @@ export default React.forwardRef<
               title={recyclingService.title}
               description={recyclingService.description}
               content={recyclingService.content}
+              infographic={recyclingService.infographic}
               isOpen={openAccordionID == recyclingService.title}
               handleClick={handleClick}
               ref={refs[index + Math.ceil(props.recyclingServices.length / 2)]}
