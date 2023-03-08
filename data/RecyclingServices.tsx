@@ -11,12 +11,8 @@ export const recyclingServices = [
     description:
       "The red recycling box is used to recycle plastic and metal cans.",
     content:
-      "**What can be recycled:** This service mainly collects plastic bottles, drink cans, food tins, aluminium foil and so on.  \n" +
-      "&nbsp;  \n" +
       "**How:** The recycling process takes place weekly with the collection between 7am and 5pm. " +
       "You should place the box at the front edge of your property by 7am and ensure that all items have been washed, squashed and with lids included for plastics.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** Things that cannot be collected involve plastic carrier bags, plastic wrapping and packaging, hard plastics and batteries.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box)",
     infographic: "/red_recycling_box_infographic.png",
@@ -25,12 +21,8 @@ export const recyclingServices = [
     title: "Blue Recycling Box",
     description: "The blue recycling box is used to recycle card and paper.",
     content:
-      "**What can be recycled:** This service mainly collects cardboard, newspapers, envelopes, tetra paks and so on.  \n" +
-      "&nbsp;  \n" +
       "**How:** The recycling process takes place weekly with the collection between 7am and 5pm. " +
       "You should place the box at the front edge of your property by 7am and ensure that all items have been loosely placed inside your box.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** Things that cannot be collected involve shredded paper, plastic sleeves, coated paper and unflattened cardboard boxes.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1598/paper_and_card_recycling_in_your_blue_box)",
     infographic: "/blue_recycling_box_infographic.png",
@@ -40,12 +32,8 @@ export const recyclingServices = [
     description:
       "The green recycling box is used to recycle glass bottles and jars.",
     content:
-      "**What can be recycled:** This service mainly collects glass bottles and jars.  \n" +
-      "&nbsp;  \n" +
       "**How:** The recycling process takes place weekly with the collection between 7am and 5pm. " +
       "You should place the box at the front edge of your property by 7am.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** Things that cannot be collected involve lightbulbs, ceramics, drinking glasses and window glass.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1599/glass_recycling_in_your_green_box)",
     infographic: "/green_recycling_box_infographic.png",
@@ -85,16 +73,12 @@ export const recyclingServices = [
     title: "Food Waste Bin",
     description: "The food waste bin is used to recycle food waste.",
     content:
-      "**What can be recycled:** This service mainly collects tea bags, bread, meat bones, out-of-date food and so on.  \n" +
-      "&nbsp;  \n" +
       "**How:** The recycling process takes place weekly with the collection between 7am and 5pm. " +
       "You will be provided two bins with lids - a 7-litre caddy for kitchen use and a 25-litre collection bin. " +
       "You should move all your food waste into the 25-litre collection bin once your 7-litre caddy is full. " +
       "The 25-litre collection bin should be locked (such that the handle is left either in the upright position or completely forward and down) and placed at the front edge of your property by 7am to be collected. " +
       "Both bins should be lined with a biodegradable food waste bag. " +
       "Do not use plastic bags in either of the bins.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** Excess liquids and oils should be drained from the food waste beforehand, otherwise they will not be collected.  \n" +
       "&nbsp;  \n" +
       "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1602/food_waste_recycling)",
     infographic: "/food_waste_bin_infographic.png",
