@@ -29,8 +29,14 @@ export default function Header(props: HeaderProps) {
         <div className="header-anchors">
           <a href="#DecisionTree">Recycling Assistant</a>
           <div className="header-quan"></div>
-          {props.displayEvents ? <a href="#EventCardCarousel">Events</a> : ""}
-          <div className="header-quan"></div>
+          {props.displayEvents ? (
+            <>
+              <a href="#EventCardCarousel">Events</a>
+              <div className="header-quan"></div>
+            </>
+          ) : (
+            ""
+          )}
           <a href="#ItemTypeCardGrid">How to recycle...</a>
           <div className="header-quan"></div>
           <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
