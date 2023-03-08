@@ -1,4 +1,12 @@
 /*========================================
+    ALL
+========================================*/
+
+* {
+  font-family: "Lato";
+}
+
+/*========================================
     ALL LINKS
 ========================================*/
 
@@ -30,7 +38,7 @@ a:hover {
   /* background-color: #cfa4d5; */
   background: linear-gradient(#d860f9, #642f6c);
   color: white;
-  font-family: Lato;
+  font-family: "Lato";
   text-align: center;
   padding: 30px;
   position: relative;
@@ -125,7 +133,7 @@ input:checked + .slider:before {
 }
 
 .header-description {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .header-anchors {
@@ -138,7 +146,7 @@ input:checked + .slider:before {
   left: 0;
 }
 
-.header-quan {
+.header-dot {
   width: 10px;
   height: 10px;
   background-color: #fff;
@@ -152,11 +160,13 @@ input:checked + .slider:before {
   border-radius: 10px;
   margin: 0 50px;
   padding: 8px;
+  font-size: 18px;
 }
 
 /*======================================
     ENGAGING BOX
 ========================================*/
+
 .engaging-box-wrapper {
   background-color: #bda0c3;
   /* border-style: ridge; */
@@ -165,15 +175,23 @@ input:checked + .slider:before {
   border-radius: 10px;
   border-width: 3px;
   margin: 55px 100px;
-  margin-bottom: -31px;
   padding: 20px;
   text-align: center;
   justify-content: center;
 }
 
 /*======================================
+    FACT BOX
+========================================*/
+
+.fact-box-content {
+  font-size: 18px;
+}
+
+/*======================================
     QUESTION BOX
 ========================================*/
+
 .question-box {
   display: grid;
   grid-template-rows: auto auto;
@@ -190,12 +208,14 @@ input:checked + .slider:before {
 
 .answer-button {
   color: black;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px;
   margin: 5px 20px;
   cursor: pointer;
   border: 5px solid transparent;
   border-radius: 5px;
+  border-style: solid;
 }
 
 .answer-button.border-correct {
@@ -216,7 +236,7 @@ input:checked + .slider:before {
   margin: 10px 0px;
   background-color: #90449c;
   margin-bottom: 45px;
-  margin-top: 85px;
+  margin-top: 45px;
 }
 
 .subheading-container {
@@ -230,6 +250,7 @@ input:checked + .slider:before {
 .subheading-anchors {
   display: flex;
   margin: 0 30px;
+  font-size: 17px;
 }
 
 .subheading-anchors a {
@@ -261,7 +282,7 @@ input:checked + .slider:before {
   border-width: 1px;
   margin: 30px 300px;
   text-align: center;
-  padding: 25px 0;
+  padding: 25px 0px;
 }
 
 .decision-tree-title {
@@ -277,13 +298,14 @@ input:checked + .slider:before {
 
 .decision-tree-option {
   width: 20%;
-  margin: 22px 22px;
-  padding: 20px 20px;
+  margin: 20px 20px 0px 20px;
+  padding: 20px;
   border-width: 0;
   border-radius: 5px;
   background-color: #c29ec7;
   color: #fff;
   cursor: pointer;
+  font-size: 18px;
 }
 
 /*========================================
@@ -312,15 +334,13 @@ input:checked + .slider:before {
 }
 
 .event-card-carousel-button {
-  height: 70x;
-  width: 150px;
+  height: 60px;
+  width: 120px;
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 15px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
-  outline: none;
   color: #fff;
   background-color: #c29ec7;
   border: none;
@@ -385,8 +405,7 @@ input:checked + .slider:before {
 }
 
 .event-card-front {
-  /* background: #ae69b9; */
-  background: #bda0c3;
+  background: #ae69b9;
   transform: rotateY(0deg);
   display: grid;
   grid-template-rows: auto auto;
@@ -398,6 +417,7 @@ input:checked + .slider:before {
 }
 
 .event-card-back {
+  font-size: 17px;
   background: #c29ec7;
   transform: rotateY(180deg);
   display: grid;
@@ -537,6 +557,7 @@ input:checked + .slider:before {
 
 .recycling-service-accordion-description {
   color: black;
+  font-size: 19px;
 }
 
 .recycling-service-accordion-content-hidden {
@@ -544,6 +565,7 @@ input:checked + .slider:before {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  font-size: 18px;
 }
 
 .recycling-service-accordion-content-displayed {
@@ -551,6 +573,11 @@ input:checked + .slider:before {
   max-height: 1000px;
   overflow: hidden;
   transition: max-height 0.2s ease-in;
+  font-size: 18px;
+}
+
+.recycling-service-accordion-infographic {
+  width: 100%;
 }
 
 /*========================================
