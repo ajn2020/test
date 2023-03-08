@@ -23,7 +23,7 @@ export const facts = [
   },
   {
     title:
-      "Did you know that the collected plastic and cans undergo mechanical separation and are split into three material streams: aluminium, steel and mixed plastics?",
+      "Did you know that collected plastic and cans undergo mechanical separation and are split into three material streams: aluminium, steel and mixed plastics?",
     content:
       "They are then baled and sent to re-processors. " +
       "The aluminium and steel are melted and used to produce new cans. " +
@@ -37,40 +37,45 @@ export const facts = [
       "However, you can place small quantities of it into your **food waste bin**.",
   },
   {
-    title: "Did you know that the cardboard boxes must have size strictly less than 70cm x 70cm to fit into the collection vehicle?",
+    title:
+      "Did you know that cardboard boxes must be strictly less than 70cm x 70cm to fit into the collection vehicle?",
     content:
-      "That's why they need to be **flattened** when put into the bin. This also helps the collection crew to to carry them. " +
+      "That's why they need to be **flattened** when put into the bin. " +
+      "This also helps the collection crew to to carry them. " +
       "Boxes that are larger than 70x70cm can be recycled directly at Space Waye Reuse and Recycling Centre or other recycling points.",
   },
   {
-    title: "Did you know that the collection crew separates the paper from the cardboard in the collection vehicle?",
-    content:
-      "Then, they are then baled separately and sent to reprocessing mills.",
+    title:
+      "Did you know that the collection crew separates the paper from the cardboard in the collection vehicle?",
+    content: "They are then baled separately and sent to reprocessing mills.",
   },
   {
-    title: "Did you know that the collected glass is sent to a re-processor where it is separated by colour?",
+    title:
+      "Did you know that collected glass is sent to a re-processor where it is separated by colour?",
     content:
-      "Then, it is resold to bottle and jar manufacturers. " +
+      "It is then resold to bottle and jar manufacturers. " +
       "Any left-overs are used in construction as an aggregate replacement.",
   },
   {
-    title: "Did you know that textiles are the world's second most polluting industry?",
+    title:
+      "Did you know that textiles are the world's second most polluting industry?",
     content:
       "Around 18,000 tonnes of textile waste is disposed of in West London each year, or 300,000 tonnes nationally. " +
       "This causes more than 5% of the UK's yearly carbon and water footprint, with only 16% of discarded textiles being reused.",
   },
   {
-    title: "Did you know that the collected textiles are sent to a re-processing site where they are separated into categories?",
+    title:
+      "Did you know that collected textiles are sent to a re-processing site where they are separated into categories?",
     content:
       "These include clothes for sale in charity shops, clothes for export, rags, and felt.",
   },
   {
-    title: "Did you know that you can donate your textile waste if it is in good condition?",
+    title:
+      "Did you know that you can donate your textile waste if it is in good condition?",
     content:
-      "You can do this at  \n" +
-      "- [TRAID charity](https://www.traid.org.uk/book-a-collection/): " +
-      "There clothing waste is transformed into funds and resources to help lessen our clothing's environmental and social impact.  \n" +
-      "- [Salvation Army Textile Banks](https://www.salvationarmydonationcentre.org/bank-finder) with 16 spots available across the Borough.",
+      "You can do this using:  \n" +
+      "[TRAID charity](https://www.traid.org.uk/book-a-collection/), where clothing waste is transformed into funds and resources to help lessen our clothing's environmental and social impact.  \n" +
+      "[Salvation Army Textile Banks](https://www.salvationarmydonationcentre.org/bank-finder), with 16 spots available across the Borough.",
   },
   {
     title:
@@ -79,78 +84,82 @@ export const facts = [
       "This makes approximately 170 million electrical items in total per year.",
   },
   {
-    title: "Did you know that 155,000 tonnes of e-waste that could be reused or recycled is being thrown away in the UK each year?",
+    title:
+      "Did you know that 155,000 tonnes of e-waste that could be reused or recycled is being thrown away in the UK each year?",
     content:
-      "Along with that, 75% of the materials in your old electricals can be recycled and transformed into useful items " +
-      "such as life-saving equipment, children's playgrounds, and even new electricals.",
+      "Along with that, 75% of the materials in your old electricals can be recycled and transformed into useful items such as life-saving equipment, children's playgrounds, and even new electricals.",
   },
   {
-    title: "Did you know that the collected appliances are sent to a re-processing site where metals are recovered and sent for further refinement?",
-    content:
-      "Waste plastics are frequently shredded and burned for energy.",
+    title:
+      "Did you know that collected appliances are sent to a re-processing site where metals are recovered and sent for further refinement?",
+    content: "Waste plastics are frequently shredded and burned for energy.",
   },
   {
-    title: "Did you know that wrapping food trash in newspapers or kitchen towels may help absorb excess liquid/oil?",
+    title:
+      "Did you know that wrapping food trash in newspapers or kitchen towels may help absorb excess liquid/oil?",
     content:
-      "This also makes easier for collection crews to empty and clean the bin.",
+      "This also makes it easier for collection crews to empty and clean the bin.",
   },
   {
-    title: "Did you know that the collected food waste is used to generate methane gas and bio-fertiliser?",
+    title:
+      "Did you know that collected food waste is used to generate methane gas and bio-fertiliser?",
     content:
-      "Firstly, the food waste is transported to an anaerobic digester facility in Mitcham by [Bio Collectors](https://www.biocollectors.com/), a specialist contractor." +
-      "This minimises the carbon footprint by reducing the number of miles travelled and the corresponding CO2 emissions.  \n" +
+      "Firstly, the food waste is transported to an anaerobic digester facility in Mitcham by [Bio Collectors](https://www.biocollectors.com/), a specialist contractor. " +
+      "This minimises the carbon footprint by reducing the number of miles travelled and the corresponding CO2 emissions. " +
       "The produced methane gas is used to produce electricity and heat while the produced bio-fertiliser is used by farmers to replace artificial fertilisers.",
   },
   {
-    title: "Did you know that if you want to recycle a disposable BBQ, you should spray it with water?",
+    title:
+      "Did you know that if you want to recycle a disposable BBQ, you should first spray it with water?",
     content:
-      "This is done to ensuring that the BBQ has been extinguished and prevent fire.  \n" +
+      "This ensures that the BBQ has been extinguished and prevents fires. " +
       "The ash should be placed in a bag and put in the black wheelie bin along with the metal grill. " +
       "The aluminium tray can go to the red recycling box.",
   },
   {
-    title: "Did you know that the collected non-recyclable household waste is burned to generate electricity and give power?",
+    title:
+      "Did you know that collected non-recyclable household waste is burned to generate electricity and give power?",
     content:
-      "This is done at [Waste-to-energy plants](https://www.eia.gov/energyexplained/biomass/waste-to-energy-in-depth.php), " +
-      "where the waste is transported to after collection.",
+      "This is done at [waste-to-energy plants](https://www.eia.gov/energyexplained/biomass/waste-to-energy-in-depth.php), which is where the waste is transported to after collection.",
   },
   {
-    title: "Did you know that you should cover your bulky waste items (e.g. sofas, refrigerators) to keep them dry before collection day?",
+    title:
+      "Did you know that you should cover your bulky waste items (e.g. sofas, refrigerators) to keep them dry before collection day?",
     content:
       "This is recommended because waterlogged items won't be collected.",
   },
   {
-    title: "Did you know that there are alternative ways to you can get your bulky waste recycled?",
+    title:
+      "Did you know that there are alternative ways to you can get your bulky waste recycled?",
     content:
       "Visit [Space Waye](https://www.hounslow.gov.uk/info/20017/space_waye_re-use_and_recycling_centre) or your nearby household waste recycling centres.  \n" +
       "Sell or donate your unwanted items via social media groups or websites like [eBay](https://www.ebay.co.uk/), [Freecycle](https://www.freecycle.org/), [Facebook Marketplace](https://www.facebook.com/marketplace) etc.  \n" +
-      "Use a registered waste carrier such as [Love Junk](https://www.lovejunk.com/).",
+      "Use a registered waste carrier such as [LoveJunk](https://www.lovejunk.com/).",
   },
   {
     title:
-      "Did you know that if your bulky waste hasn't been collected on the collection day you can file a report of miissing collection?",
+      "Did you know that if your bulky waste hasn't been collected on the collection day, you can file a missing collection report?",
     content:
-      "A report of a missing collection will not be considered until after 5pm on the day of the collection - after drivers' reports have been reviewed.  \n" +
-      "This is to prevent sending vehicles back unnecessarily or taking reports while crews are still working.  \n" +
+      "A missing collection report will not be considered until after 5pm on the day of the collection - after drivers' reports have been reviewed. " +
+      "This is to prevent sending vehicles back unnecessarily or taking reports while crews are still working. " +
       "A missed collection must be reported by 5pm the day after the scheduled collection day.",
   },
   {
     title:
-      "Did you know that you can add “no signature COVID-19” to your clinical waste collection refferal form in case your doctor/medical professional is not able to sign it?",
-    content:
-      "Then, you can send it directly to Medisort?.",
+      "Did you know that you can add “no signature COVID-19” to your clinical waste collection referral form in case your doctor/medical professional is not able to sign it?",
+    content: "Then, you can send it directly to Medisort.",
   },
   {
-    title: "Did you know that the collected garden waste is turned into compost utilised to enrich the soil?",
+    title:
+      "Did you know that collected garden waste is turned into compost and utilised to enrich the soil?",
     content:
-      "This is done through a Windrow Composting process: " +
-      "the waste is put into long heaps known as Windrows and is turned often until it naturally decomposes.",
+      "This is done through a windrow composting process: the waste is put into long heaps known as windrows and is turned often until it naturally decomposes.",
   },
   {
     title:
       "Did you know how the London Borough of Hounslow performs in terms of recycling?",
     content:
-      "In the past 5 years, for household waste, the items sent for recycling are around 25,000 tonnes and the items not sent for recycling are around 60,000 tonnes.  \n" +
+      "In the past 5 years, for household waste, the items sent for recycling are around 25,000 tonnes and the items not sent for recycling are around 60,000 tonnes. " +
       "However, for non-household waste, there were more and more items not being sent for recycling. " +
       "This number has increased by approximately 250% in the 5-years period. " +
       "Meanwhile, there is a significant drop in the number of non-household waste items sent for recycling. " +
@@ -173,7 +182,8 @@ export const facts = [
       "[Source.](https://www.london.gov.uk/programmes-strategies/environment-and-climate-change/waste-and-recycling)",
   },
   {
-    title: "Did you know that every year, British households create over 26m tonnes of waste, which is equivalent to 260 large cruise ships?",
+    title:
+      "Did you know that every year, British households create over 26m tonnes of waste, which is equivalent to 260 large cruise ships?",
     content:
       "This implies that the average person in the UK generates 400kg of waste per year, which is 7 times their body weight. " +
       "The average recycling rate is approximately 45% (i.e. 12m tonnes are recycled while the rest are sent to landfill sites). " +
