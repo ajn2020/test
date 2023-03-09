@@ -175,6 +175,7 @@ export const flatRecyclingServices = [
     description: "The plastic communal bin is used to recycle plastic.",
     content:
       "This service mainly collects plastic bottles, tubs, pots, trays and so on. The recycling process takes place weekly. Please ensure that all items have been washed, squashed, with lids included for plastics and loosely placed inside the bin. Things that cannot be collected include plastic carrier bags, plastic wrapping and packaging, and hard plastic. [Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+    infographic: "/plastic_communal_bin_(red)_infographic.png",
   },
   {
     title: "Metal Communal Bin (Grey)",
@@ -182,18 +183,21 @@ export const flatRecyclingServices = [
       "The metal communal bin is used to recycle tins, cans and aerosols.",
     content:
       "This service mainly collects drink cans, food tins, empty aerosols cans and so on. The recycling process takes place weekly. Please ensure that all items have been loosely placed inside the bin. Things that cannot be collected include scrap metal, crisp packets and paint tins. [Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+    infographic: "/metal_communal_bin_(grey)_infographic.png",
   },
   {
     title: "Card Communal Bin (Blue)",
     description: "The card communal bin is used to recycle card.",
     content:
       "This service mainly collects cardboard and tetra paks (milk and juice cartons). The recycling process takes place weekly. Please ensure that all items have been flattened and loosely placed inside the bin. Things that cannot be collected include polystyrene, plastic wrap and paper. [Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+    infographic: "/card_communal_bin_(blue)_infographic.png",
   },
   {
     title: "Paper Communal Bin (Blue)",
     description: "The paper communal bin is used to recycle paper.",
     content:
       "This service mainly collects newspapers, catalogues. envelopes and so on. The recycling process takes place weekly. Please ensure that all items have been loosely placed inside the bin. Things that cannot be collected include shredded paper and coated paper (plastic, foil, glitter). [Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+    infographic: "/paper_communal_bin_(blue)_infographic.png",
   },
   {
     title: "Glass Communal Bin (Teal)",
@@ -201,6 +205,7 @@ export const flatRecyclingServices = [
       "The glass communal bin is used to recycle glass bottles and jars.",
     content:
       "This service mainly collects glass bottles and jars. The recycling process takes place weekly. Please ensure that all items have been loosely placed inside the bin. Things that cannot be collected include lightbulbs, ceramics, drinking glasses and window glass. [Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+    infographic: "/glass_communal_bin_(teal)_infographic.png",
   },
   {
     title: "Textiles",
@@ -219,6 +224,7 @@ export const flatRecyclingServices = [
     description: "The food communal bin is used to recycle food waste.",
     content:
       "This service mainly collects tea bags, bread, meat bones, out-of-date food and so on. The recycling process takes place weekly. You will be provided with a 7-litre caddy for kitchen use. You should move all your food waste into the communal food bin once your caddy is full. The caddy should be lined with a biodegradable food waste bag. Do not use plastic bags. Excess liquids and oils should be drained from the food waste beforehand, otherwise they will not be collected. Note that not all flats have a food communal bin. If your block or development does not currently have a food waste service and you are interested in this please email recycling@hounslow.gov.uk with your managing agents details for us to make contact.",
+    infographic: "/food_communal_bin_(green)_infographic.png",
   },
   {
     title: "General Waste Communal Bin",
