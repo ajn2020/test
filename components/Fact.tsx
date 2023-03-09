@@ -13,10 +13,12 @@ export default function Fact() {
   );
 
   return (
-    <div className="factBox">
+    <div>
       <h3>{currentFact.title}</h3>
       <br />
-      <ReactMarkdown>{currentFact.content}</ReactMarkdown>
+      <ReactMarkdown className="fact-box-content">
+        {currentFact.content}
+      </ReactMarkdown>
     </div>
   );
 }

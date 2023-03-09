@@ -51,7 +51,7 @@ export default function Home(props: Props) {
 
       <EngagingBox />
 
-      <Subheading title="Find out how to recycle your item" id="DecisionTree" />
+      <Subheading title="Recycling Assistant" id="DecisionTree" />
       <DecisionTree />
 
       {props.events.length > 0 ? (

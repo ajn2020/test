@@ -30,9 +30,7 @@ export default function Question() {
 
   return (
     <div className="question-box">
-      <h2 style={{
-        marginBottom: 20
-      }}>{currentQuestion.question}</h2>
+      <h3>{currentQuestion.question}</h3>
       <div className="question-box-answers">
         {currentQuestion.answers.map((option) => (
           <button
