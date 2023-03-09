@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import EngagingBox from "@/components/EngagingBox";
 import Subheading from "@/components/Subheading";
 import DecisionTree from "@/components/DecisionTree";
@@ -43,6 +44,8 @@ export default function Home(props: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Navbar />
 
       <Header displayEvents={props.events.length > 0} />
 
