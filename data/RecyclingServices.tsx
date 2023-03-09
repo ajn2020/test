@@ -154,12 +154,12 @@ export const houseRecyclingServices = [
     description:
       "The Clinical Waste Collection Service can be used to collect waste that is considered as hazardous and can be infectious to others.",
     content:
-      "**What can be recycled:** This service mainly collects hypodermic needles, blood, human tissue and any equipment left over after treatment or operation.  \n" +
+      "**What can be collected:** This service mainly collects hypodermic needles, blood, human tissue and any equipment left over after treatment or operation.  \n" +
       "&nbsp;  \n" +
       "**How:** This is a free-of-charge service but approval must be granted by your Medical Professional via filling out a [clinical waste referral form](https://www.hounslow.gov.uk/downloads/file/555/clinical_waste_referral_form), or asking your Medical Professional to put you in contact with Medisort directly. " +
       "Items will be collected together with other types of household waste on the pre-booked collection day but they should be separately placed for safety reasons and free from excess liquid.  \n" +
       "&nbsp;  \n" +
-      "**What cannot be recycled:** Nappies, sanitary protection and incontinence pads will not be collected. " +
+      "**What cannot be collected:** Nappies, sanitary protection and incontinence pads will not be collected. " +
       "This type of waste is classed as offensive or hygiene waste. " +
       "They are predominantly non-infectious, hence do not require treatment. " +
       "These items should be securely tied in a black sack and placed with your household rubbish on the morning of your rubbish collection day. " +
@@ -308,12 +308,12 @@ export const flatRecyclingServices = [
     description:
       "The Clinical Waste Collection Service can be used to collect waste that is considered as hazardous and can be infectious to others.",
     content:
-      "**What can be recycled:** This service mainly collects hypodermic needles, blood, human tissue and any equipment left over after treatment or operation.  \n" +
+      "**What can be collected:** This service mainly collects hypodermic needles, blood, human tissue and any equipment left over after treatment or operation.  \n" +
       "&nbsp;  \n" +
       "**How:** This is a free-of-charge service but approval must be granted by your Medical Professional via filling out a [clinical waste referral form](https://www.hounslow.gov.uk/downloads/file/555/clinical_waste_referral_form), or asking your Medical Professional to put you in contact with Medisort directly. " +
       "Items will be collected together with other types of household waste on the pre-booked collection day but they should be separately placed for safety reasons and free from excess liquid.  \n" +
       "&nbsp;  \n" +
-      "**What cannot be recycled:** Nappies, sanitary protection and incontinence pads will not be collected. " +
+      "**What cannot be collected:** Nappies, sanitary protection and incontinence pads will not be collected. " +
       "This type of waste is classed as offensive or hygiene waste. " +
       "They are predominantly non-infectious, hence do not require treatment. " +
       "These items should be securely tied in a black sack and placed with your household rubbish on the morning of your rubbish collection day. " +
