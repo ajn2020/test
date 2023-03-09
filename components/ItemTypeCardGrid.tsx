@@ -50,6 +50,14 @@ export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
           openAccordion={props.openAccordion}
         />
         <ItemTypeCard
+          frontTitle="Food Waste"
+          frontImage="./food_waste.png"
+          backTitle="Food waste can be recycled using the food communal bin (green)."
+          backImage="./food_communal_bin.png"
+          serviceID="Food Communal Bin (Green)"
+          openAccordion={props.openAccordion}
+        />
+        <ItemTypeCard
           frontTitle="Textiles"
           frontImage="./textiles.png"
           backTitle="Textiles can be donated to charity."
@@ -71,14 +79,6 @@ export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
           backTitle="Large electrical items can be recycled using the Bulky Waste Collection Service."
           backImage="./large_electrical_items.png"
           serviceID="Bulky Waste Collection Service"
-          openAccordion={props.openAccordion}
-        />
-        <ItemTypeCard
-          frontTitle="Food Waste"
-          frontImage="./food_waste.png"
-          backTitle="Food waste can be recycled using the food communal bin (green)."
-          backImage="./food_communal_bin.png"
-          serviceID="Food Communal Bin (Green)"
           openAccordion={props.openAccordion}
         />
         <ItemTypeCard
@@ -143,6 +143,22 @@ export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
           openAccordion={props.openAccordion}
         />
         <ItemTypeCard
+          frontTitle="Food Waste"
+          frontImage="./food_waste.png"
+          backTitle="Food waste can be recycled using the food waste bin."
+          backImage="./food_waste_bin.png"
+          serviceID="Food Waste Bin"
+          openAccordion={props.openAccordion}
+        />
+        <ItemTypeCard
+          frontTitle="Garden Waste"
+          frontImage="./garden_waste.png"
+          backTitle="Garden waste can be recycled using the brown wheeled bin."
+          backImage="./brown_wheeled_bin.png"
+          serviceID="Brown Wheeled Bin"
+          openAccordion={props.openAccordion}
+        />
+        <ItemTypeCard
           frontTitle="Textiles"
           frontImage="./textiles.png"
           backTitle="Textiles can be recycled using a tied carrier bag."
@@ -164,22 +180,6 @@ export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
           backTitle="Large electrical items can be recycled using the Bulky Waste Collection Service."
           backImage="./large_electrical_items.png"
           serviceID="Bulky Waste Collection Service"
-          openAccordion={props.openAccordion}
-        />
-        <ItemTypeCard
-          frontTitle="Food Waste"
-          frontImage="./food_waste.png"
-          backTitle="Food waste can be recycled using the food waste bin."
-          backImage="./food_waste_bin.png"
-          serviceID="Food Waste Bin"
-          openAccordion={props.openAccordion}
-        />
-        <ItemTypeCard
-          frontTitle="Garden Waste"
-          frontImage="./garden_waste.png"
-          backTitle="Garden waste can be recycled using the brown wheeled bin."
-          backImage="./brown_wheeled_bin.png"
-          serviceID="Brown Wheeled Bin"
           openAccordion={props.openAccordion}
         />
         <ItemTypeCard
