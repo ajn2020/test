@@ -28,18 +28,6 @@ export default React.forwardRef<
   const [windowWidth, setWindowWidth] = useState(0);
   let refs: Array<React.RefObject<HTMLDivElement>> = [];
 
-  ////////////////////////////////////////////////////////////////////////////////
-
-  // Problem 2: when all accordions are closed and the toggle is toggled, the
-  // accordions will be the wrong size, since they are loaded in the wrong size.
-
-  // Problem 3: when an accordion is open and the toggle is toggled, the
-  // openAccordionID hook is called. However, since this hook has a delay, its
-  // effects occur on the new accordions. While this does fix the problem of the
-  // new accordions being the wrong size, this is some spaghetti functionality!
-
-  ////////////////////////////////////////////////////////////////////////////////
-
   // This hook runs when the page version changes. It updates the variable
   // keeping track of the max height of the accordions.
   useEffect(() => {
