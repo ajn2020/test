@@ -19,7 +19,7 @@ export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
         />
         <ItemTypeCard
           frontTitle="Metal"
-          frontImage="./metal.png"
+          frontImage="./metal2.png"
           backTitle="Metal can be recycled using the metal communal bin (grey)."
           backImage="./metal_communal_bin.png"
           serviceID="Metal Communal Bin (Grey)"
@@ -43,7 +43,7 @@ export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
         />
         <ItemTypeCard
           frontTitle="Glass"
-          frontImage="./glass.png"
+          frontImage="./glass2.png"
           backTitle="Glass can be recycled using the glass communal bin (teal)."
           backImage="./glass_communal_bin.png"
           serviceID="Glass Communal Bin (Teal)"
