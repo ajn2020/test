@@ -111,7 +111,7 @@ export default function Home(props: Props) {
         toggle={toggle}
       />
 
-      <EngagingBox />
+      <EngagingBox showFlatVersion={showFlatVersion!} />
 
       <Subheading title="Recycling Assistant" id="DecisionTree" />
       <DecisionTree />
