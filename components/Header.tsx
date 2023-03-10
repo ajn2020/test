@@ -4,6 +4,7 @@ import { SearchOutlined } from "@ant-design/icons";
 
 type HeaderProps = {
   displayEvents: boolean;
+  showFlatVersion: boolean;
   toggle(): void;
 };
 
@@ -26,7 +27,11 @@ export default function Header(props: HeaderProps) {
             <h3>House</h3>
             <div className="switch-wrapper">
               <label className="switch">
-                <input type="checkbox" onClick={props.toggle} />
+                <input
+                  type="checkbox"
+                  defaultChecked={props.showFlatVersion}
+                  onClick={props.toggle}
+                />
                 <span className="slider round"></span>
               </label>
             </div>

@@ -9,7 +9,7 @@ import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
 } from "@/components/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 // API url
 import { api } from "@/config/api";
@@ -29,7 +29,24 @@ type Props = {
 };
 
 export default function Home(props: Props) {
-  const [showFlatVersion, setShowFlatVersion] = useState(false);
+  const [showFlatVersion, setShowFlatVersion] = useState<boolean>();
+
+  // This hook is called when the page loads. It attempts to fetch
+  // showFlatVersion from local storage. If it cannot be found, it sets it to
+  // the default value of false.
+  useEffect(() => {
+    setShowFlatVersion(
+      JSON.parse(localStorage.getItem("showFlatVersion") || "false")
+    );
+  }, []);
+
+  // This hook is called whenever showFlatVersion changes. It saves it to local
+  // storage.
+  useEffect(() => {
+    if (typeof showFlatVersion !== "undefined") {
+      localStorage.setItem("showFlatVersion", JSON.stringify(showFlatVersion));
+    }
+  }, [showFlatVersion]);
 
   function toggle() {
     setShowFlatVersion(!showFlatVersion);
@@ -55,7 +72,11 @@ export default function Home(props: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header displayEvents={props.events.length > 0} toggle={toggle} />
+      <Header
+        displayEvents={props.events.length > 0}
+        showFlatVersion={showFlatVersion!}
+        toggle={toggle}
+      />
 
       <EngagingBox />
 
@@ -73,7 +94,7 @@ export default function Home(props: Props) {
 
       <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
       <ItemTypeCardGrid
-        showFlatVersion={showFlatVersion}
+        showFlatVersion={showFlatVersion!}
         openAccordion={openAccordion}
       />
 
@@ -82,7 +103,7 @@ export default function Home(props: Props) {
         id="RecyclingServiceAccordionGrid"
       />
       <RecyclingServiceAccordionGrid
-        showFlatVersion={showFlatVersion}
+        showFlatVersion={showFlatVersion!}
         houseRecyclingServices={props.houseRecyclingServices}
         flatRecyclingServices={props.flatRecyclingServices}
         ref={recyclingServiceAccordionGridRef}
