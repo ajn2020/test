@@ -10,6 +10,7 @@ import RecyclingServiceAccordionGrid, {
 } from "@/components/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
 import { useRef, useState, useEffect } from "react";
+import Popup from "reactjs-popup";
 
 // API url
 import { api } from "@/config/api";
@@ -30,14 +31,19 @@ type Props = {
 
 export default function Home(props: Props) {
   const [showFlatVersion, setShowFlatVersion] = useState<boolean>();
+  const [showPopup, setShowPopup] = useState(false);
 
   // This hook is called when the page loads. It attempts to fetch
   // showFlatVersion from local storage. If it cannot be found, it sets it to
-  // the default value of false.
+  // the default value of false and shows the popup.
   useEffect(() => {
-    setShowFlatVersion(
-      JSON.parse(localStorage.getItem("showFlatVersion") || "false")
-    );
+    if (localStorage.getItem("showFlatVersion") == null) {
+      setShowFlatVersion(false);
+      setShowPopup(true);
+    } else {
+      setShowFlatVersion(JSON.parse(localStorage.getItem("showFlatVersion")!));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // This hook is called whenever showFlatVersion changes. It saves it to local
@@ -47,6 +53,11 @@ export default function Home(props: Props) {
       localStorage.setItem("showFlatVersion", JSON.stringify(showFlatVersion));
     }
   }, [showFlatVersion]);
+
+  function handlePopupSelection(selected: boolean) {
+    setShowFlatVersion(selected);
+    setShowPopup(false);
+  }
 
   function toggle() {
     setShowFlatVersion(!showFlatVersion);
@@ -71,6 +82,27 @@ export default function Home(props: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Popup modal open={showPopup}>
+        <button className="popup-close" onClick={() => setShowPopup(false)}>
+          &times;
+        </button>
+        <h1>What best describes your living situation?</h1>
+        <button
+          type="button"
+          className="popup-button"
+          onClick={() => handlePopupSelection(false)}
+        >
+          House
+        </button>
+        <button
+          type="button"
+          className="popup-button"
+          onClick={() => handlePopupSelection(true)}
+        >
+          Flat
+        </button>
+      </Popup>
 
       <Header
         displayEvents={props.events.length > 0}
