@@ -59,7 +59,7 @@ export default function Home(props: Props) {
     setShowPopup(false);
   }
 
-  function toggle() {
+  function toggleVersion() {
     setShowFlatVersion(!showFlatVersion);
   }
 
@@ -108,7 +108,7 @@ export default function Home(props: Props) {
       <Header
         displayEvents={props.events.length > 0}
         showFlatVersion={showFlatVersion!}
-        toggle={toggle}
+        toggle={toggleVersion}
       />
 
       <EngagingBox showFlatVersion={showFlatVersion!} />
