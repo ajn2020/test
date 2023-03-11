@@ -45,9 +45,8 @@ export default function DecisionTree() {
             </button>
           ))}
         </div>
-        <Button style={{
-          marginTop: 50
-        }} onClick={handleReset}>Restart</Button>
+        <br />
+        <Button onClick={handleReset}>Restart</Button>
         {/* <button onClick={handleReset}>Restart</button> */}
       </div>
     </div>

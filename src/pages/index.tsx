@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
 import EngagingBox from "@/components/EngagingBox";
 import Subheading from "@/components/Subheading";
 import DecisionTree from "@/components/DecisionTree";
@@ -84,10 +83,6 @@ export default function Home(props: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-
-
-       
       {/* To reset local storage, type localStorage.clear() into your web browser console. */}
       <Popup modal open={showPopup}>
         <button className="popup-close" onClick={() => setShowPopup(false)}>
