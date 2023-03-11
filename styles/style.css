@@ -1,4 +1,12 @@
 /*========================================
+    ALL
+========================================*/
+
+* {
+  font-family: "Lato";
+}
+
+/*========================================
     ALL LINKS
 ========================================*/
 
@@ -23,6 +31,71 @@ a:hover {
 }
 
 /*========================================
+    POPUP
+========================================*/
+
+.popup-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 18px;
+}
+
+.popup-close:hover {
+  filter: brightness(80%);
+}
+
+.popup-content {
+  margin: auto;
+  background: #af63bb;
+  width: 50%;
+  min-width: 200px;
+  padding: 20px;
+  text-align: center;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+.popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role="tooltip"].popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+[data-popup="tooltip"]popup-overlay {
+  background: transparent;
+}
+
+.popup-button {
+  width: 100px;
+  height: 50px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.popup-button:hover {
+  filter: brightness(80%);
+}
+
+/*========================================
     HEADER
 ========================================*/
 
@@ -30,23 +103,105 @@ a:hover {
   /* background-color: #cfa4d5; */
   background: linear-gradient(#d860f9, #642f6c);
   color: white;
-  font-family: Lato;
+  font-family: "Lato";
   text-align: center;
   padding: 30px;
   position: relative;
 }
 
+.header-top {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.switch-with-labels {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 30px;
+}
+
+.switch-wrapper {
+  position: relative;
+}
+
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: purple;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 .header-title {
+  margin: auto;
   font-size: 40px;
 }
 
+.header-search {
+  position: absolute;
+  right: 30px;
+  font-size: 30px;
+}
+
+.header-search:hover {
+  color: rgb(31, 154, 241);
+}
+
+.header-search-input {
+  position: absolute;
+  right: 30px;
+}
+
 .header-description {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .header-anchors {
-  /* width: 400px; */
-
   display: flex;
   padding: 15px 100px;
   margin-top: 20px;
@@ -56,7 +211,7 @@ a:hover {
   left: 0;
 }
 
-.header-quan {
+.header-dot {
   width: 10px;
   height: 10px;
   background-color: #fff;
@@ -70,29 +225,13 @@ a:hover {
   border-radius: 10px;
   margin: 0 50px;
   padding: 8px;
-}
-
-.header-search {
-  font-size: 30px;
-  width: 50px;
-  position: absolute;
-  top: 40px;
-  right: 20px;
-}
-
-.header-search:hover {
-  color: rgb(31, 154, 241);
-}
-
-.header-search-input {
-  position: absolute;
-  top: 40px;
-  right: 20px;
+  font-size: 18px;
 }
 
 /*======================================
     ENGAGING BOX
 ========================================*/
+
 .engaging-box-wrapper {
   background-color: #bda0c3;
   /* border-style: ridge; */
@@ -101,15 +240,23 @@ a:hover {
   border-radius: 10px;
   border-width: 3px;
   margin: 55px 100px;
-  margin-bottom: -31px;
   padding: 20px;
   text-align: center;
   justify-content: center;
 }
 
 /*======================================
+    FACT BOX
+========================================*/
+
+.fact-box-content {
+  font-size: 18px;
+}
+
+/*======================================
     QUESTION BOX
 ========================================*/
+
 .question-box {
   display: grid;
   grid-template-rows: auto auto;
@@ -126,12 +273,14 @@ a:hover {
 
 .answer-button {
   color: black;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px;
   margin: 5px 20px;
   cursor: pointer;
   border: 5px solid transparent;
   border-radius: 5px;
+  border-style: solid;
 }
 
 .answer-button.border-correct {
@@ -152,7 +301,7 @@ a:hover {
   margin: 10px 0px;
   background-color: #90449c;
   margin-bottom: 45px;
-  margin-top: 85px;
+  margin-top: 45px;
 }
 
 .subheading-container {
@@ -166,6 +315,7 @@ a:hover {
 .subheading-anchors {
   display: flex;
   margin: 0 30px;
+  font-size: 17px;
 }
 
 .subheading-anchors a {
@@ -197,7 +347,7 @@ a:hover {
   border-width: 1px;
   margin: 30px 300px;
   text-align: center;
-  padding: 25px 0;
+  padding: 25px 0px;
 }
 
 .decision-tree-title {
@@ -213,13 +363,14 @@ a:hover {
 
 .decision-tree-option {
   width: 20%;
-  margin: 22px 22px;
-  padding: 20px 20px;
+  margin: 20px 20px 0px 20px;
+  padding: 20px;
   border-width: 0;
   border-radius: 5px;
   background-color: #c29ec7;
   color: #fff;
   cursor: pointer;
+  font-size: 18px;
 }
 
 /*========================================
@@ -248,15 +399,13 @@ a:hover {
 }
 
 .event-card-carousel-button {
-  height: 70x;
-  width: 150px;
+  height: 60px;
+  width: 120px;
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 15px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
-  outline: none;
   color: #fff;
   background-color: #c29ec7;
   border: none;
@@ -321,8 +470,7 @@ a:hover {
 }
 
 .event-card-front {
-  /* background: #ae69b9; */
-  background: #bda0c3;
+  background: #ae69b9;
   transform: rotateY(0deg);
   display: grid;
   grid-template-rows: auto auto;
@@ -334,6 +482,7 @@ a:hover {
 }
 
 .event-card-back {
+  font-size: 17px;
   background: #c29ec7;
   transform: rotateY(180deg);
   display: grid;
@@ -473,6 +622,7 @@ a:hover {
 
 .recycling-service-accordion-description {
   color: black;
+  font-size: 19px;
 }
 
 .recycling-service-accordion-content-hidden {
@@ -480,6 +630,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  font-size: 18px;
 }
 
 .recycling-service-accordion-content-displayed {
@@ -487,6 +638,11 @@ a:hover {
   max-height: 1000px;
   overflow: hidden;
   transition: max-height 0.2s ease-in;
+  font-size: 18px;
+}
+
+.recycling-service-accordion-infographic {
+  width: 100%;
 }
 
 /*========================================
