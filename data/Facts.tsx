@@ -11,14 +11,14 @@ export const facts = [
   {
     title: "Did you know that batteries can cause fires within our vehicles?",
     content:
-      "That's why batteries cannot be put in the red recycling bin. " +
+      "That's why they cannot be put in any of the recycling boxes or bins. " +
       "Instead, they can be [recycled](https://westlondonwaste.gov.uk/materials/batteries) with [retailers](https://www.recyclenow.com/recycling-locator).",
   },
   {
     title:
       "Did you know that plastic carrier bags can become tangled in the sorting machinery, which may lead to breakdowns or even fires?",
     content:
-      "This is why they cannot be recycled in the red recycling box. " +
+      "That's why they cannot be recycled like other plastics. " +
       "However, you can still recycle them - just find your nearest supermarket [recycling point](https://www.recyclenow.com/recycling-locator).",
   },
   {
@@ -33,7 +33,7 @@ export const facts = [
     title:
       "Did you know that shredded paper is deemed too short and can pose issues with the sorting machinery?",
     content:
-      "That's why it cannot be recycled in the blue recycling box. " +
+      "That's why it cannot be recycled like other paper. " +
       "However, you can place small quantities of it into your **food waste bin**.",
   },
   {
@@ -114,7 +114,7 @@ export const facts = [
     content:
       "This ensures that the BBQ has been extinguished and prevents fires. " +
       "The ash should be placed in a bag and put in the black wheelie bin along with the metal grill. " +
-      "The aluminium tray can go to the red recycling box.",
+      "The aluminium tray can be recycled using your red recycling box or metal communal bin (grey).",
   },
   {
     title:

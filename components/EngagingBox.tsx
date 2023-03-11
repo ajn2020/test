@@ -3,12 +3,20 @@ import React, { useState, useEffect } from "react";
 import Fact from "./Fact";
 import Question from "./Question";
 
-export default function EngagingBox() {
+type EngagingBoxProps = {
+  showFlatVersion: boolean;
+};
+
+export default function EngagingBox(props: EngagingBoxProps) {
   const [randNum, setRandNum] = useState<number>();
 
   useEffect(() => {
-    setRandNum(Math.floor(Math.random() * 2));
-  }, []);
+    if (props.showFlatVersion) {
+      setRandNum(0);
+    } else {
+      setRandNum(Math.floor(Math.random() * 2));
+    }
+  }, [props.showFlatVersion]);
 
   return (
     <div className="engaging-box-wrapper">
