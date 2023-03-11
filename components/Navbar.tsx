@@ -26,7 +26,7 @@ export default function Navbar(props: NavbarProps) {
 
   return (
     <div>
-      <div className="navbar">
+      <div className="navbar animate__animated animate__fadeIn">
         <div className="navbarCenter">
           <div className="navbarCenterLeft">
             <div className="navbarCenterLogoBox">

@@ -5,6 +5,7 @@ import { Events } from "@/data/Events";
 
 type EventCardCarouselProps = {
   events: Array<Events>;
+  t2: boolean;
 };
 
 export default function EventCardCarousel(props: EventCardCarouselProps) {
@@ -38,15 +39,27 @@ export default function EventCardCarousel(props: EventCardCarouselProps) {
           Previous
         </button>
       </div>
+      {/* props.t2 */}
       <div className="event-card-carousel">
-        {displayedEvents.map((event) => (
-          <EventCard
-            key={uuidv4()}
-            image={event.image}
-            title={event.title}
-            date={event.date}
-            description={event.description}
-          />
+        {displayedEvents.map((event, i) => (
+          <div
+            style={{
+              animationDelay: i * 0.2 + "s",
+            }}
+            className={
+              props.t2
+                ? `animate__animated animate__rollIn animate__delay-${i + 0.1}s`
+                : ""
+            }
+          >
+            <EventCard
+              key={uuidv4()}
+              image={event.image}
+              title={event.title}
+              date={event.date}
+              description={event.description}
+            />
+          </div>
         ))}
       </div>
       <div className="event-card-carousel-button-div">

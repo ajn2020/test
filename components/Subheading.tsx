@@ -4,11 +4,13 @@ type SubheadingProps = {
 };
 
 export default function Subheading(props: SubheadingProps) {
+
   return (
     <div className="subheading-container-wrapper" id={props.id}>
-      <hr className="subheading-separator" />
+    
+      {/* <hr className="subheading-separator" /> */}
       <div className="subheading-container">
-        <div className="subheading-anchors">
+        {/* <div className="subheading-anchors">
           <a href="#">
             <button className="c-button c-button--gooey">
               Back to top
@@ -42,9 +44,9 @@ export default function Subheading(props: SubheadingProps) {
               </filter>
             </defs>
           </svg>
-        </div>
+        </div> */}
         <h3 className="subheading-text">{props.title}</h3>
-        <div className="subheading-anchors">
+        {/* <div className="subheading-anchors">
           <a href="#">
             <button className="c-button c-button--gooey">
               Back to top
@@ -55,9 +57,9 @@ export default function Subheading(props: SubheadingProps) {
               </div>
             </button>
           </a>
-        </div>
+        </div> */}
       </div>
-      <hr className="subheading-separator" />
+      {/* <hr className="subheading-separator" /> */}
     </div>
   );
 }

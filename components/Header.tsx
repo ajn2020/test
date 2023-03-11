@@ -19,7 +19,7 @@ export default function Header(props: HeaderProps) {
 
   return (
     <>
-      <div className="header" id="Header">
+      <div className="header animate__animated animate__fadeIn" id="Header">
         <div className="header-title">Hounslow Recycling Hub</div>
         <br />
         <div className="header-description">

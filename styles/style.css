@@ -1,12 +1,4 @@
 /*========================================
-    ALL
-========================================*/
-
-* {
-  font-family: "Lato";
-}
-
-/*========================================
     ALL LINKS
 ========================================*/
 
@@ -38,7 +30,7 @@ a:hover {
   /* background-color: #cfa4d5; */
   background: linear-gradient(#d860f9, #642f6c);
   color: white;
-  font-family: "Lato";
+  font-family: Lato;
   text-align: center;
   padding: 30px;
   position: relative;
@@ -49,11 +41,12 @@ a:hover {
 }
 
 .header-description {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .header-anchors {
   /* width: 400px; */
+
   display: flex;
   padding: 15px 100px;
   margin-top: 20px;
@@ -63,7 +56,7 @@ a:hover {
   left: 0;
 }
 
-.header-dot {
+.header-quan {
   width: 10px;
   height: 10px;
   background-color: #fff;
@@ -77,7 +70,6 @@ a:hover {
   border-radius: 10px;
   margin: 0 50px;
   padding: 8px;
-  font-size: 18px;
 }
 
 .header-search {
@@ -101,7 +93,6 @@ a:hover {
 /*======================================
     ENGAGING BOX
 ========================================*/
-
 .engaging-box-wrapper {
   background-color: #bda0c3;
   /* border-style: ridge; */
@@ -111,7 +102,7 @@ a:hover {
   border-width: 3px;
   margin: 55px 100px;
   margin-bottom: -31px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   justify-content: center;
   --background: linear-gradient(to right, #d860f9 0%, #6656c0 100%);
@@ -140,9 +131,25 @@ a:hover {
   transition: opacity .5s;
 }
 
+
+
+
+
+
 /*======================================
     QUESTION BOX
 ========================================*/
+.factBox {
+  --color: black;
+  background: #fff;
+  color: var(--color);
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: .7rem;
+  padding: 30px 0;
+}
+
 .question-box {
   display: grid;
   grid-template-rows: auto auto;
@@ -167,14 +174,12 @@ a:hover {
 
 .answer-button {
   color: black;
-  font-size: 18px;
   font-weight: bold;
   padding: 10px;
   margin: 5px 20px;
   cursor: pointer;
   border: 5px solid transparent;
   border-radius: 5px;
-  border-style: solid;
 }
 
 .answer-button.border-correct {
@@ -193,23 +198,24 @@ a:hover {
   display: flex;
   flex-direction: column;
   margin: 10px 0px;
-  background-color: #90449c;
+  /* background-color: #90449c; */
   margin-bottom: 45px;
-  margin-top: 45px;
+  margin-top: 85px;
 }
 
 .subheading-container {
   width: 100%;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  /* grid-template-columns: auto 1fr auto; */
   align-items: center;
   justify-items: center;
+  /* border: 1px solid red; */
+  text-align: center;
 }
 
 .subheading-anchors {
   display: flex;
   margin: 0 30px;
-  font-size: 17px;
 }
 
 .subheading-anchors a {
@@ -220,10 +226,57 @@ a:hover {
   padding: 7px 15px;
 }
 
+.toTop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  cursor: pointer;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #d20fc5;
+  color: #e5e5e5;
+  font-weight: 500;
+  box-shadow: inset 20px 20px 39px #e30dd1,
+    inset -20px -20px 39px #d21ec6;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.toTop::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -10px;
+  top: -10px;
+  border-radius: 50%;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: linear-gradient(35deg, rgb(238, 47, 216), rgb(218, 57, 143), rgb(23, 135, 255));
+  filter: blur(10px);
+  animation: rotcirclegr 1s linear infinite;
+}
+
+@keyframes rotcirclegr {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .subheading-text {
-  font-size: 30px;
+  font-size: 60px;
   margin: 20px 0;
-  color: aliceblue;
+  /* font-family: monospace; */
+  /* font-style: italic; */
+  color: #d860f9;
+  font-weight: bold;
+  text-shadow: #c627ae 1px 1px 0px, #ca15a6 1px 2px 0;
+  /* color: aliceblue; */
 }
 
 .subheading-separator {
@@ -242,6 +295,12 @@ a:hover {
   margin: 30px 300px;
   text-align: center;
   padding: 25px 0;
+  /* border: 2px solid #6656c0; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.19);
+  background: #af63bb;
+  border-radius: 40px 0 40px 0;
+  color: white;
 }
 
 .decision-tree-title {
@@ -257,14 +316,13 @@ a:hover {
 
 .decision-tree-option {
   width: 20%;
-  margin: 20px 20px 0px 20px;
-  padding: 20px;
+  margin: 22px 22px;
+  padding: 20px 20px;
   border-width: 0;
   border-radius: 5px;
   background-color: #c29ec7;
   color: #fff;
   cursor: pointer;
-  font-size: 18px;
 }
 
 /*========================================
@@ -293,13 +351,52 @@ a:hover {
 }
 
 .event-card-carousel-button {
-  height: 60px;
-  width: 120px;
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(255, 97, 223);
+  --btn-bg-2: rgb(255, 31, 206);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(246, 71, 255, 0.5), 0px 5px 5px -1px rgba(233, 58, 221, 0.25), inset 4px 4px 8px rgba(255, 175, 252, 0.5), inset -4px -4px 8px rgba(203, 19, 216, 0.35);
+}
+
+.event-card-carousel-button:hover {
+  background-position: right top;
+}
+
+.event-card-carousel-button:is(:focus, :focus-within, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
+/* .event-card-carousel-button {
+  height: 70x;
+  width: 150px;
   display: inline-block;
-  padding: 15px;
-  font-size: 20px;
+  padding: 15px 25px;
+  font-size: 24px;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
+  outline: none;
   color: #fff;
   background-color: #c29ec7;
   border: none;
@@ -319,6 +416,15 @@ a:hover {
 .event-card-carousel-button:disabled {
   background-color: grey;
   cursor: not-allowed;
+} */
+.event-card-carousel-button:disabled {
+  background: grey !important;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}
+
+.event-card-carousel-button:disabled:hover {
+  background: grey !important;
 }
 
 /*========================================
@@ -365,7 +471,8 @@ a:hover {
 }
 
 .event-card-front {
-  background: #ae69b9;
+  /* background: #ae69b9; */
+  background: #bda0c3;
   transform: rotateY(0deg);
   display: grid;
   grid-template-rows: auto auto;
@@ -378,14 +485,13 @@ a:hover {
 }
 
 .event-card-back {
-  font-size: 17px;
   background: #c29ec7;
   transform: rotateY(180deg);
   display: grid;
   overflow: auto;
 }
 
-.event-card-container:hover .event-card-image{
+.event-card-container:hover .event-card-image {
   transform: scale(1.05);
 }
 
@@ -454,9 +560,9 @@ a:hover {
   backface-visibility: hidden;
   color: white;
 
-  -webkit-box-shadow:0px 0px 7px 6px rgba(175,99,187,0.34);
-  -moz-box-shadow: 0px 0px 7px 6px rgba(175,99,187,0.34);
-  box-shadow: 0px 0px 7px 6px rgba(175,99,187,0.34);
+  -webkit-box-shadow: 0px 0px 7px 6px rgba(175, 99, 187, 0.34);
+  -moz-box-shadow: 0px 0px 7px 6px rgba(175, 99, 187, 0.34);
+  box-shadow: 0px 0px 7px 6px rgba(175, 99, 187, 0.34);
 }
 
 .item-type-card-front {
@@ -537,7 +643,7 @@ a:hover {
 }
 
 .recycling-service-accordion-description {
-  color: black;
+  color: white;
 }
 
 .recycling-service-accordion-content-hidden {
@@ -545,7 +651,6 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  font-size: 18px;
 }
 
 .recycling-service-accordion-content-displayed {
@@ -553,11 +658,6 @@ a:hover {
   max-height: 1000px;
   overflow: hidden;
   transition: max-height 0.2s ease-in;
-  font-size: 18px;
-}
-
-.recycling-service-accordion-infographic {
-  width: 100%;
 }
 
 /*========================================
