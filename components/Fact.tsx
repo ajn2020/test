@@ -16,9 +16,7 @@ export default function Fact() {
     <div className="factBox">
       <h3>{currentFact.title}</h3>
       <br />
-      <ReactMarkdown className="fact-box-content">
-        {currentFact.content}
-      </ReactMarkdown>
+      <ReactMarkdown>{currentFact.content}</ReactMarkdown>
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import Head from "next/head";
+import "animate.css";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import EngagingBox from "@/components/EngagingBox";
@@ -25,6 +27,15 @@ type Props = {
 };
 
 export default function Home(props: Props) {
+  const [top, setTop] = useState(false);
+  // Find the right
+  const [t1, setT1] = useState(false);
+  // EVENTS
+  const [t2, setT2] = useState(false);
+  // How to recycle...
+  const [t3, setT3] = useState(false);
+  const [t4, setT4] = useState(false);
+
   const recyclingServiceAccordionGridRef =
     useRef<RecyclingServiceAccordionGridRef>(null);
 
@@ -32,6 +43,43 @@ export default function Home(props: Props) {
     recyclingServiceAccordionGridRef.current?.openAccordion(id);
   }
 
+  useEffect(() => {
+    window.onscroll = () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      console.log("scrollTop = ", scrollTop);
+      if (scrollTop > 1000) {
+        setTop(true);
+      } else {
+        setTop(false);
+      }
+      if (scrollTop >= 100 && scrollTop <= 1150) {
+        setT1(true);
+      } else {
+        setT1(false);
+      }
+
+      if (scrollTop >= 560 && scrollTop <= 1350) {
+        setT2(true);
+      } else {
+        setT2(false);
+      }
+
+      if (scrollTop >= 1150 && scrollTop <= 2500) {
+        setT3(true);
+      } else {
+        setT3(false);
+      }
+
+      if (scrollTop >= 2000) {
+        setT4(true);
+      } else {
+        setT4(false);
+      }
+    };
+    return () => {
+      window.onscroll = null;
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -49,32 +97,54 @@ export default function Home(props: Props) {
 
       <Header displayEvents={props.events.length > 0} />
 
-      <EngagingBox />
+      <div className="animate__animated animate__fadeInRight">
+        <EngagingBox />
+      </div>
 
-      <Subheading title="Recycling Assistant" id="DecisionTree" />
-      <DecisionTree />
+      <div className="animate__animated animate__fadeInLeft">
+        <Subheading
+          title="Find out how to recycle your item"
+          id="DecisionTree"
+        />
+      </div>
+
+      <div className={t1 ? "animate__animated animate__jello" : ""}>
+        <DecisionTree />
+      </div>
 
       {props.events.length > 0 ? (
         <>
-          <Subheading title="Events" id="EventCardCarousel" />
-          <EventCardCarousel events={props.events} />
+          <div className={t2 ? "animate__animated animate__fadeInLeft" : ""}>
+            <Subheading title="Events" id="EventCardCarousel" />
+          </div>
+
+          <EventCardCarousel t2={t2} events={props.events} />
         </>
       ) : (
         ""
       )}
+      <div className={t3 ? "animate__animated animate__fadeInLeft" : ""}>
+        <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
+      </div>
 
-      <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
-      <ItemTypeCardGrid openAccordion={openAccordion} />
+      <ItemTypeCardGrid t3={t3} openAccordion={openAccordion} />
 
-      <Subheading
-        title="Recycling Services"
-        id="RecyclingServiceAccordionGrid"
-      />
+      <div className={t4 ? "animate__animated animate__fadeInLeft" : ""}>
+        <Subheading
+          title="Recycling Services"
+          id="RecyclingServiceAccordionGrid"
+        />
+      </div>
       <RecyclingServiceAccordionGrid
+        t4={t4}
         recyclingServices={props.recyclingServices}
         ref={recyclingServiceAccordionGridRef}
       />
-
+      {top && (
+        <a href="#">
+          <button className="toTop">Top</button>
+        </a>
+      )}
       <Footer />
     </>
   );

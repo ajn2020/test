@@ -1,9 +1,11 @@
-import { RecyclingServices } from "@/data/RecyclingServices";
 import React, { Ref } from "react";
 import ReactMarkdown from "react-markdown";
 
-export type RecyclingServiceAccordionProps = RecyclingServices & {
+export type RecyclingServiceAccordionProps = {
   id: string;
+  title: string;
+  description: string;
+  content: string;
   isOpen: boolean;
   handleClick: (id: string) => void;
 };
@@ -22,7 +24,7 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
             <h2>{props.title}</h2>
           </div>
           <div className="recycling-service-accordion-description">
-            <ReactMarkdown>{props.description}</ReactMarkdown>
+            <p>{props.description}</p>
           </div>
           <div
             className={
@@ -33,18 +35,6 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
           >
             <br />
             <ReactMarkdown>{props.content}</ReactMarkdown>
-            {props.infographic != null ? (
-              <>
-                <br />
-                <img
-                  className="recycling-service-accordion-infographic"
-                  src={props.infographic}
-                  alt=""
-                />
-              </>
-            ) : (
-              ""
-            )}
           </div>
         </div>
       </div>

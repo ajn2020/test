@@ -14,6 +14,7 @@ export type RecyclingServiceAccordionGridRef = {
 
 type RecyclingServiceAccordionGridProps = {
   recyclingServices: Array<RecyclingServices>;
+  t4: boolean;
 };
 
 export default React.forwardRef<
@@ -153,34 +154,56 @@ export default React.forwardRef<
         {props.recyclingServices
           .slice(0, Math.ceil(props.recyclingServices.length / 2))
           .map((recyclingService, index) => (
-            <RecyclingServiceAccordion
-              key={recyclingService.title}
-              id={recyclingService.title}
-              title={recyclingService.title}
-              description={recyclingService.description}
-              content={recyclingService.content}
-              infographic={recyclingService.infographic}
-              isOpen={openAccordionID == recyclingService.title}
-              handleClick={handleClick}
-              ref={refs[index]}
-            />
+            <div
+              style={{
+                animationDelay: 0.1 * index + "s",
+              }}
+              className={
+                props.t4
+                  ? `animate__animated animate__fadeInLeft animate__delay-0.4s`
+                  : ""
+              }
+            >
+              <RecyclingServiceAccordion
+                key={recyclingService.title}
+                id={recyclingService.title}
+                title={recyclingService.title}
+                description={recyclingService.description}
+                content={recyclingService.content}
+                isOpen={openAccordionID == recyclingService.title}
+                handleClick={handleClick}
+                ref={refs[index]}
+              />
+            </div>
           ))}
       </div>
       <div className="recycling-service-accordion-grid-col">
         {props.recyclingServices
           .slice(Math.ceil(props.recyclingServices.length / 2))
           .map((recyclingService, index) => (
-            <RecyclingServiceAccordion
-              key={recyclingService.title}
-              id={recyclingService.title}
-              title={recyclingService.title}
-              description={recyclingService.description}
-              content={recyclingService.content}
-              infographic={recyclingService.infographic}
-              isOpen={openAccordionID == recyclingService.title}
-              handleClick={handleClick}
-              ref={refs[index + Math.ceil(props.recyclingServices.length / 2)]}
-            />
+            <div
+              style={{
+                animationDelay: 0.1 * index + "s",
+              }}
+              className={
+                props.t4
+                  ? `animate__animated animate__fadeInRight animate__delay-0.4s`
+                  : ""
+              }
+            >
+              <RecyclingServiceAccordion
+                key={recyclingService.title}
+                id={recyclingService.title}
+                title={recyclingService.title}
+                description={recyclingService.description}
+                content={recyclingService.content}
+                isOpen={openAccordionID == recyclingService.title}
+                handleClick={handleClick}
+                ref={
+                  refs[index + Math.ceil(props.recyclingServices.length / 2)]
+                }
+              />
+            </div>
           ))}
       </div>
     </div>
