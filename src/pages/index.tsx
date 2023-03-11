@@ -84,6 +84,10 @@ export default function Home(props: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
+
+       
       {/* To reset local storage, type localStorage.clear() into your web browser console. */}
       <Popup modal open={showPopup}>
         <button className="popup-close" onClick={() => setShowPopup(false)}>
