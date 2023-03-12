@@ -1,4 +1,4 @@
-import ItemTypeCard from "@/components/ItemTypeCard";
+import ItemTypeCard from "@/components/home/ItemTypeCard";
 
 type ItemTypeCardGridProps = {
   showFlatVersion: boolean;

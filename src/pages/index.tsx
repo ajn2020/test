@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Header from "@/components/Header";
-import EngagingBox from "@/components/EngagingBox";
-import Subheading from "@/components/Subheading";
-import DecisionTree from "@/components/DecisionTree";
-import EventCardCarousel from "@/components/EventCardCarousel";
-import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
+import Header from "@/components/home/Header";
+import EngagingBox from "@/components/home/EngagingBox";
+import Subheading from "@/components/home/Subheading";
+import DecisionTree from "@/components/home/DecisionTree";
+import EventCardCarousel from "@/components/home/EventCardCarousel";
+import ItemTypeCardGrid from "@/components/home/ItemTypeCardGrid";
 import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
-} from "@/components/RecyclingServiceAccordionGrid";
+} from "@/components/home/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
 import { useRef, useState, useEffect } from "react";
 import Popup from "reactjs-popup";

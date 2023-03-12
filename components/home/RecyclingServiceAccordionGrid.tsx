@@ -5,7 +5,7 @@ import React, {
   useRef,
   useImperativeHandle,
 } from "react";
-import RecyclingServiceAccordion from "@/components/RecyclingServiceAccordion";
+import RecyclingServiceAccordion from "@/components/home/RecyclingServiceAccordion";
 import { RecyclingServices } from "@/data/RecyclingServices";
 
 export type RecyclingServiceAccordionGridRef = {
