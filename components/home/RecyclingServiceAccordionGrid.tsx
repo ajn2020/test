@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import RecyclingServiceAccordion from "@/components/home/RecyclingServiceAccordion";
 import { RecyclingServices } from "@/data/RecyclingServices";
+import style from "@/styles/home/RecyclingServiceAccordionGrid.module.css";
 
 export type RecyclingServiceAccordionGridRef = {
   openAccordion(id: string): void;
@@ -172,8 +173,8 @@ export default React.forwardRef<
   }
 
   return (
-    <div className="recycling-service-accordion-grid">
-      <div className="recycling-service-accordion-grid-col">
+    <div className={style["recycling-service-accordion-grid"]}>
+      <div className={style["recycling-service-accordion-grid-col"]}>
         {(props.showFlatVersion
           ? props.flatRecyclingServices
           : props.houseRecyclingServices
@@ -204,7 +205,7 @@ export default React.forwardRef<
             />
           ))}
       </div>
-      <div className="recycling-service-accordion-grid-col">
+      <div className={style["recycling-service-accordion-grid-col"]}>
         {(props.showFlatVersion
           ? props.flatRecyclingServices
           : props.houseRecyclingServices

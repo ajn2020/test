@@ -1,3 +1,6 @@
+import { useRef, useState, useEffect } from "react";
+
+// Components
 import Head from "next/head";
 import Popup from "reactjs-popup";
 import Header from "@/components/home/Header";
@@ -10,7 +13,8 @@ import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
 } from "@/components/home/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
-import { useRef, useState, useEffect } from "react";
+
+// CSS
 
 // API URL
 import { api } from "@/config/api";
@@ -84,21 +88,24 @@ export default function Home(props: Props) {
       </Head>
 
       {/* To reset local storage, type localStorage.clear() into your web browser console. */}
-      <Popup modal open={showPopup}>
-        <button className="popup-close" onClick={() => setShowPopup(false)}>
+      <Popup modal open={showPopup} className="home-popup">
+        <button
+          className="home-popup-close"
+          onClick={() => setShowPopup(false)}
+        >
           &times;
         </button>
         <h1>What best describes your living situation?</h1>
         <button
           type="button"
-          className="popup-button"
+          className="home-popup-button"
           onClick={() => handlePopupSelection(false)}
         >
           House
         </button>
         <button
           type="button"
-          className="popup-button"
+          className="home-popup-button"
           onClick={() => handlePopupSelection(true)}
         >
           Flat

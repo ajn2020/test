@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { quizQuestions } from "@/data/Quiz";
+import style from "@/styles/home/Question.module.css";
 
 type QuizQuestion = {
   question: string;
@@ -29,19 +30,20 @@ export default function Question() {
   };
 
   return (
-    <div className="question-box">
+    <div className={style["question-box"]}>
       <h2>{currentQuestion.question}</h2>
-      <div className="question-box-answers">
+      <div className={style["question-box-answers"]}>
         {currentQuestion.answers.map((option) => (
           <button
             key={currentQuestion.answers.indexOf(option)}
-            className={`answer-button ${
-              isAnswerSelected
+            className={
+              style["answer-button"] +
+              (isAnswerSelected
                 ? option.correct
-                  ? "border-correct"
-                  : "border-incorrect"
-                : ""
-            }`}
+                  ? " " + style["border-correct"]
+                  : " " + style["border-incorrect"]
+                : "")
+            }
             onClick={() => handleAnswerClick()}
           >
             {option.answer}

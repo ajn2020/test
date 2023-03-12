@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from "@/styles/home/ItemTypeCard.module.css";
 
 type ItemTypeCardProps = {
   frontTitle: string;
@@ -24,27 +25,30 @@ export default function ItemTypeCard(props: ItemTypeCardProps) {
 
   return (
     <div
-      className="item-type-card-container"
+      className={style["item-type-card-container"]}
       onClick={() => setFlipped(!isFlipped)}
     >
       <div
-        className={`item-type-card ${
-          isFlipped ? "item-type-card-flipped" : ""
-        }`}
+        className={
+          style["item-type-card"] +
+          (isFlipped ? " " + style["item-type-card-flipped"] : "")
+        }
       >
-        <div className="item-type-card-front">
+        <div className={style["item-type-card-front"]}>
           <h2>{props.frontTitle}</h2>
           <img
-            className="item-type-card-image"
+            className={style["item-type-card-image"]}
             src={props.frontImage}
             alt={props.frontTitle}
           />
         </div>
-        <div className="item-type-card-back">
+        <div className={style["item-type-card-back"]}>
           <div>
-            <h3 className="item-type-card-back-title">{props.backTitle}</h3>
+            <h3 className={style["item-type-card-back-title"]}>
+              {props.backTitle}
+            </h3>
             <button
-              className="item-type-card-button"
+              className={style["item-type-card-button"]}
               type="button"
               onClick={(event) => jumpToAccordion(event, props.serviceID)}
             >
@@ -52,7 +56,7 @@ export default function ItemTypeCard(props: ItemTypeCardProps) {
             </button>
           </div>
           <img
-            className="item-type-card-image"
+            className={style["item-type-card-image"]}
             src={props.backImage}
             alt={props.backTitle}
           />
