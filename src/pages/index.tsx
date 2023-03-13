@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import { useRef, useState, useEffect } from "react";
 import Popup from "reactjs-popup";
 
-// API url
+// API URL
 import { api } from "@/config/api";
 
 // Data and Data Types
