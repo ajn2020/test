@@ -1,3 +1,9 @@
+export type Facts = {
+  title: string;
+  content: string;
+  id: string;
+};
+
 export const facts = [
   {
     title:
