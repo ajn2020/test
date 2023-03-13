@@ -14,7 +14,7 @@ import RecyclingServiceAccordionGrid, {
 } from "@/components/home/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
 
-// API URL
+// API url
 import { api } from "@/config/api";
 
 // Data and Data Types
