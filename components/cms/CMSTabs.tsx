@@ -5,8 +5,15 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Button, TextField } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import { v4 as uuidv4 } from "uuid";
+import { Facts } from "@/data/Facts";
+import style from "@/styles/cms/CMSTabs.module.css";
 
-export default function CMSTabs() {
+type CMSTabsProps = {
+  facts: Facts[];
+};
+
+export default function CMSTabs(props: CMSTabsProps) {
   const [value, setValue] = React.useState(0);
   const [factTitle, setFactTitle] = React.useState("");
   const [factContent, setFactContent] = React.useState("");
@@ -17,7 +24,6 @@ export default function CMSTabs() {
 
   function submitFacts(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log("here");
   }
 
   return (
@@ -72,6 +78,17 @@ export default function CMSTabs() {
             Submit
           </Button>
         </form>
+        <br />
+        <br />
+        <div className={style["fact-list"]}>
+          {props.facts.map((fact) => (
+            <div className={style["fact-list-item"]} key={fact.id}>
+              <h2>{fact.title}</h2>
+              <hr></hr>
+              <h3>{fact.content}</h3>
+            </div>
+          ))}
+        </div>
       </TabPanel>
 
       <TabPanel value={value} index={1}>

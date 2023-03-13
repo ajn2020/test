@@ -3,7 +3,17 @@ import Header from "@/components/cms/Header";
 import CMSTabs from "@/components/cms/CMSTabs";
 import Footer from "@/components/Footer";
 
-export default function CMS() {
+// API url
+import { api } from "@/config/api";
+
+// Data Types
+import { Facts } from "@/data/Facts";
+
+type Props = {
+  facts: Facts[];
+};
+
+export default function CMS(props: Props) {
   return (
     <>
       <Head>
@@ -16,9 +26,22 @@ export default function CMS() {
 
       <Header />
 
-      <CMSTabs />
+      <CMSTabs facts={props.facts} />
 
       <Footer />
     </>
   );
 }
+
+export const getServerSideProps = async () => {
+  const api = "https://f6omof7w1e.execute-api.eu-west-1.amazonaws.com/prod";
+
+  const resFacts = await fetch(`${api}/facts`);
+  const facts = await resFacts.json();
+
+  return {
+    props: {
+      facts: facts,
+    },
+  };
+};
