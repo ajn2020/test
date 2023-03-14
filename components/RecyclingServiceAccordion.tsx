@@ -22,6 +22,7 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
             <img
               className="recycling-service-accordion-image"
               src={props.itemImage}
+              alt=""
             />
             <h2>{props.title}</h2>
           </div>
@@ -39,6 +40,7 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
             <img
               className="recycling-service-accordion-image"
               src={props.binImage}
+              alt=""
             />
             <ReactMarkdown>{props.content}</ReactMarkdown>
             {props.infographic != null ? (
@@ -53,9 +55,9 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
             ) : (
               ""
             )}
-            <ReactMarkdown
-              children={`[Link for more details.](${props.link})`}
-            ></ReactMarkdown>
+            <ReactMarkdown>
+              {`[Link for more details.](${props.link})`}
+            </ReactMarkdown>
           </div>
         </div>
       </div>
