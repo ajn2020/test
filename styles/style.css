@@ -649,38 +649,42 @@ input:checked + .slider:before {
     ReportDumped
 ========================================*/
 
-.report-dumped-container{
+.dumped-rubbish-container{
   margin: 0 20px 20px 20px;
   background-color: #fff;
+  display: flex;
   text-align: center;
+  padding-left: 40px;
+  padding-bottom: 20px;
   border-radius: 36px;
 }
-.report-dumped-button{
-  height: 60px;
-  width: 80%;
+.dumped-rubbish-button{
+  height: 30px;
+  width: 100px;
   background-color: #af63bb;
+  text-align: center;
   color: #fff;
   margin-top:10px;
+  padding-bottom: 20px;
 }
-.report-dumped-text{
-  width: 80%;
-  margin:0 auto;
-  text-align: center;
-}
-.report-dumped-text-container{
+.dumped-rubbish-text-container{
   margin: '0 auto';
   margin-top: '20px';
   width: '80%';
   text-align:left
 }
-.report-dumped-title{
-  font-size: 18px;
-  font-weight: bold;
-  padding:12px 0 12px 0;
-  text-align: center;
+.dumped-rubbish-image{
+  align-items: center;
+  max-width: 50%;
 }
-.report-dumped-text-container li::marker{
-  color:#af63bb
+.dumped-rubbish-align{
+  flex-basis: 40%
+}
+.dumped-rubbish-text{
+  list-style-position: inside;
+}
+.dumped-rubbish-text-container li::marker{
+  color:#af63bb;
 }
 
 /*========================================
