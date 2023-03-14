@@ -645,6 +645,10 @@ input:checked + .slider:before {
   width: 100%;
 }
 
+.recycling-service-accordion-image {
+  width: 100px;
+}
+
 /*========================================
     FOOTER
 ========================================*/

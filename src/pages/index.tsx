@@ -125,12 +125,6 @@ export default function Home(props: Props) {
         ""
       )}
 
-      <Subheading title="How to recycle..." id="ItemTypeCardGrid" />
-      <ItemTypeCardGrid
-        showFlatVersion={showFlatVersion!}
-        openAccordion={openAccordion}
-      />
-
       <Subheading
         title="Recycling Services"
         id="RecyclingServiceAccordionGrid"
