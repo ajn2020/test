@@ -646,6 +646,44 @@ input:checked + .slider:before {
 }
 
 /*========================================
+    ReportDumped
+========================================*/
+
+.report-dumped-container{
+  margin: 0 20px 20px 20px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 36px;
+}
+.report-dumped-button{
+  height: 60px;
+  width: 80%;
+  background-color: #af63bb;
+  color: #fff;
+  margin-top:10px;
+}
+.report-dumped-text{
+  width: 80%;
+  margin:0 auto;
+  text-align: center;
+}
+.report-dumped-text-container{
+  margin: '0 auto';
+  margin-top: '20px';
+  width: '80%';
+  text-align:left
+}
+.report-dumped-title{
+  font-size: 18px;
+  font-weight: bold;
+  padding:12px 0 12px 0;
+  text-align: center;
+}
+.report-dumped-text-container li::marker{
+  color:#af63bb
+}
+
+/*========================================
     FOOTER
 ========================================*/
 

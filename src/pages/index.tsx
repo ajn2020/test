@@ -8,6 +8,7 @@ import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
 import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
 } from "@/components/RecyclingServiceAccordionGrid";
+import ReportDumped from "@/components/ReportDumped";
 import Footer from "@/components/Footer";
 import { useRef, useState, useEffect } from "react";
 import Popup from "reactjs-popup";
@@ -22,11 +23,13 @@ import {
   RecyclingServices,
 } from "@/data/RecyclingServices";
 import { events, Events } from "@/data/Events";
+import { ReportData, ReportDataType } from "@/data/ReportDumped";
 
 type Props = {
   events: Events[];
   houseRecyclingServices: RecyclingServices[];
   flatRecyclingServices: RecyclingServices[];
+  reportData: ReportDataType[];
 };
 
 export default function Home(props: Props) {
@@ -142,6 +145,15 @@ export default function Home(props: Props) {
         ref={recyclingServiceAccordionGridRef}
       />
 
+      <Subheading
+        title="Report dumped rubbish on streets"
+        id="ReportDumped"
+      />
+
+      <ReportDumped
+        reportData={props.reportData}
+      />
+
       <Footer />
     </>
   );
@@ -167,12 +179,14 @@ export const getServerSideProps = async () => {
   const mockEvents = events;
   const mockHouseRecyclingServices = houseRecyclingServices;
   const mockFlatRecyclingServices = flatRecyclingServices;
+  const mockReportData = ReportData
 
   return {
     props: {
       events: mockEvents,
       houseRecyclingServices: mockHouseRecyclingServices,
       flatRecyclingServices: mockFlatRecyclingServices,
+      reportData: mockReportData
     },
   };
 };
