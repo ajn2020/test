@@ -5,6 +5,7 @@ export type RecyclingServices = {
   description: string;
   content: string;
   infographic: string;
+  link: string;
 };
 
 export const houseRecyclingServices = [
@@ -17,10 +18,9 @@ export const houseRecyclingServices = [
     content:
       "**How:** The recycling process takes place weekly with collection between 7am and 5pm. " +
       "You should place the box at the front edge of your property by 7am  on the collection day" +
-      "and ensure that all items have been washed, squashed and for plastics - with lids included.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box)",
+      "and ensure that all items have been washed, squashed and for plastics - with lids included.  \n",
     infographic: "/red_recycling_box_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1597/plastic_recycling_in_your_red_box",
   },
   {
     itemImage: "./paper_card_item.png",
@@ -31,9 +31,9 @@ export const houseRecyclingServices = [
       "**How:** The recycling process takes place weekly with collection between 7am and 5pm. " +
       "You should place the box at the front edge of your property by 7am on the collection day" +
       "and ensure that all items have been loosely placed inside.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1598/paper_and_card_recycling_in_your_blue_box)",
+      "&nbsp;  \n",
     infographic: "/blue_recycling_box_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1598/paper_and_card_recycling_in_your_blue_box",
   },
   {
     itemImage:"./glass_items.png", 
@@ -43,10 +43,9 @@ export const houseRecyclingServices = [
       "Glass can be recycled using the green box.",
     content:
       "**How:** The recycling process takes place weekly with collection between 7am and 5pm. " +
-      "You should place the box at the front edge of your property by 7am on the collection day.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1599/glass_recycling_in_your_green_box)",
+      "You should place the box at the front edge of your property by 7am on the collection day.  \n",
     infographic: "/green_recycling_box_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1599/glass_recycling_in_your_green_box",
   },
   {
     itemImage: "./food_items.png",
@@ -60,10 +59,9 @@ export const houseRecyclingServices = [
       "The 25-litre collection bin should be locked (such that the handle is left either in the upright position " +
       "or completely forward and down) and placed at the front edge of your property by 7am on the collection day to be collected.  \n" +
       "Both bins should be lined with a biodegradable food waste bag. " +
-      "Do not use plastic bags in either of the bins.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1602/food_waste_recycling)",
+      "Do not use plastic bags in either of the bins.  \n",
     infographic: "/food_waste_bin_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1602/food_waste_recycling",
   },
   {
     itemImage: "./garden_items.png",
@@ -80,9 +78,8 @@ export const houseRecyclingServices = [
       "You will be provided with a 240-litre brown bin. " +
       "On the collection day, you must place the bin at the gate of your property before 7.00am.  \n" +
       "&nbsp;  \n" +
-      "**What cannot be recycled:** soil, large branches (diameter > 2 cm), plastic flower pots, noxious weeds.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1830/garden_waste_collections_202223)",
+      "**What cannot be recycled:** soil, large branches (diameter > 2 cm), plastic flower pots, noxious weeds.  \n",
+    link: "https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1830/garden_waste_collections_202223",
   },
   {
     itemImage: "./general_items.png",
@@ -98,12 +95,11 @@ export const houseRecyclingServices = [
       "There are alternative options where you can use either a larger 240-litre bin (subject to approval) or up to 3 black sacks.  \n" +
       "The bin should be placed at the front edge of your property by 7am on the collection day." + 
       "&nbsp;  \n" +
-      "**What cannot be collected:** It is not recommended to put any recyclable items into this bin.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1603/household_waste)",
+      "**What cannot be collected:** It is not recommended to put any recyclable items into this bin.  \n",
+    link: "https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1603/household_waste",
   },
   {
-    itemImage: "./textiles.png",
+    itemImage: "./textiles_items.png",
     title: "Textile Recycling Service",
     binImage:"./tied_carrier_bag_1.png",
     description:
@@ -119,12 +115,11 @@ export const houseRecyclingServices = [
       "&nbsp;  \n" +
       "There are additional opportunities to get your textile waste recycled, which are " +
       "[TRAID charity](https://www.traid.org.uk/book-a-collection/) and " +
-      "[Salvation Army Textile Banks](https://www.salvationarmydonationcentre.org/bank-finder).  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1600/clothing_textiles_and_shoe_recycling)",
+      "[Salvation Army Textile Banks](https://www.salvationarmydonationcentre.org/bank-finder).  \n",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1600/clothing_textiles_and_shoe_recycling",
   },
   {
-    itemImage: "./small_electrical_items.png",
+    itemImage: "./small_electricals_items.png",
     title: "Small Electrical Items Recycling Service",
     binImage:"./tied_carrier_bag_2.png",
     description:
@@ -140,14 +135,12 @@ export const houseRecyclingServices = [
       "**What cannot be recycled:** Any items that cannot fit in a standard carrier bag or include batteries.  \n" +
       "&nbsp;  \n" +
       "You can also utilise [TRAID charity](https://www.traid.org.uk/book-a-collection/) " +
-      "as an alternative opportunity to get your small electrical appliances recycled.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1601/small_electrical_and_electronic_appliance_recycling)",
+      "as an alternative opportunity to get your small electrical appliances recycled.  \n",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/1601/small_electrical_and_electronic_appliance_recycling",
   },
   {
-    itemImage: "./large_electrical_items.png",
+    itemImage: "./bulky_waste_items.png",
     title: "Bulky Waste Collection Service",
-    binImage:"",
     description:
       "Large electrical items, furniture and any items too large to fit in a regular bin can be recycled using the Bulky Waste Collection Service.",
     content:
@@ -164,9 +157,8 @@ export const houseRecyclingServices = [
       "Items placed at locations other than the agreed upon collection point and heavy items (i.e. cannot be lifted by two people) will not be collected either.  \n" +
       "&nbsp;  \n" +
       "Alternatively, you can donate your bulky waste items (if they are in a good condition) using the " +
-      "[Hounslow Furniture Recycling Project](https://hounslowconnect.com/services/furniture-recycling)" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/30/tidy_town_bulky_waste_collection)",
+      "[Hounslow Furniture Recycling Project](https://hounslowconnect.com/services/furniture-recycling)",
+    link: "https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/30/tidy_town_bulky_waste_collection",
   },
   /*{
     itemImage: "./large_electrical_items.png",
@@ -188,11 +180,10 @@ export const houseRecyclingServices = [
       "[Link for more details.](https://hounslowconnect.com/services/furniture-recycling)",
   },*/
   {
-    itemImage:"./clinical_waste_collection_service.png",
+    itemImage:"./clinical_waste_items.png",
     title: "Clinical Waste Collection Service",
-    binImage:"",
     description:
-      "Waste that is considered as hazardous and can be infectious to others can be disposed of using the Clinical Waste Collection Service.",
+      "Waste that is considered hazardous and can be infectious to others can be disposed of using the Clinical Waste Collection Service.",
     content:
       "**What can be collected:** hypodermic needles, blood, human tissue, equipment left over after treatment or operation, ...  \n" +
       "&nbsp;  \n" +
@@ -206,9 +197,8 @@ export const houseRecyclingServices = [
       "This type of waste is classed as offensive or hygiene waste. " +
       "They are predominantly non-infectious, hence do not require treatment. " +
       "These items should be securely tied in a black sack and placed with your household rubbish on the morning of your rubbish collection day. " +
-      "Please ensure this type of waste is properly wrapped and free from excess liquid.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1527/clinical_waste)",
+      "Please ensure this type of waste is properly wrapped and free from excess liquid.  \n",
+    link: "https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1527/clinical_waste",
   },
 ];
 
@@ -220,10 +210,9 @@ export const flatRecyclingServices = [
     description: "Plastic can be recycled using the communal bin with red lid.",
     content:
       "**How:** The recycling process takes place weekly. " +
-      "Please ensure that all items have been washed, squashed, with lids included, and loosely placed inside the bin.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+      "Please ensure that all items have been washed, squashed, with lids included, and loosely placed inside the bin.  \n",
     infographic: "./plastic_communal_bin_infographics.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat",
   },
   {
     itemImage:"./metal_items.png",
@@ -233,10 +222,9 @@ export const flatRecyclingServices = [
       "Metal can be recycled using the communal bin with grey label.",
     content:
       "**How:** The recycling process takes place weekly. " +
-      "Please ensure that all items have been loosely placed inside the bin.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+      "Please ensure that all items have been loosely placed inside the bin.  \n",
     infographic: "/metal_communal_bin_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat",
   },
   {
     itemImage:"./cardboard_item.png",
@@ -245,10 +233,9 @@ export const flatRecyclingServices = [
     description: "Cardboard can be recycled using the communal bin with blue lid.",
     content:
       "**How:** The recycling process takes place weekly. " +
-      "Please ensure that all items have been flattened and loosely placed inside the bin.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+      "Please ensure that all items have been flattened and loosely placed inside the bin.  \n",
     infographic: "./card_communal_bin_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat",
   },
   {
     itemImage:"./paper_item.png",
@@ -257,10 +244,9 @@ export const flatRecyclingServices = [
     description: "Paper can be recycled using the communal bin with blue label.",
     content:
       "**How:** The recycling process takes place weekly. " +
-      "Please ensure that all items have been loosely placed inside the bin.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+      "Please ensure that all items have been loosely placed inside the bin.  \n",
     infographic: "/paper_communal_bin_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat",
   },
   {
     itemImage:"./glass_item.png",
@@ -270,10 +256,9 @@ export const flatRecyclingServices = [
       "Glass can be recycled using the communal bin with teal label",
     content:
       "**How:** The recycling process takes place weekly. " +
-      "Please ensure that all items have been loosely placed inside the bin.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat)",
+      "Please ensure that all items have been loosely placed inside the bin.  \n",
     infographic: "/glass_communal_bin_infographic.png",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat",
   },
   {
     itemImage:"./food_item.png",
@@ -291,12 +276,11 @@ export const flatRecyclingServices = [
       "**Note:** Not all flats have a food communal bin. " +
       "If your block or development does not currently have a food waste service and you are interested in this " +
       "please email **recycling@hounslow.gov.uk** with your managing agents details for us to make contact.",
-    infographic: "./food_communal_bin_infographic.png",
+    infographic: "./food_communal_bin_infographic.png"
   },
   {
     itemImage:"./general_item3.png",
     title: "General Waste Collection Service",
-    binImage:"",
     description:
       "Rubbish that cannot be recycled can be disposed of using the general waste communal bin.",
     content:
@@ -307,35 +291,30 @@ export const flatRecyclingServices = [
       "**What cannot be collected:** It is not recommended to put any recyclable items into this bin.",
   },
   {
-    itemImage:"",
+    itemImage:"./textiles_item.png",
     title: "Textiles Recycling",
-    binImage:"",
     description: "Textiles and clothing can be donated to charity.",
     content:
       "**What can be donated:** bags, clothes, curtains, paired shoes, and others in **good condition**.  \n" +
       "&nbsp;  \n" +
       "**How:** You can utilise [TRAID charity](https://www.traid.org.uk/book-a-collection/) and " +
-      "[Salvation Army Textile Banks](https://www.salvationarmydonationcentre.org/bank-finder) to get your textiles recycled.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat/2)",
+      "[Salvation Army Textile Banks](https://www.salvationarmydonationcentre.org/bank-finder) to get your textiles recycled.  \n",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat/2",
   },
   {
-    itemImage:"",
+    itemImage:"./small_electricals_item2.png",
     title: "Small Electrical Items Recycling",
-    binImage:"",
     description: "Small electrical items can be donated to charity.",
     content:
       "**What can be donated:** telephones, cameras, CD/DVD players, hairdryers, and others in **good condition**.  \n" +
       "&nbsp;  \n" +
       "**How:** You can utilise [TRAID charity](https://www.traid.org.uk/book-a-collection/) as an opportunity " +
-      "to get your small electrical appliances recycled.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat/2)",
+      "to get your small electrical appliances recycled.  \n",
+    link: "https://www.hounslow.gov.uk/info/20128/household_recycling_and_waste_collections/24/recycling_and_rubbish_collections_from_your_flat/2",
   },
   {
-    itemImage: "./large_electrical_items.png",
+    itemImage: "./bulky_waste_item2.png",
     title: "Bulky Waste Collection Service",
-    binImage:"",
     description:
       "Large electrical items, furniture and any items too large to fit in a regular bin can be recycled using the Bulky Waste Collection Service.",
     content:
@@ -352,9 +331,8 @@ export const flatRecyclingServices = [
       "Items placed at locations other than the agreed upon collection point and heavy items (i.e. cannot be lifted by two people) will not be collected either.  \n" +
       "&nbsp;  \n" +
       "Alternatively, you can donate your bulky waste items (if they are in a good condition) using the " +
-      "[Hounslow Furniture Recycling Project](https://hounslowconnect.com/services/furniture-recycling)" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/30/tidy_town_bulky_waste_collection)",
+      "[Hounslow Furniture Recycling Project](https://hounslowconnect.com/services/furniture-recycling)",
+    link: "https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/30/tidy_town_bulky_waste_collection",
   },
   /*{
     itemImage:"",
@@ -376,23 +354,24 @@ export const flatRecyclingServices = [
       "[Link for more details.](https://hounslowconnect.com/services/furniture-recycling)",
   },*/
   {
-    itemImage:"./clinical_waste_collection_service.png",
+    itemImage:"./clinical_waste_item2.png",
     title: "Clinical Waste Collection Service",
-    binImage:"",
     description:
-      "The Clinical Waste Collection Service can be used to collect waste that is considered as hazardous and can be infectious to others.",
+      "Waste that is considered hazardous and can be infectious to others can be disposed of using the Clinical Waste Collection Service.",
     content:
-      "**What can be collected:** This service mainly collects hypodermic needles, blood, human tissue and any equipment left over after treatment or operation.  \n" +
+      "**What can be collected:** hypodermic needles, blood, human tissue, equipment left over after treatment or operation, ...  \n" +
       "&nbsp;  \n" +
-      "**How:** This is a free-of-charge service but approval must be granted by your Medical Professional via filling out a [clinical waste referral form](https://www.hounslow.gov.uk/downloads/file/555/clinical_waste_referral_form), or asking your Medical Professional to put you in contact with Medisort directly. " +
-      "Items will be collected together with other types of household waste on the pre-booked collection day but they should be separately placed for safety reasons and free from excess liquid.  \n" +
+      "**How:** This is a free-of-charge service but approval must be granted by your Medical Professional via filling out " +
+      "a [clinical waste referral form](https://www.hounslow.gov.uk/downloads/file/555/clinical_waste_referral_form), " +
+      "or asking your Medical Professional to put you in contact with Medisort directly.  \n" +
+      "Items will be collected together with other types of household waste on the pre-booked collection day " +
+      "but they should be free from excess liquid and separately placed for safety reasons.  \n" +
       "&nbsp;  \n" +
-      "**What cannot be collected:** Nappies, sanitary protection and incontinence pads will not be collected. " +
+      "**What cannot be collected:** nappies, sanitary protection, incontinence pads, ...  \n" +
       "This type of waste is classed as offensive or hygiene waste. " +
       "They are predominantly non-infectious, hence do not require treatment. " +
       "These items should be securely tied in a black sack and placed with your household rubbish on the morning of your rubbish collection day. " +
-      "Please ensure this type of waste is properly wrapped and free from excess liquid.  \n" +
-      "&nbsp;  \n" +
-      "[Link for more details.](https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1527/clinical_waste)",
+      "Please ensure this type of waste is properly wrapped and free from excess liquid.  \n",
+    link: "https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1527/clinical_waste",
   },
 ];

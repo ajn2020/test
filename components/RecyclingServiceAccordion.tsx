@@ -51,6 +51,7 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
             ) : (
               ""
             )}
+            <ReactMarkdown children={`[Link for more details.](${props.link})`}></ReactMarkdown>
           </div>
         </div>
       </div>

@@ -197,6 +197,7 @@ export default React.forwardRef<
               description={recyclingService.description}
               content={recyclingService.content}
               infographic={recyclingService.infographic}
+              link = {recyclingService.link}
               isOpen={openAccordionID == recyclingService.title}
               handleClick={handleClick}
               ref={createAndPushRef()}
@@ -225,6 +226,7 @@ export default React.forwardRef<
               binImage={recyclingService.binImage}
               description={recyclingService.description}
               content={recyclingService.content}
+              link = {recyclingService.link}
               infographic={recyclingService.infographic}
               isOpen={openAccordionID == recyclingService.title}
               handleClick={handleClick}
