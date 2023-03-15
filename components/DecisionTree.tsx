@@ -45,10 +45,8 @@ export default function DecisionTree() {
             </button>
           ))}
         </div>
-        <br />
-        <Button onClick={handleReset}>Restart</Button>
-        {/* <button onClick={handleReset}>Restart</button> */}
       </div>
+      <Button onClick={handleReset}>Restart</Button>
     </div>
   );
 }
