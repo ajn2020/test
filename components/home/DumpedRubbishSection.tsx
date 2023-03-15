@@ -35,7 +35,7 @@ export default function dumpedRubbishSection(props: DumpedRubbishInfoProps) {
           </Button>
           <Button
             className={style["dumped-rubbish-button"]}
-            onClick={() =>  (location.href = props.reportPrivateForm)}
+            onClick={() => (location.href = props.reportPrivateForm)}
             size="large"
           >
             On private land
@@ -46,7 +46,7 @@ export default function dumpedRubbishSection(props: DumpedRubbishInfoProps) {
           <p>If you have fixed penalty notice for fly tipping:</p>
           <Button
             className={style["dumped-rubbish-button"]}
-            onClick={() =>  (location.href = props.payPenaltyLink)}
+            onClick={() => (location.href = props.payPenaltyLink)}
             size="large"
           >
             Pay Here

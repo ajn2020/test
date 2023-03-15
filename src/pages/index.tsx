@@ -24,7 +24,7 @@ import {
   RecyclingServices,
 } from "@/data/RecyclingServices";
 import { events, Events } from "@/data/Events";
-import {dumpedRubbishInfo, DumpedRubbishInfo} from "@/data/DumpedRubbishInfo";
+import { dumpedRubbishInfo, DumpedRubbishInfo } from "@/data/DumpedRubbishInfo";
 
 type Props = {
   events: Events[];
@@ -144,12 +144,12 @@ export default function Home(props: Props) {
       />
 
       <Subheading title="Report Dumped Rubbish" id="DumpedRubbish" />
-      <DumpedRubbishSection 
+      <DumpedRubbishSection
         content={props.dumpedRubbishInfo.content}
         reportPublicForm={props.dumpedRubbishInfo.reportPublicForm}
         reportPrivateForm={props.dumpedRubbishInfo.reportPrivateForm}
-        payPenaltyLink={props.dumpedRubbishInfo.payPenaltyLink
-      }/>
+        payPenaltyLink={props.dumpedRubbishInfo.payPenaltyLink}
+      />
 
       <Footer />
     </>

@@ -3,7 +3,7 @@ export type DumpedRubbishInfo = {
   reportPublicForm: string;
   reportPrivateForm: string;
   payPenaltyLink: string;
-}
+};
 
 export const dumpedRubbishInfo = {
   content:
@@ -24,6 +24,7 @@ export const dumpedRubbishInfo = {
     "&nbsp;  \n" +
     "**Note:** Do not approach any individuals and do not put yourself in any danger!",
   reportPublicForm: "https://hounslowhighways.org/",
-  reportPrivateForm: "https://www.hounslow.gov.uk/forms/form/215/en/report_dumped_rubbish_on_private_land/",
-  payPenaltyLink: "https://www.hounslow.gov.uk/xfp/form/291"
+  reportPrivateForm:
+    "https://www.hounslow.gov.uk/forms/form/215/en/report_dumped_rubbish_on_private_land/",
+  payPenaltyLink: "https://www.hounslow.gov.uk/xfp/form/291",
 };
