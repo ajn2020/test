@@ -20,31 +20,25 @@ export default function dumpedRubbishSection(props: DumpedRubbishInfo) {
         </div>
         <div className={style["dumped-rubbish-report"]}>
           <h3>Report Dumped Rubbish</h3>
-          <Button
-            className={style["dumped-rubbish-button"]}
-            onClick={() => (location.href = props.reportPublicForm)}
-            size="large"
-          >
-            On public land
-          </Button>
-          <Button
-            className={style["dumped-rubbish-button"]}
-            onClick={() => (location.href = props.reportPrivateForm)}
-            size="large"
-          >
-            On private land
-          </Button>
+          <a href={props.reportPublicForm}>
+            <Button className={style["dumped-rubbish-button"]} size="large">
+              On public land
+            </Button>
+          </a>
+          <a href={props.reportPrivateForm}>
+            <Button className={style["dumped-rubbish-button"]} size="large">
+              On private land
+            </Button>
+          </a>
         </div>
         <div className={style["dumped-rubbish-pay"]}>
           <h3>Pay Penalty Notice</h3>
           <p>If you have fixed penalty notice for fly tipping:</p>
-          <Button
-            className={style["dumped-rubbish-button"]}
-            onClick={() => (location.href = props.payPenaltyLink)}
-            size="large"
-          >
-            Pay Here
-          </Button>
+          <a href={props.payPenaltyLink}>
+            <Button className={style["dumped-rubbish-button"]} size="large">
+              Pay Here
+            </Button>
+          </a>
         </div>
       </div>
     </div>
