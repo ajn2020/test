@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 30px;
-  margin: 0px 100px 20px 100px;
-  padding: 20px 200px 20px 200px;
+  margin: 20px 300px;
+  padding: 20px;
   background-color: white;
   border-radius: 36px;
 }
