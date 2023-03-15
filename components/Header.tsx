@@ -66,8 +66,6 @@ export default function Header(props: HeaderProps) {
         ) : (
           ""
         )}
-        <a href="#ItemTypeCardGrid">How to recycle...</a>
-        <div className="header-dot"></div>
         <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
       </div>
     </div>
