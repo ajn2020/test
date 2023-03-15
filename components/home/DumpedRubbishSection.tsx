@@ -2,15 +2,9 @@ import React from "react";
 import { Button } from "antd";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import style from "@/styles/home/DumpedRubbishSection.module.css";
+import { DumpedRubbishInfo } from "@/data/DumpedRubbishInfo";
 
-export type DumpedRubbishInfoProps = {
-  content: string;
-  reportPublicForm: string;
-  reportPrivateForm: string;
-  payPenaltyLink: string;
-};
-
-export default function dumpedRubbishSection(props: DumpedRubbishInfoProps) {
+export default function dumpedRubbishSection(props: DumpedRubbishInfo) {
   return (
     <div className={style["dumped-rubbish-container"]}>
       <div className={style["dumped-rubbish-image-div"]}>
