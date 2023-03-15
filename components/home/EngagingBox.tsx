@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Fact from "./Fact";
 import Question from "./Question";
+import style from "@/styles/home/EngagingBox.module.css";
 
 type EngagingBoxProps = {
   showFlatVersion: boolean;
@@ -19,7 +20,7 @@ export default function EngagingBox(props: EngagingBoxProps) {
   }, [props.showFlatVersion]);
 
   return (
-    <div className="engaging-box-wrapper">
+    <div className={style["engaging-box-wrapper"]}>
       {randNum == 0 && <Fact />}
       {randNum == 1 && <Question />}
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { questions } from "@/data/DecisionTreeQuestions";
 import { Button } from "antd";
+import style from "@/styles/home/DecisionTree.module.css";
 
 type Option = {
   id: string;
@@ -28,16 +29,16 @@ export default function DecisionTree() {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="decision-tree-wrapper">
-      <div className="decision-tree-title">
+    <div className={style["decision-tree-wrapper"]}>
+      <div className={style["decision-tree-title"]}>
         <h2>Find the right recycling service for your item here!</h2>
       </div>
-      <div className="decision-tree">
+      <div className={style["decision-tree"]}>
         <h3>{currentQuestion.question}</h3>
         <div>
           {currentQuestion.options.map((option) => (
             <button
-              className="decision-tree-option"
+              className={style["decision-tree-option"]}
               key={option.id}
               onClick={() => handleOptionClick(option)}
             >

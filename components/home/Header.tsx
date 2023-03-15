@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
+import style from "@/styles/home/Header.module.css";
 
 type HeaderProps = {
   displayEvents: boolean;
@@ -20,25 +21,25 @@ export default function Header(props: HeaderProps) {
   };
 
   return (
-    <div className="header" id="Header">
-      <div className="header-top">
-        <div className="switch-with-labels">
+    <div className={style["header"]} id="Header">
+      <div className={style["header-top"]}>
+        <div className={style["switch-with-labels"]}>
           <h3>House</h3>
-          <div className="switch-wrapper">
-            <label className="switch">
+          <div className={style["switch-wrapper"]}>
+            <label className={style["switch"]}>
               <input
                 type="checkbox"
                 defaultChecked={props.showFlatVersion}
                 onClick={props.toggle}
               />
-              <span className="slider round"></span>
+              <span className={style["slider"] + " " + style["round"]}></span>
             </label>
           </div>
           <h3>Flat</h3>
         </div>
-        <div className="header-title">Hounslow Recycling Hub</div>
+        <div className={style["header-title"]}>Hounslow Recycling Hub</div>
         {isInput ? (
-          <div className="header-search-input" onBlur={onBlur}>
+          <div className={style["header-search-input"]} onBlur={onBlur}>
             <Search
               placeholder="input search text"
               onSearch={onSearch}
@@ -46,22 +47,22 @@ export default function Header(props: HeaderProps) {
             />
           </div>
         ) : (
-          <div className="header-search">
+          <div className={style["header-search"]}>
             <SearchOutlined onClick={iconClick} />
           </div>
         )}
       </div>
-      <div className="header-description">
+      <div className={style["header-description"]}>
         Your go-to stop for all recycling things in the London Borough of
         Hounslow!
       </div>
-      <div className="header-anchors">
+      <div className={style["header-anchors"]}>
         <a href="#DecisionTree">Recycling Assistant</a>
-        <div className="header-dot"></div>
+        <div className={style["header-dot"]}></div>
         {props.displayEvents ? (
           <>
             <a href="#EventCardCarousel">Events</a>
-            <div className="header-dot"></div>
+            <div className={style["header-dot"]}></div>
           </>
         ) : (
           ""

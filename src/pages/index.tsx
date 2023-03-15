@@ -1,16 +1,18 @@
+import { useRef, useState, useEffect } from "react";
+
+// Components
 import Head from "next/head";
-import Header from "@/components/Header";
-import EngagingBox from "@/components/EngagingBox";
-import Subheading from "@/components/Subheading";
-import DecisionTree from "@/components/DecisionTree";
-import EventCardCarousel from "@/components/EventCardCarousel";
-import ItemTypeCardGrid from "@/components/ItemTypeCardGrid";
+import Popup from "reactjs-popup";
+import Header from "@/components/home/Header";
+import EngagingBox from "@/components/home/EngagingBox";
+import Subheading from "@/components/home/Subheading";
+import DecisionTree from "@/components/home/DecisionTree";
+import EventCardCarousel from "@/components/home/EventCardCarousel";
+import ItemTypeCardGrid from "@/components/home/ItemTypeCardGrid";
 import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
-} from "@/components/RecyclingServiceAccordionGrid";
+} from "@/components/home/RecyclingServiceAccordionGrid";
 import Footer from "@/components/Footer";
-import { useRef, useState, useEffect } from "react";
-import Popup from "reactjs-popup";
 
 // API URL
 import { api } from "@/config/api";
@@ -84,21 +86,24 @@ export default function Home(props: Props) {
       </Head>
 
       {/* To reset local storage, type localStorage.clear() into your web browser console. */}
-      <Popup modal open={showPopup}>
-        <button className="popup-close" onClick={() => setShowPopup(false)}>
+      <Popup modal open={showPopup} className="home-popup">
+        <button
+          className="home-popup-close"
+          onClick={() => setShowPopup(false)}
+        >
           &times;
         </button>
         <h1>What best describes your living situation?</h1>
         <button
           type="button"
-          className="popup-button"
+          className="home-popup-button"
           onClick={() => handlePopupSelection(false)}
         >
           House
         </button>
         <button
           type="button"
-          className="popup-button"
+          className="home-popup-button"
           onClick={() => handlePopupSelection(true)}
         >
           Flat

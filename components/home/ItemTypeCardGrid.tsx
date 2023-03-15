@@ -1,4 +1,5 @@
-import ItemTypeCard from "@/components/ItemTypeCard";
+import ItemTypeCard from "@/components/home/ItemTypeCard";
+import style from "@/styles/home/ItemTypeCardGrid.module.css";
 
 type ItemTypeCardGridProps = {
   showFlatVersion: boolean;
@@ -8,7 +9,7 @@ type ItemTypeCardGridProps = {
 export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
   if (props.showFlatVersion) {
     return (
-      <div className="item-type-card-grid">
+      <div className={style["item-type-card-grid"]}>
         <ItemTypeCard
           frontTitle="Plastic"
           frontImage="./plastic.png"
@@ -101,7 +102,7 @@ export default function ItemTypeCardGrid(props: ItemTypeCardGridProps) {
     );
   } else {
     return (
-      <div className="item-type-card-grid">
+      <div className={style["item-type-card-grid"]}>
         <ItemTypeCard
           frontTitle="Plastic"
           frontImage="./plastic.png"
