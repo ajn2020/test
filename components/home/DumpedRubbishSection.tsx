@@ -1,10 +1,16 @@
 import React from "react";
-import { dumpedRubbish } from "@/data/DumpedRubbish"; // TODO: This should be passed in as a prop from index!
 import { Button } from "antd";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import style from "@/styles/home/DumpedRubbish.module.css";
+import style from "@/styles/home/DumpedRubbishSection.module.css";
 
-export default function DumpedRubbish() {
+export type DumpedRubbishInfoProps = {
+  content: string;
+  reportPublicForm: string;
+  reportPrivateForm: string;
+  payPenaltyLink: string;
+};
+
+export default function dumpedRubbishSection(props: DumpedRubbishInfoProps) {
   return (
     <div className={style["dumped-rubbish-container"]}>
       <div className={style["dumped-rubbish-image-div"]}>
@@ -16,23 +22,20 @@ export default function DumpedRubbish() {
       </div>
       <div>
         <div className={style["dumped-rubbish-text"]}>
-          <ReactMarkdown>{dumpedRubbish.content}</ReactMarkdown>
+          <ReactMarkdown>{props.content}</ReactMarkdown>
         </div>
         <div className={style["dumped-rubbish-report"]}>
           <h3>Report Dumped Rubbish</h3>
           <Button
             className={style["dumped-rubbish-button"]}
-            onClick={() => (location.href = "https://hounslowhighways.org/")}
+            onClick={() => (location.href = props.reportPublicForm)}
             size="large"
           >
             On public land
           </Button>
           <Button
             className={style["dumped-rubbish-button"]}
-            onClick={() =>
-              (location.href =
-                "https://www.hounslow.gov.uk/forms/form/215/en/report_dumped_rubbish_on_private_land/")
-            }
+            onClick={() =>  (location.href = props.reportPrivateForm)}
             size="large"
           >
             On private land
@@ -40,12 +43,10 @@ export default function DumpedRubbish() {
         </div>
         <div className={style["dumped-rubbish-pay"]}>
           <h3>Pay Penalty Notice</h3>
-          <p>Pay for your fixed penalty notice for fly tipping.</p>
+          <p>If you have fixed penalty notice for fly tipping:</p>
           <Button
             className={style["dumped-rubbish-button"]}
-            onClick={() =>
-              (location.href = "https://www.hounslow.gov.uk/xfp/form/291")
-            }
+            onClick={() =>  (location.href = props.payPenaltyLink)}
             size="large"
           >
             Pay Here

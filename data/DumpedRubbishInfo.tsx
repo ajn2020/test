@@ -1,10 +1,18 @@
-export const dumpedRubbish = {
+export type DumpedRubbishInfo = {
+  content: string;
+  reportPublicForm: string;
+  reportPrivateForm: string;
+  payPenaltyLink: string;
+}
+
+export const dumpedRubbishInfo = {
   content:
     "# Dumped Rubbish  \n" +
-    "Dumping rubbish is considered an *illegal* activity. " +
+    "Dumping rubbish is considered an **illegal** activity. " +
     "Reporting the activity immediately will help us in our fight against this illegal activity. " +
     "All the information your report is important and will be treated confidentially.  \n" +
-    "&nbsp;  \n" + // Why is this not showing up?!?!
+    "&nbsp;  \n" +
+    "&nbsp;  \n" +
     "## What to include in the report  \n" +
     "Please, add to your report any information about the dumped rubbish, including:  \n" +
     "* location  \n" +
@@ -15,4 +23,7 @@ export const dumpedRubbish = {
     "* description of the vehicle involved (if any)  \n" +
     "&nbsp;  \n" +
     "**Note:** Do not approach any individuals and do not put yourself in any danger!",
+  reportPublicForm: "https://hounslowhighways.org/",
+  reportPrivateForm: "https://www.hounslow.gov.uk/forms/form/215/en/report_dumped_rubbish_on_private_land/",
+  payPenaltyLink: "https://www.hounslow.gov.uk/xfp/form/291"
 };
