@@ -160,9 +160,8 @@ export const facts = [
       "Did you know how the London Borough of Hounslow performs in terms of recycling?",
     content:
       "In the past 5 years, for household waste, the items sent for recycling are around 25,000 tonnes and the items not sent for recycling are around 60,000 tonnes. " +
-      "However, for non-household waste, there were more and more items not being sent for recycling. " +
-      "This number has increased by approximately 250% in the 5-years period. " +
-      "Meanwhile, there is a significant drop in the number of non-household waste items sent for recycling. " +
+      "However, for non-household waste, there are more and more items not being sent for recycling - the number has increased by approximately 150% in the 5-years period. " +
+      "Additionally, there is a significant drop in the number of non-household waste items sent for recycling. " +
       "[Source.](https://stats.hounslow.gov.uk/environment/#/view-report/04f70e9e81d54d578c2ccdc0c5456e23/___iaFirstFeature/G3)",
   },
   {
