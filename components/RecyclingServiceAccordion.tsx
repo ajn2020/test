@@ -18,13 +18,15 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
         onClick={() => props.handleClick(props.id)}
       >
         <div className="recycling-service-accordion">
-          <div className="recycling-service-accordion-title">
+          <div>
             <img
-              className="recycling-service-accordion-image"
+              className="recycling-service-accordion-item-image"
               src={props.itemImage}
               alt=""
             />
-            <h2>{props.title}</h2>
+            <div className="recycling-service-accordion-title">
+              <h2>{props.title}</h2>
+            </div>
           </div>
           <div className="recycling-service-accordion-description">
             <ReactMarkdown>{props.description}</ReactMarkdown>
@@ -36,16 +38,18 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
                 : "recycling-service-accordion-content-hidden"
             }
           >
-            <br />
-            <img
-              className="recycling-service-accordion-image"
-              src={props.binImage}
-              alt=""
-            />
+            {props.binImage != null ? (
+              <img
+                className="recycling-service-accordion-bin-image"
+                src={props.binImage}
+                alt=""
+              />
+            ) : (
+              <br />
+            )}
             <ReactMarkdown>{props.content}</ReactMarkdown>
             {props.infographic != null ? (
               <>
-                <br />
                 <img
                   className="recycling-service-accordion-infographic"
                   src={props.infographic}
@@ -53,7 +57,7 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
                 />
               </>
             ) : (
-              ""
+              <br />
             )}
             <ReactMarkdown>
               {`[Link for more details.](${props.link})`}

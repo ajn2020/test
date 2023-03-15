@@ -70,8 +70,6 @@ export const houseRecyclingServices = [
     binImage: "./brown_wheeled_bin.png",
     description: "Garden waste can be recycled using the brown wheeled bin.",
     content:
-      "**What can be recycled:** Grass cuttings, leaves, hedge clippings, flowers, weeds, twigs, small branches, fallen fruit, etc.  \n" +
-      "&nbsp;  \n" +
       "**How:** This is an annual subscription service ([sign-up here](https://www.hounslow.gov.uk/xfp/form/429)) that lasts from 1st April to 31st March for a fee of £65.00. " +
       "Alternatively, a £35.40 half-year subscription can be made that runs between 1st October and 31st March.  \n" +
       "&nbsp;  \n" +
@@ -79,9 +77,8 @@ export const houseRecyclingServices = [
       "&nbsp;  \n" +
       "A total of 25 collections will be made for a yearly subscription (i.e. takes place every two weeks excluding the Christmas period). " +
       "You will be provided with a 240-litre brown bin. " +
-      "On the collection day, you must place the bin at the gate of your property before 7.00am.  \n" +
-      "&nbsp;  \n" +
-      "**What cannot be recycled:** Soil, large branches (diameter > 2 cm), plastic flower pots, noxious weeds.  \n",
+      "On the collection day, you must place the bin at the gate of your property before 7.00am. ",
+    infographic: "./garden_waste_infographic.png",
     link: "https://www.hounslow.gov.uk/info/20002/recycling_and_rubbish/1830/garden_waste_collections_202223",
   },
   {

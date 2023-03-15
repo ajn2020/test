@@ -614,6 +614,10 @@ input:checked + .slider:before {
   text-align: center;
 }
 
+.recycling-service-accordion-item-image {
+  height: 100px;
+}
+
 .recycling-service-accordion-title {
   color: black;
   padding: 0px 0px 10px 0px;
@@ -641,12 +645,14 @@ input:checked + .slider:before {
   font-size: 18px;
 }
 
-.recycling-service-accordion-infographic {
-  width: 100%;
+.recycling-service-accordion-bin-image {
+  height: 100px;
+  margin: 10px 0px;
 }
 
-.recycling-service-accordion-image {
-  height: 100px;
+.recycling-service-accordion-infographic {
+  width: 100%;
+  margin: 10px 0px;
 }
 
 /*========================================
