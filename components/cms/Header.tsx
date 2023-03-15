@@ -4,9 +4,7 @@ export default function Header() {
   return (
     <>
       <div className={style["header"]} id="Header">
-        <div className={style["header-top"]}>
-          <div className={style["header-title"]}>Hounslow Recycling Hub</div>
-        </div>
+        <div className={style["header-title"]}>Hounslow Recycling Hub</div>
         <br />
         <div className={style["header-description"]}>
           Content Management System
