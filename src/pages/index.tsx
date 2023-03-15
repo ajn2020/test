@@ -143,12 +143,9 @@ export default function Home(props: Props) {
         ref={recyclingServiceAccordionGridRef}
       />
 
-      <Subheading
-        title="Report Dumped Rubbish"
-        id="DumpedRubbish"
-      />
+      <Subheading title="Report Dumped Rubbish" id="DumpedRubbish" />
 
-      <DumpedRubbish/>
+      <DumpedRubbish />
 
       <Footer />
     </>
