@@ -650,41 +650,49 @@ input:checked + .slider:before {
 ========================================*/
 
 .dumped-rubbish-container {
-  margin: 0 20px 20px 20px;
-  background-color: #fff;
-  display: flex;
-  text-align: center;
-  padding-left: 40px;
-  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 30px;
+  margin: 0px 20px 20px 20px;
+  padding: 20px;
+  background-color: white;
   border-radius: 36px;
 }
+
+.dumped-rubbish-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dumped-rubbish-image {
+  height: 300px;
+}
+
+.dumped-rubbish-text {
+  font-size: 18px;
+  list-style-position: inside;
+}
+
+.dumped-rubbish-text li::marker {
+  color: #af63bb;
+}
+
+.dumped-rubbish-report {
+  margin: 10px 0px;
+  font-size: 18px;
+}
+
+.dumped-rubbish-pay {
+  margin: 10px 0px;
+  font-size: 18px;
+}
+
 .dumped-rubbish-button {
-  height: 30px;
-  width: 100px;
   background-color: #af63bb;
   text-align: center;
   color: #fff;
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
-.dumped-rubbish-text-container {
-  margin: "0 auto";
-  margin-top: "20px";
-  width: "80%";
-  text-align: left;
-}
-.dumped-rubbish-image {
-  align-items: center;
-  max-width: 50%;
-}
-.dumped-rubbish-align {
-  flex-basis: 40%;
-}
-.dumped-rubbish-text {
-  list-style-position: inside;
-}
-.dumped-rubbish-text-container li::marker {
-  color: #af63bb;
+  margin-right: 10px;
 }
 
 /*========================================

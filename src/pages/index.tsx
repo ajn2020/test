@@ -144,7 +144,6 @@ export default function Home(props: Props) {
       />
 
       <Subheading title="Report Dumped Rubbish" id="DumpedRubbish" />
-
       <DumpedRubbish />
 
       <Footer />
