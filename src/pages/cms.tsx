@@ -34,8 +34,6 @@ export default function CMS(props: Props) {
 }
 
 export const getServerSideProps = async () => {
-  const api = "https://f6omof7w1e.execute-api.eu-west-1.amazonaws.com/prod";
-
   const resFacts = await fetch(`${api}/facts`);
   const facts = await resFacts.json();
 
