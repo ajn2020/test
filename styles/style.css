@@ -199,12 +199,12 @@ input:checked + .slider:before {
 
 .header-description {
   font-size: 17px;
+  margin: 20px 0px;
 }
 
 .header-anchors {
   display: flex;
   padding: 15px 100px;
-  margin-top: 20px;
   align-items: center;
   position: sticky;
   top: 0px;
@@ -363,8 +363,9 @@ input:checked + .slider:before {
 
 .decision-tree-option {
   width: 20%;
-  margin: 20px 20px 0px 20px;
-  padding: 20px;
+  min-width: 200px;
+  margin: 20px 10px 0px 10px;
+  padding: 10px;
   border-width: 0;
   border-radius: 5px;
   background-color: #c29ec7;

@@ -49,13 +49,11 @@ export default React.forwardRef<HTMLDivElement, RecyclingServiceAccordionProps>(
             )}
             <ReactMarkdown>{props.content}</ReactMarkdown>
             {props.infographic != null ? (
-              <>
-                <img
-                  className="recycling-service-accordion-infographic"
-                  src={props.infographic}
-                  alt=""
-                />
-              </>
+              <img
+                className="recycling-service-accordion-infographic"
+                src={props.infographic}
+                alt=""
+              />
             ) : (
               <br />
             )}

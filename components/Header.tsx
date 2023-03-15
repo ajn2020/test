@@ -20,59 +20,56 @@ export default function Header(props: HeaderProps) {
   };
 
   return (
-    <>
-      <div className="header" id="Header">
-        <div className="header-top">
-          <div className="switch-with-labels">
-            <h3>House</h3>
-            <div className="switch-wrapper">
-              <label className="switch">
-                <input
-                  type="checkbox"
-                  defaultChecked={props.showFlatVersion}
-                  onClick={props.toggle}
-                />
-                <span className="slider round"></span>
-              </label>
-            </div>
-            <h3>Flat</h3>
-          </div>
-          <div className="header-title">Hounslow Recycling Hub</div>
-          {isInput ? (
-            <div className="header-search-input" onBlur={onBlur}>
-              <Search
-                placeholder="input search text"
-                onSearch={onSearch}
-                style={{ width: 200 }}
+    <div className="header" id="Header">
+      <div className="header-top">
+        <div className="switch-with-labels">
+          <h3>House</h3>
+          <div className="switch-wrapper">
+            <label className="switch">
+              <input
+                type="checkbox"
+                defaultChecked={props.showFlatVersion}
+                onClick={props.toggle}
               />
-            </div>
-          ) : (
-            <div className="header-search">
-              <SearchOutlined onClick={iconClick} />
-            </div>
-          )}
+              <span className="slider round"></span>
+            </label>
+          </div>
+          <h3>Flat</h3>
         </div>
-        <br />
-        <div className="header-description">
-          Your go-to stop for all recycling things in the London Borough of
-          Hounslow!
-        </div>
-        <div className="header-anchors">
-          <a href="#DecisionTree">Recycling Assistant</a>
-          <div className="header-dot"></div>
-          {props.displayEvents ? (
-            <>
-              <a href="#EventCardCarousel">Events</a>
-              <div className="header-dot"></div>
-            </>
-          ) : (
-            ""
-          )}
-          <a href="#ItemTypeCardGrid">How to recycle...</a>
-          <div className="header-dot"></div>
-          <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
-        </div>
+        <div className="header-title">Hounslow Recycling Hub</div>
+        {isInput ? (
+          <div className="header-search-input" onBlur={onBlur}>
+            <Search
+              placeholder="input search text"
+              onSearch={onSearch}
+              style={{ width: 200 }}
+            />
+          </div>
+        ) : (
+          <div className="header-search">
+            <SearchOutlined onClick={iconClick} />
+          </div>
+        )}
       </div>
-    </>
+      <div className="header-description">
+        Your go-to stop for all recycling things in the London Borough of
+        Hounslow!
+      </div>
+      <div className="header-anchors">
+        <a href="#DecisionTree">Recycling Assistant</a>
+        <div className="header-dot"></div>
+        {props.displayEvents ? (
+          <>
+            <a href="#EventCardCarousel">Events</a>
+            <div className="header-dot"></div>
+          </>
+        ) : (
+          ""
+        )}
+        <a href="#ItemTypeCardGrid">How to recycle...</a>
+        <div className="header-dot"></div>
+        <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
+      </div>
+    </div>
   );
 }
