@@ -1,30 +1,20 @@
-import * as React from "react";
+import { SyntheticEvent, useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Button, TextField } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
-import { v4 as uuidv4 } from "uuid";
+import FactCMS from "./FactCMS";
 import { Facts } from "@/data/Facts";
-import style from "@/styles/cms/CMSTabs.module.css";
 
 type CMSTabsProps = {
   facts: Facts[];
 };
 
 export default function CMSTabs(props: CMSTabsProps) {
-  const [value, setValue] = React.useState(0);
-  const [factTitle, setFactTitle] = React.useState("");
-  const [factContent, setFactContent] = React.useState("");
+  const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-
-  function submitFacts(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-  }
 
   return (
     <Box
@@ -52,43 +42,7 @@ export default function CMSTabs(props: CMSTabsProps) {
       </Tabs>
 
       <TabPanel value={value} index={0}>
-        <form onSubmit={submitFacts}>
-          <TextField
-            fullWidth
-            id="fact-title"
-            label="Fact Title"
-            variant="outlined"
-            value={factTitle}
-            onChange={(event) => setFactTitle(event.target.value)}
-          />
-          <br />
-          <br />
-          <TextField
-            fullWidth
-            multiline
-            id="fact-title"
-            label="Fact Content"
-            variant="outlined"
-            value={factContent}
-            onChange={(event) => setFactContent(event.target.value)}
-          />
-          <br />
-          <br />
-          <Button variant="contained" endIcon={<SendIcon />} type="submit">
-            Submit
-          </Button>
-        </form>
-        <br />
-        <br />
-        <div className={style["fact-list"]}>
-          {props.facts.map((fact) => (
-            <div className={style["fact-list-item"]} key={fact.id}>
-              <h2>{fact.title}</h2>
-              <hr></hr>
-              <h3>{fact.content}</h3>
-            </div>
-          ))}
-        </div>
+        <FactCMS facts={props.facts} />
       </TabPanel>
 
       <TabPanel value={value} index={1}>

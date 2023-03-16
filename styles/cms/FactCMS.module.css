@@ -1,0 +1,22 @@
+.form-component-div {
+  margin: 20px 0px;
+}
+
+.fact-list {
+  display: grid;
+}
+
+.fact-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 10px;
+  margin: 10px 0px;
+  padding: 10px;
+  border: solid 2px purple;
+  border-radius: 20px;
+}
+
+.fact-list-fact {
+  display: grid;
+  grid-template-rows: auto auto;
+}
