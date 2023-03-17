@@ -38,36 +38,10 @@ export default function Header(props: HeaderProps) {
           <h3>Flat</h3>
         </div>
         <div className={style["header-title"]}>Hounslow Recycling Hub</div>
-        {isInput ? (
-          <div className={style["header-search-input"]} onBlur={onBlur}>
-            <Search
-              placeholder="input search text"
-              onSearch={onSearch}
-              style={{ width: 200 }}
-            />
-          </div>
-        ) : (
-          <div className={style["header-search"]}>
-            <SearchOutlined onClick={iconClick} />
-          </div>
-        )}
       </div>
       <div className={style["header-description"]}>
         Your go-to stop for all recycling things in the London Borough of
         Hounslow!
-      </div>
-      <div className={style["header-anchors"]}>
-        <a href="#DecisionTree">Recycling Assistant</a>
-        <div className={style["header-dot"]}></div>
-        {props.displayEvents ? (
-          <>
-            <a href="#EventCardCarousel">Events</a>
-            <div className={style["header-dot"]}></div>
-          </>
-        ) : (
-          ""
-        )}
-        <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
       </div>
     </div>
   );

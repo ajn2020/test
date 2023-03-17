@@ -1,9 +1,9 @@
 .header {
-  background: linear-gradient(#d860f9, #642f6c);
+  background: linear-gradient(#4e165b, #642f6c);
   color: white;
-  font-family: "Lato";
+  font-family: cursive;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   position: relative;
 }
 

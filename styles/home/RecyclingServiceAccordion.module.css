@@ -1,11 +1,12 @@
 .recycling-service-accordion-wrapper {
   display: grid;
   grid-template-rows: 1fr auto;
-  background-color: #af63bb;
+  background-color: #ffffff;
   border-style: solid;
   border-width: 3px;
   border-radius: 15px;
   cursor: pointer;
+  margin: 0 100px;
 }
 
 .recycling-service-accordion-wrapper:hover {

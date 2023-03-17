@@ -1,16 +1,23 @@
 .subheading-container-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
-  background-color: #90449c;
-  margin-bottom: 45px;
-  margin-top: 45px;
+  margin: 0px 500px;
+  /*background-color: #90449c;*/
+  margin-bottom: 100px;
+  margin-top: 100px;
+
+  background:
+      linear-gradient(to top, #7a4caf, #7a4caf 10px, transparent 10px),
+      linear-gradient(to right, #ba8cef, #c28cef 10px, transparent 10px),
+      linear-gradient(to bottom, #784ac3, #914ac3 10px, transparent 10px),
+      linear-gradient(to left, #390096, #570096 10px, transparent 10px);
+  background-origin: border-box;
 }
 
 .subheading-container {
   width: 100%;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  /* grid-template-columns: auto 1fr auto; */
   align-items: center;
   justify-items: center;
 }
@@ -32,10 +39,16 @@
 .subheading-text {
   font-size: 30px;
   margin: 20px 0;
-  color: aliceblue;
+  /* font-family: monospace; */
+  /* font-style: italic; */
+  color: #d860f9;
+  font-weight: bold;
+  text-shadow: #c627ae 1px 1px 0px, #ca15a6 1px 2px 0;
+  /* color: aliceblue; */
+
 }
 
 .subheading-separator {
   width: 100%;
-  border: 1px solid #999;
+  border: 1px solid #ffffff;
 }

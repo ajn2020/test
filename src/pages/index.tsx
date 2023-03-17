@@ -2,8 +2,10 @@ import { useRef, useState, useEffect } from "react";
 
 // Components
 import Head from "next/head";
+import "animate.css";
 import Popup from "reactjs-popup";
 import Header from "@/components/home/Header";
+import Navbar from "@/components/home/Navbar";
 import EngagingBox from "@/components/home/EngagingBox";
 import Subheading from "@/components/home/Subheading";
 import DecisionTree from "@/components/home/DecisionTree";
@@ -32,6 +34,14 @@ type Props = {
 };
 
 export default function Home(props: Props) {
+  const [top, setTop] = useState(false);
+  // Find the right
+  const [t1, setT1] = useState(false);
+  // EVENTS
+  const [t2, setT2] = useState(false);
+  // How to recycle...
+  const [t3, setT3] = useState(false);
+
   const [showFlatVersion, setShowFlatVersion] = useState<boolean>();
   const [showPopup, setShowPopup] = useState(false);
 
@@ -72,6 +82,38 @@ export default function Home(props: Props) {
     recyclingServiceAccordionGridRef.current?.openAccordion(id);
   }
 
+  useEffect(() => {
+    window.onscroll = () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      console.log("scrollTop = ", scrollTop);
+      if (scrollTop > 100) {
+        setTop(true);
+      } else {
+        setTop(false);
+      }
+      if (scrollTop >= 100 && scrollTop <= 1150) {
+        setT1(true);
+      } else {
+        setT1(false);
+      }
+
+      if (scrollTop >= 560 && scrollTop <= 1350) {
+        setT2(true);
+      } else {
+        setT2(false);
+      }
+
+      if (scrollTop >= 1150 && scrollTop <= 5000) {
+        setT3(true);
+      } else {
+        setT3(false);
+      }
+    };
+    return () => {
+      window.onscroll = null;
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -84,6 +126,8 @@ export default function Home(props: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Navbar />
 
       {/* To reset local storage, type localStorage.clear() into your web browser console. */}
       <Popup modal open={showPopup} className="home-popup">
@@ -121,26 +165,37 @@ export default function Home(props: Props) {
       <Subheading title="Recycling Assistant" id="DecisionTree" />
       <DecisionTree />
 
+
       {props.events.length > 0 ? (
         <>
-          <Subheading title="Events" id="EventCardCarousel" />
+ 
+            <Subheading title="Events" id="EventCardCarousel" />
+
           <EventCardCarousel events={props.events} />
         </>
       ) : (
         ""
       )}
 
-      <Subheading
-        title="Recycling Services"
-        id="RecyclingServiceAccordionGrid"
-      />
+
+      <div className={t3 ? "animate__animated animate__fadeInLeft" : ""}>
+        <Subheading
+          title="Recycling Services"
+          id="RecyclingServiceAccordionGrid"
+        />
+      </div>
+
       <RecyclingServiceAccordionGrid
         showFlatVersion={showFlatVersion!}
         houseRecyclingServices={props.houseRecyclingServices}
         flatRecyclingServices={props.flatRecyclingServices}
         ref={recyclingServiceAccordionGridRef}
       />
-
+      {top && (
+        <a href="#">
+          <button className="toTop">Top</button>
+        </a>
+      )}
       <Footer />
     </>
   );

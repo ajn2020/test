@@ -4,6 +4,7 @@
   padding: 20px;
   grid-gap: 20px;
   justify-items: center;
+  margin: 0 100px;
 }
 
 .event-card-carousel {
@@ -27,7 +28,7 @@
   font-size: 20px;
   cursor: pointer;
   text-align: center;
-  color: #fff;
+  color: #1b1717;
   background-color: #c29ec7;
   border: none;
   border-radius: 15px;
