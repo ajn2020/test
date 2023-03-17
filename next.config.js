@@ -1,23 +1,6 @@
 /** @type {import('next').NextConfig} */
-
-const securityHeaders = [
-  {
-    key: 'Referrer-Policy',
-    value: 'unsafe-url'
-  }
-]
-
-
 const nextConfig = {
   reactStrictMode: true,
-  async headers() {
-    return [
-      {
-        source: '/api/:slug/:path*',
-        headers: securityHeaders,
-      },
-    ]
-  },
   async rewrites() {
     return [
       {
