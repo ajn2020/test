@@ -8,10 +8,10 @@ import EngagingBox from "@/components/home/EngagingBox";
 import Subheading from "@/components/home/Subheading";
 import DecisionTree from "@/components/home/DecisionTree";
 import EventCardCarousel from "@/components/home/EventCardCarousel";
-import ItemTypeCardGrid from "@/components/home/ItemTypeCardGrid";
 import RecyclingServiceAccordionGrid, {
   RecyclingServiceAccordionGridRef,
 } from "@/components/home/RecyclingServiceAccordionGrid";
+import DumpedRubbishSection from "@/components/home/DumpedRubbishSection";
 import Footer from "@/components/Footer";
 
 // Data and Data Types
@@ -21,11 +21,13 @@ import {
   RecyclingServices,
 } from "@/data/RecyclingServices";
 import { events, Events } from "@/data/Events";
+import { dumpedRubbishInfo, DumpedRubbishInfo } from "@/data/DumpedRubbishInfo";
 
 type Props = {
   events: Events[];
   houseRecyclingServices: RecyclingServices[];
   flatRecyclingServices: RecyclingServices[];
+  dumpedRubbishInfo: DumpedRubbishInfo;
 };
 
 export default function Home(props: Props) {
@@ -138,6 +140,14 @@ export default function Home(props: Props) {
         ref={recyclingServiceAccordionGridRef}
       />
 
+      <Subheading title="Report Dumped Rubbish" id="DumpedRubbish" />
+      <DumpedRubbishSection
+        content={props.dumpedRubbishInfo.content}
+        reportPublicForm={props.dumpedRubbishInfo.reportPublicForm}
+        reportPrivateForm={props.dumpedRubbishInfo.reportPrivateForm}
+        payPenaltyLink={props.dumpedRubbishInfo.payPenaltyLink}
+      />
+
       <Footer />
     </>
   );
@@ -163,12 +173,14 @@ export const getServerSideProps = async () => {
   const mockEvents = events;
   const mockHouseRecyclingServices = houseRecyclingServices;
   const mockFlatRecyclingServices = flatRecyclingServices;
+  const mockDumpedRubbishInfo = dumpedRubbishInfo;
 
   return {
     props: {
       events: mockEvents,
       houseRecyclingServices: mockHouseRecyclingServices,
       flatRecyclingServices: mockFlatRecyclingServices,
+      dumpedRubbishInfo: mockDumpedRubbishInfo,
     },
   };
 };
