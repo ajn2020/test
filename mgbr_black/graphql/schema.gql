@@ -1,0 +1,77 @@
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
+
+
+type VisitCount {
+    id: ID!
+    count: Int!
+}
+
+
+type Options {
+    text: String!
+    percentage: Float!
+    selectedCount: Int!
+}
+
+
+type QuestionAnswer {
+    question: String!
+    answers: [Options!]         #any one in the array is of true correct answer
+    selectedCount: Int!
+}
+
+
+type Query {
+    getVisitCount: VisitCount
+    ##
+    ##
+    getAllQuestions: [QuestionAnswer!]
+}
+
+
+input OptionsInput {
+    text: String!
+    percentage: Float!
+    selectedCount: Int!
+}
+
+
+input QuestionAnswerInput {
+    question: String!
+    answers: [OptionsInput!]    #any one in the array is of true correct answer
+    selectedCount: Int!
+}
+
+
+type Mutation {
+    increaseVisitCount: String!
+    ##
+    ##
+    addQuestion(content: QuestionAnswerInput!):  String!
+    deleteQuestion(question: String!):  String!
+    addAllQuestions(content: [QuestionAnswerInput!]):  String!
+    updateQuestionAnswerPercentage(question: String!, answer: String!): String!
+}
+
+
+type Subscription {
+    onIncreaseVisitCount: String!
+        @aws_subscribe(mutations: ["increaseVisitCount"])
+    ##
+    ##
+    onAddQuestion:  String!
+        @aws_subscribe(mutations: ["addQuestion"])
+
+    onDeleteQuestion:  String!
+        @aws_subscribe(mutations: ["deleteQuestion"])
+
+    onAddAllQuestions: String!
+        @aws_subscribe(mutations: ["addAllQuestions"])
+
+    onUpdateQuestionAnswerPercentage: String!
+        @aws_subscribe(mutations: ["updateQuestionAnswerPercentage"])
+}
