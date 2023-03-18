@@ -1,0 +1,17 @@
+.header {
+  background: linear-gradient(#d860f9, #642f6c);
+  color: white;
+  font-family: "Lato";
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+
+.header-title {
+  margin: auto;
+  font-size: 40px;
+}
+
+.header-description {
+  font-size: 17px;
+}

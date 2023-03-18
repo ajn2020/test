@@ -1,4 +1,12 @@
 /*========================================
+    ALL
+========================================*/
+
+* {
+  font-family: "Lato";
+}
+
+/*========================================
     ALL LINKS
 ========================================*/
 
@@ -23,481 +31,74 @@ a:hover {
 }
 
 /*========================================
-    HEADER
+    HOME POPUP
 ========================================*/
 
-.header {
-  /* background-color: #cfa4d5; */
-  background: linear-gradient(#d860f9, #642f6c);
-  color: white;
-  font-family: Lato;
-  text-align: center;
-  padding: 30px;
-  position: relative;
+.home-popup-overlay {
+  background: rgba(0, 0, 0, 0.75);
 }
 
-.header-title {
-  font-size: 40px;
-}
-
-.header-description {
-  font-size: 15px;
-}
-
-.header-anchors {
-  /* width: 400px; */
-
-  display: flex;
-  padding: 15px 100px;
-  margin-top: 20px;
-  align-items: center;
-  position: sticky;
-  top: 0px;
-  left: 0;
-}
-
-.header-quan {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-.header-anchors a {
-  color: aliceblue;
-  flex: 1;
-  background-color: #af63bb;
-  border-radius: 10px;
-  margin: 0 50px;
-  padding: 8px;
-}
-
-.header-search {
-  font-size: 30px;
-  width: 50px;
-  position: absolute;
-  top: 40px;
-  right: 20px;
-}
-
-.header-search:hover {
-  color: rgb(31, 154, 241);
-}
-
-.header-search-input {
-  position: absolute;
-  top: 40px;
-  right: 20px;
-}
-
-/*======================================
-    ENGAGING BOX
-========================================*/
-.engaging-box-wrapper {
-  background-color: #bda0c3;
-  /* border-style: ridge; */
-  /* border-color: black; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
-  border-width: 3px;
-  margin: 55px 100px;
-  margin-bottom: -31px;
+.home-popup-content {
+  margin: auto;
+  background: #af63bb;
+  width: 50%;
+  min-width: 200px;
   padding: 20px;
   text-align: center;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+/* .home-popup-arrow {
+  color: rgb(255, 255, 255);
+} */
+
+/* .popup-arrow {
+  -webkit-filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.16));
+  filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.16));
+  color: #fff;
+  stroke-width: 2px;
+  stroke: #d7d7d7;
+  stroke-dasharray: 30px;
+  stroke-dashoffset: -54px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+} */
+
+.home-popup-close {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 18px;
 }
 
-/*======================================
-    QUESTION BOX
-========================================*/
-.question-box {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-gap: 10px;
-  justify-items: center;
+.home-popup-close:hover {
+  filter: brightness(80%);
 }
 
-.question-box-answers {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
-  width: fit-content;
-}
-
-.answer-button {
+.home-popup-button {
+  width: 100px;
+  height: 50px;
   color: black;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px;
-  margin: 5px 20px;
-  /* border-width: 1px; */
+  margin: 20px;
   cursor: pointer;
-  border: 0;
+  border: 2px solid black;
   border-radius: 5px;
 }
 
-.answer-button.border-correct {
-  border-color: green;
-  border-width: 5px 5px 5px 5px;
-}
-
-.answer-button.border-incorrect {
-  border-color: red;
-  border-width: 5px 5px 5px 5px;
-}
-
-.answer-button.correct {
-  background-color: green;
-  border-width: 2px 2px 2px 2px;
-}
-
-.answer-button.incorrect {
-  background-color: red;
-  border-width: 2px 2px 2px 2px;
-}
-
-/*========================================
-    SUBHEADING
-========================================*/
-
-.subheading-container-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0px;
-  background-color: #90449c;
-  margin-bottom: 45px;
-  margin-top: 85px;
-}
-
-.subheading-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  justify-items: center;
-}
-
-.subheading-anchors {
-  display: flex;
-  margin: 0 30px;
-}
-
-.subheading-anchors a {
-  color: aliceblue;
-  flex: 1;
-  background-color: #af63bb;
-  border-radius: 10px;
-  padding: 7px 15px;
-}
-
-.subheading-text {
-  font-size: 30px;
-  margin: 20px 0;
-  color: aliceblue;
-}
-
-.subheading-separator {
-  width: 100%;
-  border: 1px solid #999;
-}
-
-/*======================================
-    DECISION TREE
-========================================*/
-
-.decision-tree-wrapper {
-  background-color: white;
-  border-style: solid;
-  border-width: 1px;
-  margin: 30px 300px;
-  text-align: center;
-  padding: 25px 0;
-}
-
-.decision-tree-title {
-  color: black;
-  text-align: center;
-}
-
-.decision-tree {
-  color: black;
-  padding: 20px 20px;
-  text-align: center;
-}
-
-.decision-tree-option {
-  width: 20%;
-  margin: 22px 22px;
-  padding: 20px 20px;
-  border-width: 0;
-  border-radius: 5px;
-  background-color: #c29ec7;
-  color: #fff;
-  cursor: pointer;
-}
-
-/*========================================
-    EVENT CARD CAROUSEL
-========================================*/
-
-.event-card-carousel-container {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  padding: 20px;
-  grid-gap: 20px;
-  justify-items: center;
-}
-
-.event-card-carousel {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  width: 100%;
-}
-
-.event-card-carousel-button-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.event-card-carousel-button {
-  height: 70x;
-  width: 150px;
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #c29ec7;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.event-card-carousel-button:not(:disabled):hover {
-  background-color: #3e8e41;
-}
-
-.event-card-carousel-button:not(:disabled):active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.event-card-carousel-button:disabled {
-  background-color: grey;
-  cursor: not-allowed;
-}
-
-/*========================================
-    EVENT CARD
-========================================*/
-
-.event-card-container {
-  width: 100%;
-  height: 300px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.event-card-container:hover {
+.home-popup-button:hover {
   filter: brightness(80%);
-}
-
-.event-card {
-  /* border-style: solid; */
-  border-width: 0px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 2px;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
-}
-
-.event-card-flipped {
-  transform: rotateY(180deg);
-}
-
-.event-card-front,
-.event-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  place-items: center;
-  text-align: center;
-  backface-visibility: hidden;
-}
-
-.event-card-front {
-  /* background: #ae69b9; */
-  background: #bda0c3;
-  transform: rotateY(0deg);
-  display: grid;
-  grid-template-rows: auto auto;
-}
-
-.event-card-image {
-  width: 100%;
-  max-width: 400px;
-}
-
-.event-card-back {
-  background: #c29ec7;
-  transform: rotateY(180deg);
-  display: grid;
-  overflow: auto;
-}
-
-/*========================================
-    ITEM TYPE CARD GRID
-========================================*/
-
-.item-type-card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 20px;
-  grid-gap: 20px;
-  justify-items: center;
-}
-
-/*========================================
-    ITEM TYPE CARD
-========================================*/
-
-.item-type-card-container {
-  width: 100%;
-  min-width: 200px;
-  height: 200px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.item-type-card-container:hover {
-  filter: brightness(80%);
-}
-
-.item-type-card {
-  border-style: solid;
-  border-width: 3px;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
-}
-
-.item-type-card-flipped {
-  transform: rotateY(180deg);
-}
-
-.item-type-card-front,
-.item-type-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 10px;
-  place-items: center;
-  text-align: center;
-  backface-visibility: hidden;
-}
-
-.item-type-card-front {
-  background: #af63bb;
-  transform: rotateY(0deg);
-}
-
-.item-type-card-back {
-  background: #c29ec7;
-  transform: rotateY(180deg);
-}
-
-.item-type-card-image {
-  height: 75px;
-}
-
-/*========================================
-    RECYCLING SERVICE ACCORDION GRID
-========================================*/
-
-.recycling-service-accordion-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 20px 40px;
-  grid-gap: 20px;
-}
-
-.recycling-service-accordion-grid-col {
-  display: grid;
-  grid-template-rows: min-content min-content min-content min-content min-content min-content;
-  grid-gap: 20px;
-}
-
-/*========================================
-    RECYCLING SERVICE ACCORDION
-========================================*/
-
-.recycling-service-accordion-wrapper {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  background-color: #af63bb;
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.recycling-service-accordion-wrapper:hover {
-  filter: brightness(80%);
-}
-
-.recycling-service-accordion {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.recycling-service-accordion-title {
-  color: black;
-  padding: 0px 0px 10px 0px;
-  font-size: 20px;
-}
-
-.recycling-service-accordion-description {
-  color: black;
-}
-
-.recycling-service-accordion-content-hidden {
-  color: black;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-.recycling-service-accordion-content-displayed {
-  color: black;
-  max-height: 1000px;
-  transition: max-height 0.2s ease-in;
-}
-
-/*========================================
-    FOOTER
-========================================*/
-
-.footer {
-  width: 100%;
-  background-color: #642f6c;
-  color: grey;
-  font-family: Lato;
-  font-size: 20px;
-  text-align: center;
-  padding: 20px;
 }
