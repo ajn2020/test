@@ -68,6 +68,8 @@ export default function Header(props: HeaderProps) {
           ""
         )}
         <a href="#RecyclingServiceAccordionGrid">Recycling Services</a>
+        <div className="header-dot"></div>
+        <a href="#DumpedRubbish">Report Dumped Rubbish</a>
       </div>
     </div>
   );
