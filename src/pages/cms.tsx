@@ -3,9 +3,6 @@ import Header from "@/components/cms/Header";
 import CMSTabs from "@/components/cms/CMSTabs";
 import Footer from "@/components/Footer";
 
-// API url
-import { api } from "@/config/api";
-
 // Data Types
 import { Facts } from "@/data/Facts";
 
@@ -34,7 +31,7 @@ export default function CMS(props: Props) {
 }
 
 export const getServerSideProps = async () => {
-  const resFacts = await fetch(`${api}/facts`);
+  const resFacts = await fetch(`/api/facts`);
   const facts = await resFacts.json();
 
   return {
