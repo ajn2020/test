@@ -29,9 +29,8 @@ export default function FactCMS(props: FactCMSProps) {
         "Content-Type": "application/json",
       },
     });
-    const status = await res.status
-    console.log(status)
-
+    const status = await res.status;
+    console.log(status);
   }
 
   return (
