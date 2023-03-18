@@ -21,7 +21,7 @@ export default function FactCMS(props: FactCMSProps) {
 
   async function submitFacts(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const res = await fetch(`/api/facts`, {
+    const res = await fetch("/api/facts", {
       method: "POST",
       mode: "cors",
       body: JSON.stringify(newFact),

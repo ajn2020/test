@@ -158,13 +158,13 @@ export const getServerSideProps = async () => {
   FETCHING DATA FROM BACKEND
   UNCOMMENT WHEN READY TO DEPLOY
 
-  const resE = await fetch(`/api/events`)
+  const resE = await fetch("/api/events")
   const events = await resE.json()
 
-  const resHRS = await fetch(`/api/houserecyclingservices`)
+  const resHRS = await fetch("/api/houserecyclingservices")
   const houseRecyclingServices = await resHRS.json()
 
-  const resFRS = await fetch(`/api/flatrecyclingservices`)
+  const resFRS = await fetch("/api/flatrecyclingservices")
   const flatRecyclingServices = await resFRS.json()
 
   */
