@@ -25,7 +25,11 @@ export default function Navbar() {
         <div className={style["navbarCenter"]}>
           <div className={style["navbarCenterLeft"]}>
             <div className={style["navbarCenterLogoBox"]}>
-              <img className={style["navbarCenterLogo"]} src="/logo.svg" />
+              <img
+                className={style["navbarCenterLogo"]}
+                src="/logo.svg"
+                alt=""
+              />
               <div className={style["navbarCenterLogoName"]}>
                 Hounslow Recycling Hub
               </div>
