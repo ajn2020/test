@@ -25,10 +25,10 @@ export default function Navbar(props: NavbarProps) {
       <div className="navbar animate__animated animate__fadeIn">
         <div className="navbarCenter">
           <div className="navbarCenterLeft">
-            <div className="navbarCenterLogoBox">
+            <a href="/" className="navbarCenterLogoBox">
               <img className="navbarCenterLogo" src="/logo.svg" />
               <div className="navbarCenterLogoName">Hounslow Recycling Hub</div>
-            </div>
+            </a>
             <div className="navbarItemBox">
               {navList.map((v, i) => {
                 return <a href={`#${v.target}`} key={i} className="navbarItem">{v.label}</a>;
