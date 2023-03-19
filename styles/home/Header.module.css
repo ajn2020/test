@@ -1,11 +1,11 @@
 .header {
-  background: linear-gradient(#4e165b, #55279b);
+  background: linear-gradient(#642f6c, #644494);
   color: white;
   font-family: cursive;
   text-align: center;
   padding: 20px;
   position: relative;
-  top: 70px;
+  top: 0;
   width: 100%;
 }
 
