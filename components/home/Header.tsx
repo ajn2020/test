@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Input } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
 import style from "@/styles/home/Header.module.css";
 
 type HeaderProps = {
@@ -10,16 +9,6 @@ type HeaderProps = {
 };
 
 export default function Header(props: HeaderProps) {
-  const [isInput, setIsInput] = useState(false);
-  const { Search } = Input;
-  const onSearch = (value: string) => console.log(value);
-  const iconClick = () => {
-    setIsInput(true);
-  };
-  const onBlur = () => {
-    setIsInput(false);
-  };
-
   return (
     <div className={style["header"]} id="Header">
       <div className={style["header-top"]}>

@@ -1,10 +1,6 @@
 import { useState } from "react";
-import { Input } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
 
-type NavbarProps = {};
-
-export default function Navbar(props: NavbarProps) {
+export default function Navbar() {
   const [navList] = useState([
     {
       label: "Recycling Assistant",
