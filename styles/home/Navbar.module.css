@@ -1,0 +1,83 @@
+.navbar {
+  height: 78px;
+  background: #4e165b;
+  /* background: linear-gradient(#d860f9, #642f6c); */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar .navbarCenter {
+  padding: 0 36px;
+  height: 100%;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+}
+
+.navbarCenterLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navbarCenterLogoBox {
+  display: flex;
+  align-items: center;
+}
+
+.navbarCenterLogo {
+  width: 40px;
+}
+
+.navbarCenterLogoName {
+  color: white;
+  margin-left: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbarItemBox {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.navbarItem {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  /* width: 100px; */
+  /* border: 1px solid red; */
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 20px;
+  color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.navbarItem::before {
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  left: 0;
+  top: 40px;
+  background: transparent;
+}
+
+.navbarItem:hover {
+  color: white;
+  background: #a516cc;
+  text-decoration: none;
+}
+
+.navbarItem:hover::before {
+  background: #a516cc;
+}
