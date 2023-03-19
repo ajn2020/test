@@ -145,9 +145,15 @@ a:hover {
   }
 }
 
+.fixedHeight {
+  height: 78px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+
 .navbar {
   height: 78px;
-  background: #4e165b;
+  background: #642f6c;
   /* background: linear-gradient(#d860f9, #642f6c); */
   position: fixed;
   left: 0;
