@@ -118,15 +118,14 @@ a:hover {
   background: #4f1d4b;
   color: #e5e5e5;
   font-weight: 500;
-  box-shadow: inset 20px 20px 39px #593056,
-    inset -20px -20px 39px #571d54;
+  box-shadow: inset 20px 20px 39px #593056, inset -20px -20px 39px #571d54;
   font-size: 15px;
   font-weight: bold;
   z-index: 100;
 }
 
 .toTop::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   left: -10px;
@@ -134,7 +133,12 @@ a:hover {
   border-radius: 50%;
   width: calc(100% + 20px);
   height: calc(100% + 20px);
-  background: linear-gradient(35deg, rgb(104, 47, 97), rgb(218, 57, 143), rgb(23, 135, 255));
+  background: linear-gradient(
+    35deg,
+    rgb(104, 47, 97),
+    rgb(218, 57, 143),
+    rgb(23, 135, 255)
+  );
   filter: blur(10px);
   animation: rotcirclegr 1s linear infinite;
 }
@@ -200,7 +204,7 @@ a:hover {
   text-align: center;
   cursor: pointer;
   padding: 5px 20px;
-  color: #F9F9F9;
+  color: #f9f9f9;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   position: relative;

@@ -31,7 +31,11 @@ export default function Navbar(props: NavbarProps) {
             </div>
             <div className="navbarItemBox">
               {navList.map((v, i) => {
-                return <a href={`#${v.target}`} key={i} className="navbarItem">{v.label}</a>;
+                return (
+                  <a href={`#${v.target}`} key={i} className="navbarItem">
+                    {v.label}
+                  </a>
+                );
               })}
             </div>
           </div>

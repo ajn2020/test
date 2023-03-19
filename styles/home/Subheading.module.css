@@ -6,11 +6,10 @@
   margin-bottom: 100px;
   margin-top: 100px;
 
-  background:
-      linear-gradient(to top, #7a4caf, #7a4caf 10px, transparent 10px),
-      linear-gradient(to right, #ba8cef, #c28cef 10px, transparent 10px),
-      linear-gradient(to bottom, #784ac3, #914ac3 10px, transparent 10px),
-      linear-gradient(to left, #390096, #570096 10px, transparent 10px);
+  background: linear-gradient(to top, #7a4caf, #7a4caf 10px, transparent 10px),
+    linear-gradient(to right, #ba8cef, #c28cef 10px, transparent 10px),
+    linear-gradient(to bottom, #784ac3, #914ac3 10px, transparent 10px),
+    linear-gradient(to left, #390096, #570096 10px, transparent 10px);
   background-origin: border-box;
 }
 
@@ -45,7 +44,6 @@
   font-weight: bold;
   text-shadow: #c627ae 1px 1px 0px, #ca15a6 1px 2px 0;
   /* color: aliceblue; */
-
 }
 
 .subheading-separator {

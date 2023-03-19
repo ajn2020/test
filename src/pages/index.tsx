@@ -165,18 +165,15 @@ export default function Home(props: Props) {
       <Subheading title="Recycling Assistant" id="DecisionTree" />
       <DecisionTree />
 
-
       {props.events.length > 0 ? (
         <>
- 
-            <Subheading title="Events" id="EventCardCarousel" />
+          <Subheading title="Events" id="EventCardCarousel" />
 
           <EventCardCarousel events={props.events} />
         </>
       ) : (
         ""
       )}
-
 
       <div className={t3 ? "animate__animated animate__fadeInLeft" : ""}>
         <Subheading

@@ -10,13 +10,9 @@ export default function Subheading(props: SubheadingProps) {
     <div className={style["subheading-container-wrapper"]} id={props.id}>
       <hr className={style["subheading-separator"]} />
       <div className={style["subheading-container"]}>
-        <div className={style["subheading-anchors"]}>
-
-        </div>
+        <div className={style["subheading-anchors"]}></div>
         <h3 className={style["subheading-text"]}>{props.title}</h3>
-        <div className={style["subheading-anchors"]}>
-
-        </div>
+        <div className={style["subheading-anchors"]}></div>
       </div>
       <hr className={style["subheading-separator"]} />
     </div>
