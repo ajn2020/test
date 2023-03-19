@@ -13,7 +13,7 @@ import RecyclingServiceAccordionGrid, {
 } from "@/components/home/RecyclingServiceAccordionGrid";
 import DumpedRubbishSection from "@/components/home/DumpedRubbishSection";
 import Footer from "@/components/Footer";
-import {api} from "@/config/api"
+import { api } from "@/config/api";
 
 // Data and Data Types
 import {
