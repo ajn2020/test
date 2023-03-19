@@ -2,10 +2,9 @@ import { useRef, useState, useEffect } from "react";
 
 // Components
 import Head from "next/head";
-import "animate.css";
 import Popup from "reactjs-popup";
-import Header from "@/components/home/Header";
 import Navbar from "@/components/home/Navbar";
+import Header from "@/components/home/Header";
 import EngagingBox from "@/components/home/EngagingBox";
 import Subheading from "@/components/home/Subheading";
 import DecisionTree from "@/components/home/DecisionTree";
