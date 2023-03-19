@@ -51,8 +51,9 @@
 
 .event-card-back {
   font-size: 17px;
-  background: #c29ec7;
+  background: #ffffff;
   transform: rotateY(180deg);
   display: grid;
   overflow: auto;
+  color: black;
 }
