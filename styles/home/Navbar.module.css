@@ -1,56 +1,39 @@
 .navbar {
   height: 78px;
-  background: #4e165b;
-  /* background: linear-gradient(#d860f9, #642f6c); */
+  background: #642f6c;
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 0px;
+  top: 0px;
   width: 100%;
   z-index: 100;
 }
 
-.navbar .navbarCenter {
-  padding: 0 36px;
+.navbar-contents {
+  padding: 0px 36px;
   height: 100%;
-  /* border: 1px solid white; */
   display: flex;
   align-items: center;
 }
 
-.navbarCenterLeft {
-  display: flex;
-  align-items: center;
-}
-
-.navbarCenterLogoBox {
-  display: flex;
-  align-items: center;
-}
-
-.navbarCenterLogo {
+.navbar-logo {
   width: 40px;
 }
 
-.navbarCenterLogoName {
+.navbar-title {
   color: white;
   margin-left: 20px;
   font-size: 22px;
   font-weight: bold;
 }
 
-.navbarItemBox {
-  display: flex;
-  align-items: center;
+.navbar-anchor-box {
   margin-left: 30px;
 }
 
-.navbarItem {
+.navbar-anchor {
   font-size: 16px;
   color: white;
   font-weight: bold;
-  /* width: 100px; */
-  /* border: 1px solid red; */
-  text-align: center;
   cursor: pointer;
   padding: 5px 20px;
   color: #f9f9f9;
@@ -60,24 +43,24 @@
   margin-left: 10px;
 }
 
-.navbarItem::before {
+.navbar-anchor::before {
   transition: all 0.3s ease-in-out;
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  left: 0;
+  left: 0px;
   top: 40px;
   background: transparent;
 }
 
-.navbarItem:hover {
+.navbar-anchor:hover {
   color: white;
   background: #a516cc;
   text-decoration: none;
 }
 
-.navbarItem:hover::before {
+.navbar-anchor:hover::before {
   background: #a516cc;
 }

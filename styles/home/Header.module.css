@@ -1,3 +1,7 @@
+.navbar-offset {
+  height: 78px;
+}
+
 .header {
   background: linear-gradient(#642f6c, #644494);
   color: white;

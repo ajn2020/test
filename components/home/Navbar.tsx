@@ -18,39 +18,26 @@ export default function Navbar() {
   ]);
 
   return (
-    <div>
-      <div
-        className={style["navbar"] + " " + "animate__animated animate__fadeIn"}
-      >
-        <div className={style["navbarCenter"]}>
-          <div className={style["navbarCenterLeft"]}>
-            <div className={style["navbarCenterLogoBox"]}>
-              <img
-                className={style["navbarCenterLogo"]}
-                src="/logo.svg"
-                alt=""
-              />
-              <div className={style["navbarCenterLogoName"]}>
-                Hounslow Recycling Hub
-              </div>
-            </div>
-            <div className={style["navbarItemBox"]}>
-              {navList.map((v, i) => {
-                return (
-                  <a
-                    href={`#${v.target}`}
-                    key={i}
-                    className={style["navbarItem"]}
-                  >
-                    {v.label}
-                  </a>
-                );
-              })}
-            </div>
-          </div>
+    <div
+      className={style["navbar"] + " " + "animate__animated animate__fadeIn"}
+    >
+      <div className={style["navbar-contents"]}>
+        <img className={style["navbar-logo"]} src="/logo.svg" alt="" />
+        <div className={style["navbar-title"]}>Hounslow Recycling Hub</div>
+        <div className={style["navbar-anchor-box"]}>
+          {navList.map((navItem, navItemIndex) => {
+            return (
+              <a
+                key={navItemIndex}
+                className={style["navbar-anchor"]}
+                href={`#${navItem.target}`}
+              >
+                {navItem.label}
+              </a>
+            );
+          })}
         </div>
       </div>
-      <div className={style["fixedHeight"]}></div>
     </div>
   );
 }
