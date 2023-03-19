@@ -85,8 +85,16 @@ export default function ImageRecognition(props: ImageRecognitionProps) {
         body: encodedImage
       })
       .then(response => response.json())
-      .then(data => setCategory(data[0]['Name']))
-      .catch(error => console.error(error));
+      .then(data => {
+        if (data.length == 0) {
+          setCategory("rubbish")
+        }
+        else setCategory(data[0]['Name'])}
+      )
+      .catch(error => {
+        console.error(error)
+        setCategory("rubbish")
+      });
     };
     reader.onerror = function (error) {
       console.log('Error: ', error);
