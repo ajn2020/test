@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+.navbar-logo-title-box {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-logo {
   width: 40px;
 }

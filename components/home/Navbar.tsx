@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from "@/styles/home/Navbar.module.css";
+import Link from "next/link";
 
 export default function Navbar() {
   const [navList] = useState([
@@ -22,8 +23,10 @@ export default function Navbar() {
       className={style["navbar"] + " " + "animate__animated animate__fadeIn"}
     >
       <div className={style["navbar-contents"]}>
-        <img className={style["navbar-logo"]} src="/logo.svg" alt="" />
-        <div className={style["navbar-title"]}>Hounslow Recycling Hub</div>
+        <Link href="/" className={style["navbar-logo-title-box"]}>
+          <img className={style["navbar-logo"]} src="/logo.svg" alt="" />
+          <div className={style["navbar-title"]}>Hounslow Recycling Hub</div>
+        </Link>
         <div className={style["navbar-anchor-box"]}>
           {navList.map((navItem, navItemIndex) => {
             return (
